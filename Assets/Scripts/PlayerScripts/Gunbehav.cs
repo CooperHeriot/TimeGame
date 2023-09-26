@@ -12,6 +12,8 @@ public class Gunbehav : MonoBehaviour
     public GameObject Model, point;
 
     public GameObject firepoint, bullet;
+
+    [Header("Fire Rate")]
     public float fireRate;
     private float currentRate;
 
@@ -32,20 +34,23 @@ public class Gunbehav : MonoBehaviour
         }
 
         //SHOOT
-        if (auto == false)
+        if (Time.timeScale > 0)
         {
-            if (Input.GetMouseButtonDown(0) && currentRate >= fireRate)
+            if (auto == false)
             {
-                Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation,Timeline.transform);
-                currentRate = 0;
+                if (Input.GetMouseButtonDown(0) && currentRate >= fireRate)
+                {
+                    Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
+                    currentRate = 0;
+                }
             }
-        }
-        else
-        {
-            if (Input.GetMouseButton(0) && currentRate >= fireRate)
+            else
             {
-                Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
-                currentRate = 0;
+                if (Input.GetMouseButton(0) && currentRate >= fireRate)
+                {
+                    Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
+                    currentRate = 0;
+                }
             }
         }
 
