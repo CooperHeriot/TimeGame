@@ -18,6 +18,8 @@ public class Gunbehav : MonoBehaviour
     private float currentRate;
 
     public bool auto;
+    [Header("Is this the prime timeline player")]
+    public bool Prime = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class Gunbehav : MonoBehaviour
     void Update()
     {
         //point at cursor
-        if (Time.timeScale > 0)
+        if (Time.timeScale > 0 && Prime == true)
         {
             Model.transform.rotation = Quaternion.LookRotation(point.transform.position - Model.transform.position);
         }

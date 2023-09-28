@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5132905383300535257}
   - component: {fileID: -2589815988156287426}
   m_Layer: 0
-  m_Name: SmallBullet
+  m_Name: SmallPlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,3 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bc37b1641503745aab785255c89fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  HurtPlayer: 0
+  HurtEnemy: 1
+  destroyOnHit: 1

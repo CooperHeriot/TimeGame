@@ -2,38 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
-    public float currentHealth = 3;
+    public float currentHealth = 1;
     private float maxHealth;
 
     public bool dead;
-    private PlayerMove PM;
-    public GameObject damageBorder;
     // Start is called before the first frame update
     void Start()
     {
-        PM = GetComponent<PlayerMove>();
-        damageBorder.SetActive(false);
-
-        maxHealth = currentHealth;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PlayerHurt(0);
-        }*/
+        
     }
 
-    public void PlayerHurt(float dmg)
+    public void EnemyHurt(float dmg)
     {
         currentHealth -= dmg;
-
-        damageBorder.SetActive(false);
-        damageBorder.SetActive(true);
 
         if (currentHealth <= 0)
         {
@@ -41,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void PlayerHeal(float helt)
+    public void EnemyHeal(float helt)
     {
         currentHealth += helt;
 
@@ -54,6 +43,8 @@ public class PlayerHealth : MonoBehaviour
     public void death()
     {
         dead = true;
-        PM.ded = true;
+
+        //temp
+        Destroy(gameObject);
     }
 }
