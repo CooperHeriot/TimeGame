@@ -7,6 +7,12 @@ public class NewGun : MonoBehaviour
     public GameObject ThisTimeLine;
 
     private TimelineManager TM;
+
+    [Header("Attributes")]
+    public Sprite GunSprite;
+    public float FRate;
+    public bool Auto;
+    public GameObject Bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +30,6 @@ public class NewGun : MonoBehaviour
 
     public void MakeAnew()
     {
-        TM.createNewTimeline(ThisTimeLine);
+        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet);
     }
 }
