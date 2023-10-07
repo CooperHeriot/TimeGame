@@ -18,6 +18,10 @@ public class Gunbehav : MonoBehaviour
     private float currentRate;
 
     public bool auto;
+
+    [Header("Gun Sprite")]
+    public Sprite GSprite;
+
     [Header("Is this the prime timeline player")]
     public bool Prime = true;
     // Start is called before the first frame update
@@ -68,5 +72,13 @@ public class Gunbehav : MonoBehaviour
         {
             currentRate = 0;
         }
+    }
+
+    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet)
+    {
+        GSprite = _Gunn;
+        fireRate = _FRate;
+        auto = _Auto;
+        bullet = _Bullet;
     }
 }

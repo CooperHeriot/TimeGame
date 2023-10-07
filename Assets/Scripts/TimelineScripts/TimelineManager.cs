@@ -10,18 +10,32 @@ public class TimelineManager : MonoBehaviour
     public GameObject primeTime;
 
     public Quaternion primmeRot;
+
+    private CamManager CM;
+
+    [Header("Game Over")]
+    public GameObject GameOver;
     // Start is called before the first frame update
     void Start()
     {
+        GameOver.SetActive(false);
+
         Lines.Add(primeTime);
 
+        primeTime.GetComponent<TimelineBehav>().becomePrime();
+
         currentAmount = Lines.Count;
+
+        CM = GetComponent<CamManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Lines.Count == 0)
+        {
+            GameOver.SetActive(true);
+        }
     }
 
     public void createNewTimeline(GameObject _TLine)
@@ -30,6 +44,9 @@ public class TimelineManager : MonoBehaviour
         {
             GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
             Lines.Add(NewTL);
+
+            CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
+            NewTL.GetComponent<TimelineBehav>().prime = false;
         }
         
         if (currentAmount >= maxAmount)
@@ -49,8 +66,17 @@ public class TimelineManager : MonoBehaviour
 
     public void eraseTimeline(GameObject _TLine)
     {
+        
+
         Destroy(_TLine.gameObject);
         Lines.Remove(_TLine);
+
+        if (_TLine.GetComponent<TimelineBehav>().prime == true)
+        {
+            Lines[0].GetComponent<TimelineBehav>().becomePrime();
+        }
+
+        CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
 
         currentAmount = Lines.Count;
     }

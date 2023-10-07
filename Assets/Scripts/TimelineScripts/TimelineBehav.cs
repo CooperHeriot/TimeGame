@@ -35,18 +35,28 @@ public class TimelineBehav : MonoBehaviour
             PrimeRot = GB.Model.transform.rotation;
 
             TM.primmeRot = PrimeRot;
+
+            GB.Prime = true;
+        } else
+        {
+            GB.Prime = false;
+
+            PrimeBorder.SetActive(false);
         }
 
         //rotate the non prime players
         notPrimeRot = TM.primmeRot;
         if (GB.Prime == false)
         {
+            
             GB.Model.transform.rotation = notPrimeRot;
         }
     }
 
     public void becomePrime()
     {
+        prime = true;
+
         Player.GetComponent<Gunbehav>().Prime = true;
 
         PrimeBorder.SetActive(true);

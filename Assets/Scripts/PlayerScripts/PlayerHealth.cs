@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public bool dead;
     private PlayerMove PM;
     public GameObject damageBorder;
+
+    public TimeDeleteTest TDT;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,5 +57,7 @@ public class PlayerHealth : MonoBehaviour
     {
         dead = true;
         PM.ded = true;
+
+        TDT.kill = true;
     }
 }
