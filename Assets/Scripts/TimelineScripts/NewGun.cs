@@ -35,4 +35,12 @@ public class NewGun : MonoBehaviour
     {
         TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerMove>() != null)
+        {
+            MakeAnew();
+        }
+    }
 }

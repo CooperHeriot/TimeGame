@@ -66,4 +66,6 @@ public class TimelineBehav : MonoBehaviour
     {
         Player.GetComponent<Gunbehav>().NewGun(_Gunn, _FRate, _Auto, _Bullet);
     }
+
+   
 }
