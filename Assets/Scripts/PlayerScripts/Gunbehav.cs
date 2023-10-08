@@ -20,7 +20,7 @@ public class Gunbehav : MonoBehaviour
     public bool auto;
 
     [Header("Gun Sprite")]
-    public Sprite GSprite;
+    public SpriteRenderer GSprite;
 
     [Header("Is this the prime timeline player")]
     public bool Prime = true;
@@ -76,7 +76,7 @@ public class Gunbehav : MonoBehaviour
 
     public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet)
     {
-        GSprite = _Gunn;
+        GSprite.sprite = _Gunn;
         fireRate = _FRate;
         auto = _Auto;
         bullet = _Bullet;

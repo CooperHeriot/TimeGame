@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewGun : MonoBehaviour
 {
     public GameObject ThisTimeLine;
+    private Gunbehav GB;
 
     private TimelineManager TM;
 
@@ -17,6 +18,8 @@ public class NewGun : MonoBehaviour
     void Start()
     {
         TM = FindObjectOfType<TimelineManager>();
+
+        GB = ThisTimeLine.GetComponent<TimelineBehav>().Player.GetComponent<Gunbehav>();
     }
 
     // Update is called once per frame
