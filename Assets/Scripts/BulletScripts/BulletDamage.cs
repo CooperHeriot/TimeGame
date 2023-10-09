@@ -23,17 +23,24 @@ public class BulletDamage : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerHealth>() != null && HurtPlayer == true)
         {
             collision.gameObject.GetComponent<PlayerHealth>().PlayerHurt(damage);
+
+            if (destroyOnHit == true)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (collision.gameObject.GetComponent<EnemyHealth>() != null && HurtEnemy == true)
         {
             collision.gameObject.GetComponent<EnemyHealth>().EnemyHurt(damage);
+
+            if (destroyOnHit == true)
+            {
+                Destroy(gameObject);
+            }
         }
 
-        if (destroyOnHit == true)
-        {
-            Destroy(gameObject);
-        }
+        
        
     }
 }

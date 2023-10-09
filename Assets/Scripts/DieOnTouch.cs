@@ -8,12 +8,16 @@ public class DieOnTouch : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (particl != null)
+        if (collision.gameObject.GetComponent<BulletDamage>() == null)
         {
-            Instantiate(particl, transform.position, Quaternion.LookRotation(collision.contacts[0].normal));
-        }
+            if (particl != null)
+            {
+                Instantiate(particl, transform.position, Quaternion.LookRotation(collision.contacts[0].normal));
+            }
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+       
     }
 
 }

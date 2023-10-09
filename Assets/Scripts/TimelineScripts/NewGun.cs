@@ -25,10 +25,10 @@ public class NewGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+       /* if (Input.GetKeyDown(KeyCode.Q))
         {
             MakeAnew();
-        }
+        }*/
     }
 
     public void MakeAnew()
@@ -36,11 +36,27 @@ public class NewGun : MonoBehaviour
         TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet);
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerMove>() != null)
+         if (collision.gameObject.GetComponent<PlayerMove>() != null)
+         {
+             MakeAnew();
+         }
+        //MakeAnew();
+        print("dsad");
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
             MakeAnew();
+
+            Destroy(gameObject);
         }
+
+        
+        //MakeAnew();
+        //print("dsad");
     }
 }

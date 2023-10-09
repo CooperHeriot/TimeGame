@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6169899290938168524
+--- !u!1 &8008107138096141864
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6169899290938168515}
-  - component: {fileID: 6169899290938168512}
-  - component: {fileID: 6169899290938168513}
-  - component: {fileID: 6169899290938168526}
-  - component: {fileID: 6169899290938168527}
-  - component: {fileID: 8615472886316057874}
-  - component: {fileID: 9177439408979824443}
-  - component: {fileID: 5132905383300535257}
-  - component: {fileID: -2589815988156287426}
+  - component: {fileID: 8008107138096141863}
+  - component: {fileID: 8008107138096141860}
+  - component: {fileID: 8008107138096141861}
+  - component: {fileID: 8008107138096141866}
+  - component: {fileID: 8008107138096141867}
+  - component: {fileID: 5561153091926001654}
+  - component: {fileID: 5035500682234924511}
+  - component: {fileID: 9045163142503584061}
+  - component: {fileID: 7400049296686544090}
   m_Layer: 7
-  m_Name: SmallPlayerBullet
+  m_Name: SmallEnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6169899290938168515
+--- !u!4 &8008107138096141863
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8540951, y: 0.23301423, z: 0.03760481}
+  m_LocalPosition: {x: -2.2936249, y: 0.2, z: -2.9059453}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6169899290938168512
+--- !u!33 &8008107138096141860
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6169899290938168513
+--- !u!23 &8008107138096141861
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 65c1ad7de334e2a4e9435f7a31ce0547, type: 2}
+  - {fileID: 2100000, guid: 25dfe93a383f5f34299e86d148822a8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,52 +89,52 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6169899290938168526
+--- !u!135 &8008107138096141866
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6169899290938168527
+--- !u!114 &8008107138096141867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b072d1ca8a2dd8489ef02935f5c9f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
---- !u!114 &8615472886316057874
+  speed: 10
+--- !u!114 &5561153091926001654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03614fb041d9a5b479ebee810fb36f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particl: {fileID: 3834174468971315677, guid: 12b2a346aeca2d1458d073b34ad71a38, type: 3}
---- !u!54 &9177439408979824443
+--- !u!54 &5035500682234924511
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -144,33 +144,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5132905383300535257
+--- !u!114 &9045163142503584061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33853dd4d41158d43be197e5e1ad72a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1
+  timer: 5
   particl: {fileID: 0}
---- !u!114 &-2589815988156287426
+--- !u!114 &7400049296686544090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6169899290938168524}
+  m_GameObject: {fileID: 8008107138096141864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27bc37b1641503745aab785255c89fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  HurtPlayer: 0
-  HurtEnemy: 1
+  HurtPlayer: 1
+  HurtEnemy: 0
   destroyOnHit: 1
