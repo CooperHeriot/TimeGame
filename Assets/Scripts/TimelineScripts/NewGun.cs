@@ -50,9 +50,11 @@ public class NewGun : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
+            Destroy(gameObject);
+
             MakeAnew();
 
-            Destroy(gameObject);
+           
         }
 
         
