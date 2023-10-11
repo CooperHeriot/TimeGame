@@ -24,6 +24,9 @@ public class Gunbehav : MonoBehaviour
 
     [Header("Is this the prime timeline player")]
     public bool Prime = true;
+
+    [Header("Enable first person mode")]
+    public bool FPSMode;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,7 @@ public class Gunbehav : MonoBehaviour
     void Update()
     {
         //point at cursor
-        if (Time.timeScale > 0 && Prime == true)
+        if (Time.timeScale > 0 && Prime == true && FPSMode == false)
         {
             Model.transform.rotation = Quaternion.LookRotation(point.transform.position - Model.transform.position);
         }

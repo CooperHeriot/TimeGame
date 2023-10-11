@@ -14,6 +14,10 @@ public class CamMove : MonoBehaviour
     public float dist;
 
     private Vector3 mid, quart, eighth;
+
+    [Header("Enable first person mode")]
+    public bool FPSMode;
+    public float turnSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +37,18 @@ public class CamMove : MonoBehaviour
         Marker.transform.position = worldPosition;
 
         //move cam in between where mouse is and player
-        mid = new Vector3((player.transform.position.x + Marker.transform.position.x) / 2, 0, (player.transform.position.z + Marker.transform.position.z) / 2);
-        quart = new Vector3((player.transform.position.x + mid.x) / 2, 0, (player.transform.position.z + mid.z) / 2);
-        eighth = new Vector3((player.transform.position.x + quart.x) / 2, 0, (player.transform.position.z + quart.z) / 2);
+        if (FPSMode == false)
+        {
+            mid = new Vector3((player.transform.position.x + Marker.transform.position.x) / 2, 0, (player.transform.position.z + Marker.transform.position.z) / 2);
+            quart = new Vector3((player.transform.position.x + mid.x) / 2, 0, (player.transform.position.z + mid.z) / 2);
+            eighth = new Vector3((player.transform.position.x + quart.x) / 2, 0, (player.transform.position.z + quart.z) / 2);
 
-        transform.position = Vector3.Slerp(transform.position, eighth, speed * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, eighth, speed * Time.deltaTime);
+        } else
+        {
+            transform.Rotate(-Input.GetAxis("Mouse Y") * turnSpeed * Time.deltaTime, 0, 0);
+        }
+
+        
     }
 }

@@ -34,7 +34,7 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
+        //RaycastHit hit;
 
         if (Time.timeScale > 0)
         {
