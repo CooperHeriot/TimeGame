@@ -47,6 +47,14 @@ public class CamMove : MonoBehaviour
         } else
         {
             transform.Rotate(-Input.GetAxis("Mouse Y") * turnSpeed * Time.deltaTime, 0, 0);
+
+            float cameraXRot = transform.localEulerAngles.x;
+            if (cameraXRot > 180)
+            {
+                cameraXRot -= 360;
+            }
+            cameraXRot = Mathf.Clamp(cameraXRot, -50, 50);
+            transform.localRotation = Quaternion.Euler(cameraXRot, 0, 0);
         }
 
         

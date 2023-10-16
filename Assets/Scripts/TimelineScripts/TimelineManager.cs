@@ -13,8 +13,10 @@ public class TimelineManager : MonoBehaviour
 
     private CamManager CM;
 
+    private WaveManager WM;
     [Header("Game Over")]
     public GameObject GameOver;
+    public bool lsott;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,10 @@ public class TimelineManager : MonoBehaviour
         currentAmount = Lines.Count;
 
         CM = GetComponent<CamManager>();
+
+        WM = GetComponent<WaveManager>();
+
+        WM.UpdateWaves();
     }
 
     // Update is called once per frame
@@ -35,6 +41,8 @@ public class TimelineManager : MonoBehaviour
         if (Lines.Count == 0)
         {
             GameOver.SetActive(true);
+
+            lsott = true;
         }
     }
 
@@ -49,6 +57,8 @@ public class TimelineManager : MonoBehaviour
             NewTL.GetComponent<TimelineBehav>().prime = false;
 
             NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet);
+
+            WM.UpdateWaves();
         }
         
         if (currentAmount >= maxAmount)

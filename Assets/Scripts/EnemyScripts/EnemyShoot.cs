@@ -26,6 +26,11 @@ public class EnemyShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Started();
+    }
+
+    public void Started()
+    {
         target = Timeline.GetComponent<TimelineBehav>().Player;
 
         currentRate = fireRate;

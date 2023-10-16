@@ -23,6 +23,11 @@ public class CamManager : MonoBehaviour
         {
             Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
             Aount = 1;
+
+            /*if (Cams[0].gameObject.GetComponentInChildren<Camera>() != null)
+            {
+                Cams[0].GetComponentInChildren<Camera>().rect = Cams[0].rect;
+            }*/
         }
 
         if (TM.currentAmount == 2 && Aount != 2)
@@ -31,6 +36,7 @@ public class CamManager : MonoBehaviour
             Cams[1].rect = new Rect(0.5f, 0.15f, 0.42f, 0.7f);
 
             Aount = 2;
+           
         }
 
         if (TM.currentAmount == 3 && Aount != 3)
@@ -40,6 +46,7 @@ public class CamManager : MonoBehaviour
             Cams[2].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);            
 
             Aount = 3;
+            
         }
 
         if (TM.currentAmount == 4 && Aount != 4)
@@ -51,6 +58,7 @@ public class CamManager : MonoBehaviour
             
 
             Aount = 4;
+            
         }
     }
 }
