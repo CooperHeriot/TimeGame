@@ -24,6 +24,7 @@ public class LaserPointer : MonoBehaviour
             Mark.SetActive(true);
 
             Mark.transform.position = hit.point;
+           /// Mark.transform.position = Vector3.Slerp(Mark.transform.position, hit.point, 10 * Time.deltaTime);
         } else
         {
             Mark.SetActive(false);

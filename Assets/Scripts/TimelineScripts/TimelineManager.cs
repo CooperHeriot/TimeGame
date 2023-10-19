@@ -32,7 +32,7 @@ public class TimelineManager : MonoBehaviour
 
         WM = GetComponent<WaveManager>();
 
-        WM.UpdateWaves();
+        WM.UpdateWaves(primeTime);
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class TimelineManager : MonoBehaviour
 
             NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet);
 
-            WM.UpdateWaves();
+            WM.UpdateWaves(NewTL);
         }
         
         if (currentAmount >= maxAmount)

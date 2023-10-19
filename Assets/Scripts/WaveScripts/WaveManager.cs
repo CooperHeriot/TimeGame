@@ -23,18 +23,24 @@ public class WaveManager : MonoBehaviour
         
     }
 
-    public void UpdateWaves()
+    public void UpdateWaves(GameObject _Wave)
     {
-        for (int i = 0; i < TM.Lines.Count; i++)
+        /*for (int i = 0; i < TM.Lines.Count; i++)
         {
             WaveBehavs.Add(TM.Lines[i]);
 
             currentNumber = WaveBehavs.Count;
-        }
+        }*/
+        WaveBehavs.Add(_Wave);
+
+        currentNumber = WaveBehavs.Count;
     }
 
     public void nextWave()
     {
-
+        for (int i = 0; i < WaveBehavs.Count; i++)
+        {
+            WaveBehavs[i].GetComponent<WaveBehaviour>().NewWave();
+        }
     }
 }

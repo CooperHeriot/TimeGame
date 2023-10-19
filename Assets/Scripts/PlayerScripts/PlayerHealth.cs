@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float currentHealth = 3;
-    private float maxHealth;
+    public float maxHealth;
 
     public bool dead;
     private PlayerMove PM;
@@ -18,7 +18,11 @@ public class PlayerHealth : MonoBehaviour
         PM = GetComponent<PlayerMove>();
         damageBorder.SetActive(false);
 
-        maxHealth = currentHealth;
+        if (maxHealth == 0)
+        {
+            maxHealth = currentHealth;
+        }
+        
     }
 
     // Update is called once per frame
