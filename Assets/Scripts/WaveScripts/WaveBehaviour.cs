@@ -26,22 +26,38 @@ public class WaveBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)){
             NewWave();
         }
+
+        spw = 0;
     }
 
     public void NewWave()
     {
         for (int i = 0; i < Waves[currentWave].transform.childCount; i++)
         {
-            GameObject ed = Instantiate(Waves[currentWave].transform.GetChild(i).gameObject, SpawnPoints[spw].transform.position, transform.rotation, transform);
+            int spop;
+
+            if (spw >= SpawnPoints.Count)
+            {
+                spop = 0;
+            } else
+            {
+                spop = spw;
+            }
+
+            GameObject ed = Instantiate(Waves[currentWave].transform.GetChild(i).gameObject, SpawnPoints[spop].transform.position, transform.rotation, transform);
 
             ed.GetComponent<EnemyShoot>().Timeline = gameObject;
             ed.GetComponent<EnemyShoot>().Started();
 
-            spw += 1;
-            if (spw > SpawnPoints.Count)
+            enms.Add(ed);
+            relativeAmount += 1;
+
+            
+            if (spw == SpawnPoints.Count)
             {
                 spw = 0;
             }
+            spw += 1;
         }
 
        currentWave += 1;
@@ -49,6 +65,7 @@ public class WaveBehaviour : MonoBehaviour
 
     public void EnemyDie(GameObject _Enem)
     {
+        enms.Remove(_Enem);
         relativeAmount -= 1;
     }
 }
