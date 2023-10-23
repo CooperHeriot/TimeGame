@@ -151,7 +151,7 @@ MonoBehaviour:
   firepoint: {fileID: 6658728614677392983}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   GSprite: {fileID: 8972575886484854274}
 --- !u!114 &8551718274210396374
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &5126719592828408300
 NavMeshAgent:
@@ -832,7 +832,7 @@ MonoBehaviour:
   firepoint: {fileID: 4438773490438119750}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   GSprite: {fileID: 2162751292336750539}
 --- !u!114 &739548474985115783
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &5998382445594225816
 NavMeshAgent:
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   firepoint: {fileID: 3090728471844159677}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   GSprite: {fileID: 199538712441963464}
 --- !u!114 &3560547671808437700
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &5829083905796439162
 NavMeshAgent:

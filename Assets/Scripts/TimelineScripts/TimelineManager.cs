@@ -17,6 +17,8 @@ public class TimelineManager : MonoBehaviour
     [Header("Game Over")]
     public GameObject GameOver;
     public bool lsott;
+
+    private NewNavMesh NV;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class TimelineManager : MonoBehaviour
         CM = GetComponent<CamManager>();
 
         WM = GetComponent<WaveManager>();
+
+        NV = GetComponent<NewNavMesh>();
 
         WM.UpdateWaves(primeTime);
     }
@@ -59,6 +63,8 @@ public class TimelineManager : MonoBehaviour
             NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet);
 
             WM.UpdateWaves(NewTL);
+
+            NV.makeNew();
         }
         
         if (currentAmount >= maxAmount)
@@ -86,10 +92,13 @@ public class TimelineManager : MonoBehaviour
         if (_TLine.GetComponent<TimelineBehav>().prime == true)
         {
             Lines[0].GetComponent<TimelineBehav>().becomePrime();
+            primeTime = Lines[0];
         }
 
         CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
 
         currentAmount = Lines.Count;
+
+        NV.makeNew();
     }
 }

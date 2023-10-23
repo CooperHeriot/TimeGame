@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject damageBorder;
 
     public TimeDeleteTest TDT;
+    public float IFrames;
+    private float IFFrames;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,11 @@ public class PlayerHealth : MonoBehaviour
         if (maxHealth == 0)
         {
             maxHealth = currentHealth;
+        }
+
+        if (IFFrames == 0)
+        {
+            IFFrames = IFrames;
         }
         
     }
@@ -32,19 +39,30 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerHurt(0);
         }*/
+        if (IFrames > 0)
+        {
+            IFrames -= 1 * Time.deltaTime;
+        }
     }
 
     public void PlayerHurt(float dmg)
     {
-        currentHealth -= dmg;
-
-        damageBorder.SetActive(false);
-        damageBorder.SetActive(true);
-
-        if (currentHealth <= 0)
+        if (IFrames <= 0)
         {
-            death();
+            currentHealth -= dmg;
+
+            damageBorder.SetActive(false);
+            damageBorder.SetActive(true);
+
+            IFrames = IFFrames;
+
+            if (currentHealth <= 0)
+            {
+                death();
+            }
         }
+
+        
     }
 
     public void PlayerHeal(float helt)

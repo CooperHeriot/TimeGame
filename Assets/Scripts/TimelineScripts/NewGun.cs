@@ -7,7 +7,7 @@ public class NewGun : MonoBehaviour
     public GameObject ThisTimeLine;
     private Gunbehav GB;
 
-    private TimelineManager TM;
+    public TimelineManager TM;
 
     [Header("Attributes")]
     public Sprite GunSprite;
@@ -36,6 +36,11 @@ public class NewGun : MonoBehaviour
         TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet);
     }
 
+    public void SwapGun()
+    {
+        GB.NewGun(GunSprite, FRate, Auto, Bullet);
+    }
+
    /* private void OnCollisionEnter(Collision collision)
     {
          if (collision.gameObject.GetComponent<PlayerMove>() != null)
@@ -50,9 +55,22 @@ public class NewGun : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
-            Destroy(gameObject);
+            transform.parent = null;
 
-            MakeAnew();
+            Destroy(gameObject);
+            if (TM.currentAmount < TM.maxAmount)
+            {
+                //Destroy(gameObject);
+
+                MakeAnew();
+            } else
+            {
+                //Destroy(gameObject);
+
+                SwapGun();
+            }
+
+            
 
            
         }

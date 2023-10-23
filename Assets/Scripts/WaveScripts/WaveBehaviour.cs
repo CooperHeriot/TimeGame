@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveBehaviour : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class WaveBehaviour : MonoBehaviour
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public int spw;
 
+    public TextMeshProUGUI Tm;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +53,7 @@ public class WaveBehaviour : MonoBehaviour
             ed.GetComponent<EnemyShoot>().Started();
 
             enms.Add(ed);
-            relativeAmount += 1;
+            relativeAmount = enms.Count;
 
             
             if (spw == SpawnPoints.Count)
@@ -61,11 +64,15 @@ public class WaveBehaviour : MonoBehaviour
         }
 
        currentWave += 1;
+
+        Tm.text = ("Enemies: " + relativeAmount);
     }
 
     public void EnemyDie(GameObject _Enem)
     {
         enms.Remove(_Enem);
-        relativeAmount -= 1;
+        relativeAmount = enms.Count;
+
+        Tm.text = ("Enemies: " + relativeAmount);
     }
 }

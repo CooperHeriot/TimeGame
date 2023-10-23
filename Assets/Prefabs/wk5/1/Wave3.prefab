@@ -517,7 +517,7 @@ MonoBehaviour:
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
   NeedLineOSight: 1
-  InLine: 0
+  InLine: 1
   GSprite: {fileID: 8757523536276866250}
 --- !u!114 &5342822876272749254
 MonoBehaviour:
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &3146062078311955320
 NavMeshAgent:
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
   NeedLineOSight: 1
-  InLine: 0
+  InLine: 1
   GSprite: {fileID: 4501305547066853624}
 --- !u!114 &4776995576766718006
 MonoBehaviour:
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &2663084980681139237
 NavMeshAgent:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
   NeedLineOSight: 1
-  InLine: 0
+  InLine: 1
   GSprite: {fileID: 7300261261794785481}
 --- !u!114 &8146863620010440581
 MonoBehaviour:
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &2914558118349777818
 NavMeshAgent:
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
   NeedLineOSight: 1
-  InLine: 0
+  InLine: 1
   GSprite: {fileID: 5632081308576361423}
 --- !u!114 &1788293126997024721
 MonoBehaviour:
@@ -1825,7 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &8538656355485843990
 NavMeshAgent:
@@ -2542,7 +2542,7 @@ MonoBehaviour:
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
   NeedLineOSight: 1
-  InLine: 0
+  InLine: 1
   GSprite: {fileID: 560944572990443776}
 --- !u!114 &1000309639510491092
 MonoBehaviour:
@@ -2556,7 +2556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27284677a5a0d04ab24010400248da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0
   target: {fileID: 0}
 --- !u!195 &4353250662432085742
 NavMeshAgent:

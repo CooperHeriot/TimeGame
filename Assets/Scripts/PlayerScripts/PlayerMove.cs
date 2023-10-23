@@ -35,14 +35,28 @@ public class PlayerMove : MonoBehaviour
             }
         } else
         {
+            /*Vector3 forwardVector = transform.forward * Input.GetAxis("Vertical");
+            Vector3 sideVector = transform.right * Input.GetAxis("Horizontal");
+            Vector3 movementVector = (forwardVector + sideVector).normalized;
+
+            rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
+
+            transform.Rotate(0, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime, 0);*/
+        }
+              
+    }
+
+    void Update()
+    {
+        if (FPSMode == true)
+        {
             Vector3 forwardVector = transform.forward * Input.GetAxis("Vertical");
             Vector3 sideVector = transform.right * Input.GetAxis("Horizontal");
             Vector3 movementVector = (forwardVector + sideVector).normalized;
 
             rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
 
-            transform.Rotate(0, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime, 0);
+            transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
         }
-              
     }
 }
