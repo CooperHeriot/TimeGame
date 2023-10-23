@@ -33,7 +33,7 @@ public class EnemyShoot : MonoBehaviour
     {
         target = Timeline.GetComponent<TimelineBehav>().Player;
 
-        currentRate = fireRate;
+       // currentRate = fireRate;
     }
 
     // Update is called once per frame

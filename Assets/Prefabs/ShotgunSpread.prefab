@@ -58,7 +58,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5132905383300535257, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: timer
-      value: 0.35
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168515, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_RootOrder
@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168527, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: speed
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9177439408979824443, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_Constraints
@@ -156,7 +156,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5132905383300535257, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: timer
-      value: 0.35
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168515, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_RootOrder
@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168527, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: speed
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9177439408979824443, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_Constraints
@@ -254,7 +254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5132905383300535257, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: timer
-      value: 0.35
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168515, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_RootOrder
@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168527, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: speed
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9177439408979824443, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_Constraints
@@ -352,7 +352,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5132905383300535257, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: timer
-      value: 0.35
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168515, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_RootOrder
@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168527, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: speed
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9177439408979824443, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_Constraints
@@ -450,7 +450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5132905383300535257, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: timer
-      value: 0.35
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168515, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_RootOrder
@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6169899290938168527, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: speed
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9177439408979824443, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
       propertyPath: m_Constraints

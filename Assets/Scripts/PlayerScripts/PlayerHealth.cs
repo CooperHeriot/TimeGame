@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject damageBorder;
 
     public TimeDeleteTest TDT;
-    public float IFrames;
+    public float IFrames = 1;
     private float IFFrames;
     // Start is called before the first frame update
     void Start()

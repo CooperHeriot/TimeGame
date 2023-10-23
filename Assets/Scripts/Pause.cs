@@ -12,6 +12,8 @@ public class Pause : MonoBehaviour
     [Header("Enable first person mode")]
     public bool FPSMode;
     public TimelineManager TM;
+
+    public float TheTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,15 +32,13 @@ public class Pause : MonoBehaviour
         else
         {
             panel.SetActive(false);
-            Time.timeScale = 1;
+            Time.timeScale = TheTime;
 
             if (FPSMode == true)
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-        }
-
-        
+        }       
     }
 
     // Update is called once per frame
@@ -71,7 +71,7 @@ public class Pause : MonoBehaviour
         } else
         {
             panel.SetActive(false);
-            Time.timeScale = 1;
+            Time.timeScale = TheTime;
 
             if (FPSMode == true)
             {

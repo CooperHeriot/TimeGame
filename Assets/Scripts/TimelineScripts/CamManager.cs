@@ -10,6 +10,24 @@ public class CamManager : MonoBehaviour
     public List<Camera> Cams = new List<Camera>();
 
     public float Aount = 1;
+
+    [Header("1")]
+    public Rect C1;
+
+    [Header("2")]
+    public Rect C11;
+    public Rect C22;
+
+    [Header("3")]
+    public Rect C111;
+    public Rect C222;
+    public Rect C333;
+
+    [Header("4")]
+    public Rect C1111;
+    public Rect C2222;
+    public Rect C3333;
+    public Rect C4444;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +39,19 @@ public class CamManager : MonoBehaviour
     {
         if (TM.currentAmount == 1 && Aount != 1)
         {
-            Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
+            //Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
+            Cams[0].rect = C1;
+
             Aount = 1;
 
-            /*if (Cams[0].gameObject.GetComponentInChildren<Camera>() != null)
-            {
-                Cams[0].GetComponentInChildren<Camera>().rect = Cams[0].rect;
-            }*/
         }
 
         if (TM.currentAmount == 2 && Aount != 2)
         {
-            Cams[0].rect = new Rect(0.08f, 0.15f, 0.42f, 0.7f);
-            Cams[1].rect = new Rect(0.5f, 0.15f, 0.42f, 0.7f);
+            //Cams[0].rect = new Rect(0.08f, 0.15f, 0.42f, 0.7f);
+            //Cams[1].rect = new Rect(0.5f, 0.15f, 0.42f, 0.7f);
+            Cams[0].rect = C11;
+            Cams[1].rect = C22;
 
             Aount = 2;
            
@@ -41,9 +59,12 @@ public class CamManager : MonoBehaviour
 
         if (TM.currentAmount == 3 && Aount != 3)
         {
-            Cams[0].rect = new Rect(0.35f, 0f, 0.3f, 0.5f);            
-            Cams[1].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);            
-            Cams[2].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);            
+            //Cams[0].rect = new Rect(0.35f, 0f, 0.3f, 0.5f);            
+            //Cams[1].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);            
+            //Cams[2].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);            
+            Cams[0].rect = C111;
+            Cams[1].rect = C222;
+            Cams[2].rect = C333;
 
             Aount = 3;
             
@@ -51,11 +72,14 @@ public class CamManager : MonoBehaviour
 
         if (TM.currentAmount == 4 && Aount != 4)
         {
-            Cams[0].rect = new Rect(0.2f, 0f, 0.3f, 0.5f);
-            Cams[1].rect = new Rect(0.5f, 0f, 0.3f, 0.5f);
-            Cams[2].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);
-            Cams[3].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);
-            
+            //Cams[0].rect = new Rect(0.2f, 0f, 0.3f, 0.5f);
+            //Cams[1].rect = new Rect(0.5f, 0f, 0.3f, 0.5f);
+            //Cams[2].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);
+            //Cams[3].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);
+            Cams[0].rect = C1111;
+            Cams[1].rect = C2222;
+            Cams[2].rect = C3333;
+            Cams[3].rect = C4444;
 
             Aount = 4;
             
