@@ -20,7 +20,7 @@ public class WaveBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckColor();
     }
 
     // Update is called once per frame
@@ -65,7 +65,8 @@ public class WaveBehaviour : MonoBehaviour
 
        currentWave += 1;
 
-        Tm.text = ("Enemies: " + relativeAmount);
+       Tm.text = ("Enemies: " + relativeAmount);
+        CheckColor();
     }
 
     public void EnemyDie(GameObject _Enem)
@@ -74,5 +75,19 @@ public class WaveBehaviour : MonoBehaviour
         relativeAmount = enms.Count;
 
         Tm.text = ("Enemies: " + relativeAmount);
+
+        CheckColor();
+    }
+
+    public void CheckColor()
+    {
+        if (relativeAmount != 0)
+        {
+            Tm.color = Color.black;
+        }
+        else
+        {
+            Tm.color = Color.white;
+        }
     }
 }

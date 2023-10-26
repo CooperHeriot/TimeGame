@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public bool dead;
     private PlayerMove PM;
-    public GameObject damageBorder;
+    public GameObject damageBorder, heltBorder;
 
     public TimeDeleteTest TDT;
     public float IFrames = 1;
@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     {
         PM = GetComponent<PlayerMove>();
         damageBorder.SetActive(false);
+        heltBorder.SetActive(false);
 
         if (maxHealth == 0)
         {
@@ -68,6 +69,9 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerHeal(float helt)
     {
         currentHealth += helt;
+
+        heltBorder.SetActive(false);
+        heltBorder.SetActive(true);
 
         if (currentHealth >= maxHealth)
         {

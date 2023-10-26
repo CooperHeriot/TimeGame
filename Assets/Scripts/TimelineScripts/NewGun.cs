@@ -55,6 +55,8 @@ public class NewGun : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
+            other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
+
             transform.parent = null;
 
             Destroy(gameObject);
@@ -70,9 +72,8 @@ public class NewGun : MonoBehaviour
                 SwapGun();
             }
 
-            
 
-           
+            //other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
         }
 
         
