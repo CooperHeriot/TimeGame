@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class WaveBehaviour : MonoBehaviour
 {
+    public WaveManager WM;
+
     public float relativeAmount;
     public int currentWave;
 
@@ -21,20 +23,27 @@ public class WaveBehaviour : MonoBehaviour
     void Start()
     {
         CheckColor();
+
+        if (relativeAmount != 0)
+        {
+           // WM.enems += 1;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)){
+        /*if (Input.GetKeyDown(KeyCode.P)){
             NewWave();
-        }
+        }*/
 
         spw = 0;
     }
 
     public void NewWave()
     {
+        //WM.enems += 1;
+
         for (int i = 0; i < Waves[currentWave].transform.childCount; i++)
         {
             int spop;
@@ -77,6 +86,11 @@ public class WaveBehaviour : MonoBehaviour
         Tm.text = ("Enemies: " + relativeAmount);
 
         CheckColor();
+
+        if (relativeAmount == 0)
+        {
+           // WM.enems -= 1;
+        }
     }
 
     public void CheckColor()
@@ -88,6 +102,8 @@ public class WaveBehaviour : MonoBehaviour
         else
         {
             Tm.color = Color.white;
+
+            //WM.activeWaves -= 1;
         }
     }
 }
