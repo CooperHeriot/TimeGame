@@ -89,6 +89,8 @@ public class TimelineManager : MonoBehaviour
         Destroy(_TLine.gameObject);
         Lines.Remove(_TLine);
 
+        WM.removeWave(_TLine);
+
         if (_TLine.GetComponent<TimelineBehav>().prime == true)
         {
             Lines[0].GetComponent<TimelineBehav>().becomePrime();
