@@ -153,6 +153,9 @@ MonoBehaviour:
   fireRate: 1
   NeedLineOSight: 1
   InLine: 0
+  LM:
+    serializedVersion: 2
+    m_Bits: 8
   GSprite: {fileID: 8972575886484854274}
 --- !u!114 &8551718274210396374
 MonoBehaviour:
@@ -834,6 +837,9 @@ MonoBehaviour:
   fireRate: 1
   NeedLineOSight: 1
   InLine: 0
+  LM:
+    serializedVersion: 2
+    m_Bits: 8
   GSprite: {fileID: 2162751292336750539}
 --- !u!114 &739548474985115783
 MonoBehaviour:
@@ -1252,6 +1258,9 @@ MonoBehaviour:
   fireRate: 1
   NeedLineOSight: 1
   InLine: 0
+  LM:
+    serializedVersion: 2
+    m_Bits: 8
   GSprite: {fileID: 199538712441963464}
 --- !u!114 &3560547671808437700
 MonoBehaviour:

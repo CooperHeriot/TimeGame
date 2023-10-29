@@ -20,6 +20,7 @@ public class EnemyShoot : MonoBehaviour
     private float currentRate;
 
     public bool NeedLineOSight, InLine;
+    public LayerMask LM;
 
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;
@@ -63,7 +64,7 @@ public class EnemyShoot : MonoBehaviour
             
         }
 
-        if (Physics.Raycast(firepoint.transform.position,Model.transform.forward, 100, 3))
+        if (Physics.Raycast(firepoint.transform.position,Model.transform.forward, 100, LM))
         {
             InLine = false;
         } else
