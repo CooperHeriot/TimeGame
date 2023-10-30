@@ -19,6 +19,9 @@ public class TimelineManager : MonoBehaviour
     public bool lsott;
 
     private NewNavMesh NV;
+
+
+    private float Total = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +57,8 @@ public class TimelineManager : MonoBehaviour
     {
         if (currentAmount < maxAmount)
         {
-            GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
+           // GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
+            GameObject NewTL = Instantiate(_TLine, new Vector3(0, primeTime.transform.position.y + (offset * Total), 0), transform.rotation, transform);
             Lines.Add(NewTL);
 
             CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
@@ -65,6 +69,8 @@ public class TimelineManager : MonoBehaviour
             WM.UpdateWaves(NewTL);
 
             NV.makeNew();
+
+            Total += 1;
         }
         
         if (currentAmount >= maxAmount)

@@ -685,6 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisTimeLine: {fileID: 1389665089}
+  TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: b3d7e52d0cff04d4096cec7c56466e30, type: 3}
   FRate: 1
   Auto: 0
@@ -1524,7 +1525,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1804,6 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2517,7 +2519,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &696081935
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2534,7 +2536,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &759207038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,7 +2993,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &893481230
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3007,7 +3010,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &893481231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3388,7 +3392,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3706,6 +3710,9 @@ MonoBehaviour:
   fireRate: 1
   NeedLineOSight: 1
   InLine: 0
+  LM:
+    serializedVersion: 2
+    m_Bits: 0
   GSprite: {fileID: 344243795}
 --- !u!1 &1217913364
 GameObject:
@@ -3759,7 +3766,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4421,6 +4428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f80cd2a0e24c345a03c41468dfd7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WM: {fileID: 0}
   relativeAmount: 0
   currentWave: 0
   enms: []
@@ -4432,6 +4440,7 @@ MonoBehaviour:
   - {fileID: 1651522805}
   - {fileID: 1788537002}
   spw: 0
+  Tm: {fileID: 0}
 --- !u!1 &1406098992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,6 +4995,7 @@ MonoBehaviour:
   sceneToLoad: Menu
   FPSMode: 1
   TM: {fileID: 1759550454}
+  TheTime: 0
 --- !u!1 &1651522805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,7 +5162,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5448,6 +5458,66 @@ MonoBehaviour:
   Cams:
   - {fileID: 963194227}
   Aount: 1
+  C1:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C11:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C22:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C111:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C222:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C333:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C1111:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C2222:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C3333:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C4444:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &1759550456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5462,6 +5532,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentNumber: 0
   WaveBehavs: []
+  Cooldown: 0
+  enems: 0
+  TextHolder: {fileID: 0}
+  Tm: {fileID: 0}
 --- !u!1 &1761924203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5943,6 +6017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThisTimeLine: {fileID: 1389665089}
+  TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: b3d7e52d0cff04d4096cec7c56466e30, type: 3}
   FRate: 0.4
   Auto: 1
@@ -6323,7 +6398,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6558,9 +6633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 3
+  maxHealth: 0
   dead: 0
   damageBorder: {fileID: 696081932}
+  heltBorder: {fileID: 0}
   TDT: {fileID: 1942850559}
+  IFrames: 1
 --- !u!1 &2132432983
 GameObject:
   m_ObjectHideFlags: 0

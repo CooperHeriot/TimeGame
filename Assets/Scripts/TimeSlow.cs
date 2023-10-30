@@ -23,10 +23,12 @@ public class TimeSlow : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
+            //currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
+            currentTime = GoalTime;
         } else
         {
-            currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
+            //currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
+            currentTime = 1;
         }
 
         Paus.TheTime = currentTime;

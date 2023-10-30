@@ -151,7 +151,7 @@ MonoBehaviour:
   firepoint: {fileID: 3918558213188473468}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   LM:
     serializedVersion: 2
@@ -577,7 +577,7 @@ MonoBehaviour:
   firepoint: {fileID: 5099353920600488373}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   LM:
     serializedVersion: 2
@@ -1094,7 +1094,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1515,7 +1515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5972721538434586343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.85, y: 0, z: -7.3}
+  m_LocalPosition: {x: -1.8499985, y: 0, z: -7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   firepoint: {fileID: 3776251575406394856}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   LM:
     serializedVersion: 2
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   firepoint: {fileID: 2825364186191378084}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   LM:
     serializedVersion: 2
@@ -1954,7 +1954,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2235,7 +2235,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2319,7 +2319,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2403,7 +2403,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2586,7 +2586,7 @@ MonoBehaviour:
   firepoint: {fileID: 3479167127779612511}
   bullet: {fileID: 8008107138096141864, guid: c70a62f26fcab134eb9c79b8f46c4abd, type: 3}
   fireRate: 1
-  NeedLineOSight: 1
+  NeedLineOSight: 0
   InLine: 0
   LM:
     serializedVersion: 2
