@@ -9,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
 
     public bool dead;
 
+    public GameObject drop;
+
     private EnemyShoot ES;
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,11 @@ public class EnemyHealth : MonoBehaviour
 
         //temp
         ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
+
+        if (drop != null)
+        {
+            Instantiate(drop, transform.position, transform.rotation, transform.parent);
+        }
 
         Destroy(gameObject);
     }

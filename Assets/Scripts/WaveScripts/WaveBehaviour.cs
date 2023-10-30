@@ -19,6 +19,14 @@ public class WaveBehaviour : MonoBehaviour
     public int spw;
 
     public TextMeshProUGUI Tm;
+
+    //public float p1, p2, p3, p4, p5;
+    //private float 
+    [Header("Paradox Stuff")]
+    public GameObject paradaoxEnem;
+
+    public float chance;
+    private float c1;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +78,20 @@ public class WaveBehaviour : MonoBehaviour
                 spw = 0;
             }
             spw += 1;
+        }
+        c1 = Random.Range(0, 100);
+        if (c1 > chance)
+        {
+            if (paradaoxEnem != null)
+            {
+                GameObject ked = Instantiate(paradaoxEnem, SpawnPoints[spw].transform.position, transform.rotation, transform);
+
+                ked.GetComponent<EnemyShoot>().Timeline = gameObject;
+                ked.GetComponent<EnemyShoot>().Started();
+
+                enms.Add(ked);
+                relativeAmount = enms.Count;
+            }           
         }
 
        currentWave += 1;
