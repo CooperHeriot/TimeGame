@@ -90,12 +90,12 @@ public class TimelineManager : MonoBehaviour
 
     public void eraseTimeline(GameObject _TLine)
     {
-        
+        WM.removeWave(_TLine);
 
         Destroy(_TLine.gameObject);
         Lines.Remove(_TLine);
 
-        WM.removeWave(_TLine);
+        //WM.removeWave(_TLine);
 
         if (_TLine.GetComponent<TimelineBehav>().prime == true)
         {

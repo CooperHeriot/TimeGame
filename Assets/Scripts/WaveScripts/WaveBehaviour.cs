@@ -16,7 +16,7 @@ public class WaveBehaviour : MonoBehaviour
     public List<GameObject> Waves = new List<GameObject>();
 
     public List<GameObject> SpawnPoints = new List<GameObject>();
-    public int spw;
+    public int spw, spop;
 
     public TextMeshProUGUI Tm;
 
@@ -54,7 +54,7 @@ public class WaveBehaviour : MonoBehaviour
 
         for (int i = 0; i < Waves[currentWave].transform.childCount; i++)
         {
-            int spop;
+            /////////int spop;
 
             if (spw >= SpawnPoints.Count)
             {
@@ -80,11 +80,27 @@ public class WaveBehaviour : MonoBehaviour
             spw += 1;
         }
         c1 = Random.Range(0, 100);
-        if (c1 > chance)
+        if (c1 < chance)
         {
             if (paradaoxEnem != null)
             {
-                GameObject ked = Instantiate(paradaoxEnem, SpawnPoints[spw].transform.position, transform.rotation, transform);
+                spw += 1;
+
+                if (spw == SpawnPoints.Count)
+                {
+                    spw = 0;
+                }
+
+                if (spw >= SpawnPoints.Count)
+                {
+                    spop = 0;
+                }
+                else
+                {
+                    spop = spw;
+                }
+
+                GameObject ked = Instantiate(paradaoxEnem, SpawnPoints[spop].transform.position, transform.rotation, transform);
 
                 ked.GetComponent<EnemyShoot>().Timeline = gameObject;
                 ked.GetComponent<EnemyShoot>().Started();
