@@ -58,8 +58,11 @@ public class TimelineManager : MonoBehaviour
         if (currentAmount < maxAmount)
         {
            // GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
+            //if (_TLine.GetComponent<TimelineBehav>().OnOff == false) { }
             GameObject NewTL = Instantiate(_TLine, new Vector3(0, primeTime.transform.position.y + (offset * Total), 0), transform.rotation, transform);
             Lines.Add(NewTL);
+
+            NewTL.GetComponent<TimelineBehav>().OnOff = !NewTL.GetComponent<TimelineBehav>().OnOff;
 
             CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
             NewTL.GetComponent<TimelineBehav>().prime = false;

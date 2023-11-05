@@ -17,12 +17,27 @@ public class TimelineBehav : MonoBehaviour
 
     [Header("Camera")]
     public Camera Cam;
+
+    [Header("Odd Even")]
+    public bool OnOff;
+
+    public GameObject G1, G2;
     // Start is called before the first frame update
     void Start()
     {
         TM = FindObjectOfType<TimelineManager>();
 
         GB = Player.GetComponent<Gunbehav>();
+
+        if (OnOff == true)
+        {
+            G1.SetActive(false);
+            G2.SetActive(true);
+        } else
+        {
+            G1.SetActive(true);
+            G2.SetActive(false);
+        }
         
     }
 
