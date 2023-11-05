@@ -9491,7 +9491,7 @@ MonoBehaviour:
   spop: 0
   Tm: {fileID: 2094581069}
   paradaoxEnem: {fileID: 4742366709467350579, guid: c594b784e2f1cd54cb1a6faf52cf6e11, type: 3}
-  chance: 100
+  chance: 40
 --- !u!1 &1406098992
 GameObject:
   m_ObjectHideFlags: 0
