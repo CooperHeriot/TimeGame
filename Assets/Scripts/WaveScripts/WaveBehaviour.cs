@@ -26,7 +26,7 @@ public class WaveBehaviour : MonoBehaviour
     public GameObject paradaoxEnem;
 
     public float chance;
-    private float chanec = 40;
+    public float chanec = 40;
     private float c1;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,11 @@ public class WaveBehaviour : MonoBehaviour
         }*/
 
         spw = 0;
+
+        if (currentWave >= Waves.Count)
+        {
+            WM.StopWaves = true;
+        }
     }
 
     public void NewWave()

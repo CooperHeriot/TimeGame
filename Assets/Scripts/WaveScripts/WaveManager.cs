@@ -18,6 +18,9 @@ public class WaveManager : MonoBehaviour
 
     public GameObject TextHolder;
     public TextMeshProUGUI Tm;
+
+    [Header("Paradox Stuff")]
+    public bool StopWaves;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,15 +38,20 @@ public class WaveManager : MonoBehaviour
         if (enems == 0)
         {
             Cooldown -= 1 * Time.deltaTime;
-
-            TextHolder.SetActive(true);
-            Tm.text = ("New wave in: " + Cooldown.ToString("F0"));
+            if (StopWaves == false)
+            {
+                TextHolder.SetActive(true);
+                Tm.text = ("New wave in: " + Cooldown.ToString("F0"));
+            }            
         }
 
         if (Cooldown <= 0)
         {
-            Cooldown = CD;
-            nextWave();
+            if (StopWaves == false)
+            {
+                Cooldown = CD;
+                nextWave();
+            }            
 
             TextHolder.SetActive(false);
         }
