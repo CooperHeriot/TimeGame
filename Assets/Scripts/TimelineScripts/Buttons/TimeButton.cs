@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class TimeButton : MonoBehaviour
 {
+    public GameObject Destroyed, maked, POINT;
+
     public float Powered;
+
+    public bool p2;
     // Start is called before the first frame update
     void Start()
     {
-        
+        POINT.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,6 +26,10 @@ public class TimeButton : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
             Powered = 1;
+
+            p2 = true;
+
+            POINT.SetActive(true);
         }
     }
 
@@ -30,6 +38,16 @@ public class TimeButton : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
             Powered = 0;
+
+            p2 = false;
+
+            POINT.SetActive(false);
         }
+    }
+
+    public void doIt()
+    {
+        Destroy(Destroyed);
+        maked.SetActive(true);
     }
 }
