@@ -4977,7 +4977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bc37b1641503745aab785255c89fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   HurtPlayer: 1
   HurtEnemy: 1
   destroyOnHit: 0
@@ -8781,7 +8781,8 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes: []
+    m_Planes:
+    - {fileID: 0}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -9922,7 +9923,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 25dfe93a383f5f34299e86d148822a8d, type: 2}
+  - {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   - {fileID: 2100000, guid: a299d01db30595a4aad678b665e6bab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

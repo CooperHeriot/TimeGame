@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 3
   dead: 0
-  drop: {fileID: 3249286304770838663, guid: a8f9427a4d34a8e479e607e7bf65c6a7, type: 3}
+  drop: {fileID: 4172091500362504660, guid: a8f9427a4d34a8e479e607e7bf65c6a7, type: 3}
 --- !u!114 &2987071321959567894
 MonoBehaviour:
   m_ObjectHideFlags: 0
