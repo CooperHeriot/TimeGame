@@ -19,6 +19,8 @@ public class WaveManager : MonoBehaviour
     public GameObject TextHolder;
     public TextMeshProUGUI Tm;
 
+    //public GameObject Currentdoors;
+
     [Header("Paradox Stuff")]
     public bool StopWaves;
     // Start is called before the first frame update
@@ -51,9 +53,24 @@ public class WaveManager : MonoBehaviour
             {
                 Cooldown = CD;
                 nextWave();
-            }            
+            } else
+            {
+                for (int i = 0; i < WaveBehavs.Count; i++)
+                {
+                    WaveBehavs[i].GetComponent<WaveBehaviour>().openDoors();
+                }
+            }           
 
             TextHolder.SetActive(false);
+
+            /* for (int i = 0; i < Currentdoors.transform.childCount; i++)
+             {
+                 if (Currentdoors.transform.GetChild(i).GetComponent<DoorGoAway>() != null)
+                 {
+                     Currentdoors.transform.GetChild(i).GetComponent<DoorGoAway>().die();
+                 }               
+             }*/
+            
         }
 
         /*if (Input.GetKeyDown(KeyCode.P)){

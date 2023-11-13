@@ -10,7 +10,7 @@ public class newWave : MonoBehaviour
 
     public List<GameObject> nSpawnPoints = new List<GameObject>();
 
-    public GameObject nParaEnem;
+    public GameObject nParaEnem, doors;
 
     public int me;
 
@@ -22,7 +22,7 @@ public class newWave : MonoBehaviour
     {
         WM = FindObjectOfType<WaveManager>();
 
-        
+        doors.SetActive(false);
     }
 
     // Update is called once per frame
@@ -74,6 +74,7 @@ public class newWave : MonoBehaviour
     public void MakeAnew()
     {
         WM.StopWaves = false;
+        WM.Cooldown = 5;
 
         //int me;
 
@@ -91,11 +92,14 @@ public class newWave : MonoBehaviour
             WM.WaveBehavs[i].GetComponent<WaveBehaviour>().SpawnPoints = nSpawnPoints;
             WM.WaveBehavs[i].GetComponent<WaveBehaviour>().paradaoxEnem = nParaEnem;
         }*/
+        
+        doors.SetActive(true);
 
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().currentWave = 0;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Waves = nWaves;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().SpawnPoints = nSpawnPoints;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().paradaoxEnem = nParaEnem;
+        WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Currentdoors = doors;
 
         Destroy(gameObject);
     }

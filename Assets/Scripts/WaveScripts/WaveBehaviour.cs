@@ -18,6 +18,8 @@ public class WaveBehaviour : MonoBehaviour
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public int spw, spop;
 
+    public GameObject Currentdoors;
+
     public TextMeshProUGUI Tm;
 
     //public float p1, p2, p3, p4, p5;
@@ -158,6 +160,17 @@ public class WaveBehaviour : MonoBehaviour
             Tm.color = Color.white;
 
             //WM.activeWaves -= 1;
+        }
+    }
+
+    public void openDoors()
+    {
+        for (int i = 0; i < Currentdoors.transform.childCount; i++)
+        {
+            if (Currentdoors.transform.GetChild(i).GetComponent<DoorGoAway>() != null)
+            {
+                Currentdoors.transform.GetChild(i).GetComponent<DoorGoAway>().die();
+            }
         }
     }
 }

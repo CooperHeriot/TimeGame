@@ -54,7 +54,11 @@ public class PlayerMove : MonoBehaviour
             Vector3 sideVector = transform.right * Input.GetAxis("Horizontal");
             Vector3 movementVector = (forwardVector + sideVector).normalized;
 
-            rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
+            if (ded == false && stopped == false)
+            {
+                rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
+            }
+                
 
             transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
         }
