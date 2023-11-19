@@ -19,6 +19,10 @@ public class Gunbehav : MonoBehaviour
 
     public bool auto;
 
+    [Header("Ammo")]
+    public float currentAmmo, maxAmmo, reloadTime;
+    private float RTime;
+
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;
 
@@ -31,6 +35,11 @@ public class Gunbehav : MonoBehaviour
     void Start()
     {
         currentRate = fireRate;
+
+        if (maxAmmo == 0)
+        {
+            maxAmmo = currentAmmo;
+        }
     }
 
     // Update is called once per frame
@@ -62,6 +71,12 @@ public class Gunbehav : MonoBehaviour
                 }
             }
         }
+        if (currentAmmo < 1)
+        {
+            reloadTime -= 1 * Time.deltaTime;
+        }
+
+        
 
         //currentRate Lock
         if (currentRate > fireRate)
