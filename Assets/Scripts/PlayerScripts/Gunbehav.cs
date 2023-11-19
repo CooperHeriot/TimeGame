@@ -20,7 +20,7 @@ public class Gunbehav : MonoBehaviour
     public bool auto;
 
     [Header("Ammo")]
-    public float currentAmmo, maxAmmo, reloadTime;
+    public float currentAmmo = 10, maxAmmo, reloadTime;
     private float RTime;
 
     [Header("Gun Sprite")]
@@ -39,6 +39,10 @@ public class Gunbehav : MonoBehaviour
         if (maxAmmo == 0)
         {
             maxAmmo = currentAmmo;
+        }
+        if (RTime == 0)
+        {
+            RTime = reloadTime;
         }
     }
 
@@ -60,6 +64,8 @@ public class Gunbehav : MonoBehaviour
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
+
+                    currentAmmo -= 1;
                 }
             }
             else
@@ -68,12 +74,26 @@ public class Gunbehav : MonoBehaviour
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
+
+                    currentAmmo -= 1;
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                currentAmmo = 0;
+            }
         }
+
         if (currentAmmo < 1)
         {
             reloadTime -= 1 * Time.deltaTime;
+        }
+
+        if (reloadTime <= 0)
+        {
+            reloadTime = RTime;
+            currentAmmo = maxAmmo;
         }
 
         
@@ -92,11 +112,14 @@ public class Gunbehav : MonoBehaviour
         }
     }
 
-    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet)
+    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo)
     {
         GSprite.sprite = _Gunn;
         fireRate = _FRate;
         auto = _Auto;
         bullet = _Bullet;
+
+        currentAmmo = _Ammo;
+        maxAmmo = _Ammo;
     }
 }
