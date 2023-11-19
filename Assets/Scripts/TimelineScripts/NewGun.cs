@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewGun : MonoBehaviour
 {
+    //asd
     public GameObject ThisTimeLine;
     private Gunbehav GB;
 
