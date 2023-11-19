@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewGun : MonoBehaviour
 {
+    //asd
     public GameObject ThisTimeLine;
     private Gunbehav GB;
 
@@ -14,6 +15,7 @@ public class NewGun : MonoBehaviour
     public float FRate;
     public bool Auto;
     public GameObject Bullet;
+    public float Ammo = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +35,12 @@ public class NewGun : MonoBehaviour
 
     public void MakeAnew()
     {
-        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet);
+        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo);
     }
 
     public void SwapGun()
     {
-        GB.NewGun(GunSprite, FRate, Auto, Bullet);
+        GB.NewGun(GunSprite, FRate, Auto, Bullet, Ammo);
     }
 
    /* private void OnCollisionEnter(Collision collision)
