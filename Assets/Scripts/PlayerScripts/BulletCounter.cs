@@ -8,6 +8,7 @@ public class BulletCounter : MonoBehaviour
     public TextMeshProUGUI tp;
 
     public Gunbehav gb;
+    public GameObject dots;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,13 @@ public class BulletCounter : MonoBehaviour
     void Update()
     {
         tp.text = (gb.currentAmmo + "/" + gb.maxAmmo);
+
+        if (gb.currentAmmo < 1)
+        {
+            dots.SetActive(true);
+        } else
+        {
+            dots.SetActive(false);
+        }
     }
 }

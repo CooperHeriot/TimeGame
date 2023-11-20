@@ -220,6 +220,7 @@ MonoBehaviour:
   FRate: 0.1
   Auto: 1
   Bullet: {fileID: 6169899290938168524, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
+  Ammo: 15
 --- !u!65 &4995669393045075048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -334,6 +335,7 @@ MonoBehaviour:
   FRate: 0.3
   Auto: 1
   Bullet: {fileID: 1795707250594262657, guid: e522f417370403c44995268362490a48, type: 3}
+  Ammo: 10
 --- !u!65 &191461317700249080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -354,6 +356,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5200838441842050557}
     m_Modifications:
+    - target: {fileID: 5143614172588598173, guid: 6806efe85fe969d43bfca5d83d51ee48, type: 3}
+      propertyPath: Ammo
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5143614172588598174, guid: 6806efe85fe969d43bfca5d83d51ee48, type: 3}
       propertyPath: m_Name
       value: NewTimelineTest (3)
