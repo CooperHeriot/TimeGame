@@ -9,6 +9,7 @@ public class BulletCounter : MonoBehaviour
 
     public Gunbehav gb;
     public GameObject dots;
+    public SpriteRenderer SR;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +24,11 @@ public class BulletCounter : MonoBehaviour
         if (gb.currentAmmo < 1)
         {
             dots.SetActive(true);
+            SR.enabled = false;
         } else
         {
             dots.SetActive(false);
+            SR.enabled = true;
         }
     }
 }
