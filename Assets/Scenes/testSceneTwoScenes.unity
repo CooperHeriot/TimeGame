@@ -17009,7 +17009,7 @@ MonoBehaviour:
   - {fileID: 1293032357}
   - {fileID: 818271326}
   - {fileID: 1025638962}
-  nParaEnem: {fileID: 4742366709467350579, guid: c594b784e2f1cd54cb1a6faf52cf6e11, type: 3}
+  nParaEnem: {fileID: 8805256581582027388, guid: fd3e99839c803684793a5a87cf48fea3, type: 3}
   doors: {fileID: 273008895}
   me: 0
   Paent: {fileID: 1389665089}
