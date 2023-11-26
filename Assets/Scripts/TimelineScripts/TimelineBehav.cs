@@ -31,12 +31,24 @@ public class TimelineBehav : MonoBehaviour
 
         if (OnOff == true)
         {
-            G1.SetActive(false);
-            G2.SetActive(true);
+            if (G1 != null)
+            {
+                G1.SetActive(false);
+            }
+            if (G2 != null)
+            {
+                G2.SetActive(true);
+            }
         } else
         {
-            G1.SetActive(true);
-            G2.SetActive(false);
+            if (G1 != null)
+            {
+                G1.SetActive(true);
+            }
+            if (G2 != null)
+            {
+                G2.SetActive(false);
+            }
         }
         
     }
