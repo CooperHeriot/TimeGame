@@ -11,7 +11,7 @@ public class PauseSensitivity : MonoBehaviour
      public PlayerMove PM;*/
     private TimelineManager TM;
 
-    public float sensitibty;
+    public float sensitibty, sens2;
 
     public GameObject PH;
     private PauseHolder ps;
@@ -28,6 +28,7 @@ public class PauseSensitivity : MonoBehaviour
         TM = FindObjectOfType<TimelineManager>();
 
         //ps = PH.GetComponent<PauseHolder>();
+        sens2 = sensitibty;
     }
 
     /*void Awake()
@@ -52,6 +53,12 @@ public class PauseSensitivity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(sensitibty != sens2)
+        {
+            UpdateSave();
+            sens2 = sensitibty;
+        }
         //CM = FindObjectsOfType<CamMove>();
 
         /*if (Input.GetKeyDown(KeyCode.K))
@@ -93,5 +100,8 @@ public class PauseSensitivity : MonoBehaviour
 
     
 
-  
+  public void UpdateSave()
+    {
+        GetComponent<SaveableObject>().UpdatemyData();
+    }
 }

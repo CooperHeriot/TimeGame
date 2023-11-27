@@ -5,5 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class SavedData
 {
-    public int sens;
+    public float sens;
+
+    public List<MouseData> SensInGame = new List<MouseData>();
 }

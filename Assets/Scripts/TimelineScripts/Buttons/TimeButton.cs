@@ -12,6 +12,8 @@ public class TimeButton : MonoBehaviour
     public bool p2;
 
     public GameObject Player;
+
+    public float tier;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,9 +61,16 @@ public class TimeButton : MonoBehaviour
 
     public void doIt()
     {
-        Player.GetComponent<PlayerMove>().stopped = false;
+        if (tier <= 0)
+        {
+            Player.GetComponent<PlayerMove>().stopped = false;
 
-        Destroy(Destroyed);
-        maked.SetActive(true);
+            Destroy(Destroyed);
+            maked.SetActive(true);
+        } else
+        {
+            tier -= 1;
+        }
+        
     }
 }
