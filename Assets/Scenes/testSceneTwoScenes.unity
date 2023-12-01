@@ -19084,14 +19084,14 @@ MonoBehaviour:
   - {fileID: 1583991432296263504, guid: e30f8fdd22b39dc46a0cd5d5536a812b, type: 3}
   - {fileID: 3119694723221006237, guid: dc060c603d0b0ed408adfa346a5a850a, type: 3}
   nSpawnPoints:
-  - {fileID: 188857402}
-  - {fileID: 1223547819}
-  - {fileID: 82282783}
-  - {fileID: 368715828}
-  - {fileID: 1478715789}
-  - {fileID: 1407444140}
-  - {fileID: 506591163}
-  - {fileID: 1403246323}
+  - {fileID: 101822308}
+  - {fileID: 1334040230}
+  - {fileID: 1611062395}
+  - {fileID: 1601130063}
+  - {fileID: 1925669785}
+  - {fileID: 1720263793}
+  - {fileID: 1286504214}
+  - {fileID: 179627560}
   nParaEnem: {fileID: 8805256581582027388, guid: fd3e99839c803684793a5a87cf48fea3, type: 3}
   doors: {fileID: 524877542}
   me: 0
