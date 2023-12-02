@@ -19081,8 +19081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WM: {fileID: 0}
   nWaves:
-  - {fileID: 1583991432296263504, guid: e30f8fdd22b39dc46a0cd5d5536a812b, type: 3}
   - {fileID: 3119694723221006237, guid: dc060c603d0b0ed408adfa346a5a850a, type: 3}
+  - {fileID: 1819322251147745458, guid: dc81be928c5ad784c9475815aaf6b1c9, type: 3}
   nSpawnPoints:
   - {fileID: 101822308}
   - {fileID: 1334040230}
@@ -45937,7 +45937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 1
-  GoalTime: 0.5
+  GoalTime: 0.1
   speed: 1
   TimeJuice: 0
 --- !u!1 &1611062395

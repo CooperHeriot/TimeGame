@@ -52,6 +52,12 @@ public class Pause : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }*/
+
+        if (paused == false)
+        {
+            Time.timeScale = TheTime;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
        
     }
 
