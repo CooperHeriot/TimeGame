@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeSlow : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class TimeSlow : MonoBehaviour
     private Pause Paus;
 
     public float TJ;
+
+    public Image img;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +53,7 @@ public class TimeSlow : MonoBehaviour
         }
 
         Paus.TheTime = currentTime;
+
+        img.fillAmount = (TimeJuice / TJ);
     }
 }
