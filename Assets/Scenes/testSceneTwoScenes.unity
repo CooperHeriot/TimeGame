@@ -22633,6 +22633,7 @@ GameObject:
   - component: {fileID: 814521283}
   - component: {fileID: 814521285}
   - component: {fileID: 814521284}
+  - component: {fileID: 814521286}
   m_Layer: 5
   m_Name: rEMINDER
   m_TagString: Untagged
@@ -22654,7 +22655,7 @@ RectTransform:
   m_Children:
   - {fileID: 546651116}
   m_Father: {fileID: 1761924207}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22699,6 +22700,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814521282}
   m_CullTransparentMesh: 1
+--- !u!95 &814521286
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814521282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd4f6e1568f1b4e48b39613a4f8a7027, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &815733408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24441,7 +24463,7 @@ RectTransform:
   m_Children:
   - {fileID: 1886722190}
   m_Father: {fileID: 1761924207}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46136,7 +46158,7 @@ RectTransform:
   - {fileID: 125745716}
   - {fileID: 882016467}
   m_Father: {fileID: 1761924207}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46179,6 +46201,7 @@ MonoBehaviour:
   TimeJuice: 5
   TJ: 0
   img: {fileID: 882016468}
+  reminder: {fileID: 814521282}
 --- !u!1 &1611062395
 GameObject:
   m_ObjectHideFlags: 0
@@ -50642,10 +50665,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 814521283}
   - {fileID: 1895177312}
   - {fileID: 1607152169}
   - {fileID: 893481229}
-  - {fileID: 814521283}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54503,7 +54526,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1761924207}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

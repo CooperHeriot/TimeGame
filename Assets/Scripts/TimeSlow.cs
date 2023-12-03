@@ -39,7 +39,7 @@ public class TimeSlow : MonoBehaviour
 
             TimeJuice -= 2 * Time.deltaTime;
 
-            if (reminder != null)
+            if (reminder != null && reminder.activeSelf == true)
             {
                 Destroy(reminder.gameObject);
             }
