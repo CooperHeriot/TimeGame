@@ -8,6 +8,7 @@ public class CamManager : MonoBehaviour
 
     //private List<GameObject> snes = new List<GameObject>();
     public List<Camera> Cams = new List<Camera>();
+    public Pause PH;
 
     public float Aount = 1;
 
@@ -83,6 +84,19 @@ public class CamManager : MonoBehaviour
 
             Aount = 4;
             
+        }
+
+        for (int i = 0; i < Cams.Count; i++)
+        {
+            Cams[i].fieldOfView = (60 / (PH.TheTime));
+            if (Cams[i].fieldOfView > 80)
+            {
+                Cams[i].fieldOfView = 80;
+            }
+            if (Cams[i].fieldOfView < 60)
+            {
+                Cams[i].fieldOfView = 60;
+            }
         }
     }
 }
