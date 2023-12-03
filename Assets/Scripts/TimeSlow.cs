@@ -11,7 +11,7 @@ public class TimeSlow : MonoBehaviour
     private TimelineManager TM;
     private Pause Paus;
 
-    private float TJ;
+    public float TJ;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class TimeSlow : MonoBehaviour
         Paus = GetComponent<Pause>();
 
         TJ = TimeJuice;
+        TimeJuice = 0;
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class TimeSlow : MonoBehaviour
             currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
             //currentTime = GoalTime;
 
-            TimeJuice -= 1;
+            TimeJuice -= 2 * Time.deltaTime;
         } else
         {
             currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
@@ -38,7 +39,7 @@ public class TimeSlow : MonoBehaviour
 
             if (TM.currentAmount > 1)
             {
-                TimeJuice += (1 * TM.currentAmount);
+                TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
             }
 
         }
