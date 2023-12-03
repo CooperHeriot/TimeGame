@@ -15,9 +15,12 @@ public class TimeSlow : MonoBehaviour
     public float TJ;
 
     public Image img;
+    public GameObject reminder;
     // Start is called before the first frame update
     void Start()
     {
+        reminder.SetActive(false);
+
         TM = FindObjectOfType<TimelineManager>();
 
         Paus = GetComponent<Pause>();
@@ -35,6 +38,11 @@ public class TimeSlow : MonoBehaviour
             //currentTime = GoalTime;
 
             TimeJuice -= 2 * Time.deltaTime;
+
+            if (reminder != null)
+            {
+                Destroy(reminder.gameObject);
+            }
         } else
         {
             currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
@@ -50,6 +58,11 @@ public class TimeSlow : MonoBehaviour
         if (TimeJuice > TJ)
         {
             TimeJuice = TJ;
+
+            if (reminder != null)
+            {
+                reminder.SetActive(true);
+            }            
         }
 
         Paus.TheTime = currentTime;
