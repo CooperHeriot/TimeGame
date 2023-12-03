@@ -113,7 +113,7 @@ public class WaveBehaviour : MonoBehaviour
                     spop = spw;
                 }
 
-                GameObject ked = Instantiate(paradaoxEnem, SpawnPoints[spop].transform.position, transform.rotation, transform);
+                GameObject ked = Instantiate(paradaoxEnem, SpawnPoints[Random.Range(0, SpawnPoints.Count)].transform.position, transform.rotation, transform);
 
                 ked.GetComponent<EnemyShoot>().Timeline = gameObject;
                 ked.GetComponent<EnemyShoot>().Started();
