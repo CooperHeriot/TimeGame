@@ -10,6 +10,8 @@ public class HealthBar : MonoBehaviour
     public PlayerHealth PH;
 
     public Color w1, w2, w3;
+
+    public GameObject b1, b2;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +26,59 @@ public class HealthBar : MonoBehaviour
         if (PH.currentHealth == 3)
         {
             bar.color = w3;
+
+            for (int i = 0; i < b1.transform.childCount; i++)
+            {
+                if (b1.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b1.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w3;
+                }
+            }
+            for (int i = 0; i < b2.transform.childCount; i++)
+            {
+                if (b2.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b2.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w3;
+                }
+            }
         }
         if (PH.currentHealth == 2)
         {
             bar.color = w2;
+
+            for (int i = 0; i < b1.transform.childCount; i++)
+            {
+                if (b1.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b1.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w2;
+                }
+            }
+            for (int i = 0; i < b2.transform.childCount; i++)
+            {
+                if (b2.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b2.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w2;
+                }
+            }
         }
         if (PH.currentHealth == 1)
         {
             bar.color = w1;
+
+            for (int i = 0; i < b1.transform.childCount; i++)
+            {
+                if (b1.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b1.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w1;
+                }
+            }
+            for (int i = 0; i < b2.transform.childCount; i++)
+            {
+                if (b2.transform.GetChild(i).GetComponent<MeshRenderer>() != null)
+                {
+                    b2.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = w1;
+                }
+            }
         }
     }
 }

@@ -6,6 +6,9 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class EnemyShoot : MonoBehaviour
 {
+    [Header("Is this guy active")]
+    public bool online;
+
     [Header("Player")]
     public GameObject target;
     public GameObject Timeline;
@@ -40,50 +43,56 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //RaycastHit hit;
-
-        if (Time.timeScale > 0)
+        if (online == true)
         {
-            Model.transform.rotation = Quaternion.LookRotation(target.transform.position - Model.transform.position);
-        }
+            //RaycastHit hit;
 
-        if (currentRate >= fireRate)
-        {
-            if (NeedLineOSight == true && InLine == true)
+            if (Time.timeScale > 0)
             {
-                Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
-                currentRate = 0;
-            } else
+                Model.transform.rotation = Quaternion.LookRotation(target.transform.position - Model.transform.position);
+            }
+
+            if (currentRate >= fireRate)
             {
-                if (NeedLineOSight == false)
+                if (NeedLineOSight == true && InLine == true)
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
                 }
+                else
+                {
+                    if (NeedLineOSight == false)
+                    {
+                        Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
+                        currentRate = 0;
+                    }
+                }
+
             }
-            
-        }
 
-        if (Physics.Raycast(firepoint.transform.position,Model.transform.forward, 100, LM))
-        {
-            InLine = false;
-        } else
-        {
-            InLine = true;
-        }
+            if (Physics.Raycast(firepoint.transform.position, Model.transform.forward, 100, LM))
+            {
+                InLine = false;
+            }
+            else
+            {
+                InLine = true;
+            }
 
 
-        if (currentRate > fireRate)
-        {
-            currentRate = fireRate;
+            if (currentRate > fireRate)
+            {
+                currentRate = fireRate;
+            }
+            else
+            {
+                currentRate += 1 * Time.deltaTime;
+            }
+            if (currentRate < 0)
+            {
+                currentRate = 0;
+            }
         }
-        else
-        {
-            currentRate += 1 * Time.deltaTime;
-        }
-        if (currentRate < 0)
-        {
-            currentRate = 0;
-        }
+        
     }
 }

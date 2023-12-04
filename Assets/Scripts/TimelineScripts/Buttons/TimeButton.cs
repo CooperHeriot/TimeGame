@@ -36,6 +36,7 @@ public class TimeButton : MonoBehaviour
             Player = other.gameObject;
 
             Player.GetComponent<PlayerMove>().stopped = true;
+            Player.GetComponent<Rigidbody>().isKinematic = true;
 
             Powered = 1;
 
@@ -50,6 +51,7 @@ public class TimeButton : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerMove>() != null)
         {
             Player.GetComponent<PlayerMove>().stopped = false;
+            Player.GetComponent<Rigidbody>().isKinematic = false;
 
             Powered = 0;
 
@@ -64,6 +66,7 @@ public class TimeButton : MonoBehaviour
         if (tier <= 0)
         {
             Player.GetComponent<PlayerMove>().stopped = false;
+            Player.GetComponent<Rigidbody>().isKinematic = false;
 
             Destroy(Destroyed);
             maked.SetActive(true);
