@@ -77780,6 +77780,7 @@ MonoBehaviour:
   currentAmmo: 10
   maxAmmo: 0
   reloadTime: 1.5
+  RTime: 0
   GSprite: {fileID: 1699353584}
   Prime: 1
   FPSMode: 1
