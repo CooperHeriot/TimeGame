@@ -21,7 +21,7 @@ public class Gunbehav : MonoBehaviour
 
     [Header("Ammo")]
     public float currentAmmo = 10, maxAmmo, reloadTime;
-    private float RTime;
+    public float RTime;
 
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;

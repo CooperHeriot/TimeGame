@@ -84,6 +84,11 @@ public class PlayerHealth : MonoBehaviour
         dead = true;
         PM.ded = true;
 
+        for (int i = 0; i < FindObjectsOfType<PlayerHealth>().Length; i++)
+        {
+            FindObjectsOfType<PlayerHealth>()[i].GetComponent<PlayerHealth>().IFrames = IFFrames;
+        }
+
         TDT.kill = true;
     }
 }
