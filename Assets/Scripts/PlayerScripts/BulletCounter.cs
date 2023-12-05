@@ -19,7 +19,14 @@ public class BulletCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tp.text = (gb.currentAmmo + "/" + gb.maxAmmo);
+        if (gb.currentAmmo < 1)
+        {
+            tp.text = ("Reloading");
+        } else
+        {
+            tp.text = (gb.currentAmmo + "/" + gb.maxAmmo);
+        }
+        
 
         if (gb.currentAmmo < 1)
         {
