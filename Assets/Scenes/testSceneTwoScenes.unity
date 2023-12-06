@@ -77728,7 +77728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ded: 0
   stopped: 0
-  speed: 12
+  speed: 13
   FPSMode: 1
   turnSpeed: 600
 --- !u!54 &2127149554
@@ -77780,7 +77780,7 @@ MonoBehaviour:
   currentAmmo: 10
   maxAmmo: 0
   reloadTime: 1.5
-  RTime: 0
+  RTime: 1.5
   GSprite: {fileID: 1699353584}
   Prime: 1
   FPSMode: 1

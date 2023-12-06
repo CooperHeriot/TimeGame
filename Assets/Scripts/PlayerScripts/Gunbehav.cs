@@ -40,10 +40,10 @@ public class Gunbehav : MonoBehaviour
         {
             maxAmmo = currentAmmo;
         }
-        if (RTime == 0)
-        {
-            RTime = reloadTime;
-        }
+        /* if (RTime == 0)
+         {
+             RTime = reloadTime;
+         }*/
     }
 
     // Update is called once per frame
