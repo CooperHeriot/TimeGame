@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     public TimeDeleteTest TDT;
     public float IFrames = 1;
-    private float IFFrames;
+    public float IFFrames;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (IFFrames == 0)
         {
-            IFFrames = IFrames;
+            //IFFrames = IFrames;
         }
         
     }
