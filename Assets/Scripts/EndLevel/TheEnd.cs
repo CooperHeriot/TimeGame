@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TheEnd : MonoBehaviour
 {
+    public GameObject Player;
+
+    public GameObject endingg;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,19 @@ public class TheEnd : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerMove>() != null)
+        {
+            Player = other.gameObject;
+
+            Player.GetComponent<PlayerMove>().speed = 0;
+
+            endingg.SetActive(true);
+
+            FindObjectOfType<StatTracker>().GetComponent<StatTracker>().done = true;
+        }
     }
 }
