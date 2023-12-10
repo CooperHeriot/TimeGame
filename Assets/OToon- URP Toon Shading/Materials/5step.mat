@@ -22,8 +22,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 5step
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _HALFTONESHAPE_DOT
   - _RECEIVE_SHADOWS_OFF
@@ -37,7 +35,6 @@ Material:
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:

@@ -26,7 +26,7 @@ public class StatTracker : MonoBehaviour
         
         if (done == true)
         {
-            T.text = ("" + timeT);
+            T.text = ("" + timeT.ToString("F0") + " Seconds");
             K.text = ("" + killed);
             TL.text = ("" + Tiemlins);
         }

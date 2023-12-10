@@ -16,6 +16,8 @@ public class TimeSlow : MonoBehaviour
 
     public Image img;
     public GameObject reminder;
+
+    public bool slowing;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class TimeSlow : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && TimeJuice > 0)
         {
+            slowing = true;
+
             currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
             //currentTime = GoalTime;
 
@@ -45,6 +49,8 @@ public class TimeSlow : MonoBehaviour
             }
         } else
         {
+            slowing = false;
+
             currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
             //currentTime = 1;
 

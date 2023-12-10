@@ -9,6 +9,7 @@ public class CamManager : MonoBehaviour
     //private List<GameObject> snes = new List<GameObject>();
     public List<Camera> Cams = new List<Camera>();
     public Pause PH;
+    public TimeSlow TS;
 
     public float Aount = 1;
 
@@ -89,13 +90,21 @@ public class CamManager : MonoBehaviour
         for (int i = 0; i < Cams.Count; i++)
         {
             Cams[i].fieldOfView = (60 / (PH.TheTime));
-            if (Cams[i].fieldOfView > 80)
+            if (Cams[i].fieldOfView > 90)
             {
-                Cams[i].fieldOfView = 80;
+                Cams[i].fieldOfView = 90;
             }
             if (Cams[i].fieldOfView < 60)
             {
                 Cams[i].fieldOfView = 60;
+            }
+
+            if (TS.slowing == true)
+            {
+                Cams[i].GetComponent<CamParticles>().particle.SetActive(true);
+            } else
+            {
+                Cams[i].GetComponent<CamParticles>().particle.SetActive(false);
             }
         }
     }
