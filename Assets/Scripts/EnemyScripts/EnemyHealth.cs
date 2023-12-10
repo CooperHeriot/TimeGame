@@ -56,6 +56,7 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(drop, transform.position, transform.rotation, transform.parent);
         }
 
+        FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
         Destroy(gameObject);
     }
 }
