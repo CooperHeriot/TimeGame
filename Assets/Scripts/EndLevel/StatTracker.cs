@@ -27,13 +27,18 @@ public class StatTracker : MonoBehaviour
         if (done == true)
         {
             T.text = ("" + timeT);
-            K.text = ("" + timeT);
-            TL.text = ("" + timeT);
+            K.text = ("" + killed);
+            TL.text = ("" + Tiemlins);
         }
     }
 
     public void KilledPlusOne()
     {
         killed += 1;
+    }
+
+    public void TPlusOne()
+    {
+        Tiemlins += 1;
     }
 }

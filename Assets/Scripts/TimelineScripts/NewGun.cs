@@ -36,6 +36,8 @@ public class NewGun : MonoBehaviour
     public void MakeAnew()
     {
         TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo);
+
+        FindObjectOfType<StatTracker>().GetComponent<StatTracker>().TPlusOne();
     }
 
     public void SwapGun()
