@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimeSlow : MonoBehaviour
 {
     public float currentTime, GoalTime;
+    public float currentRot, GoalRot;
     public float speed = 1;
 
     public float TimeJuice;
@@ -39,6 +40,7 @@ public class TimeSlow : MonoBehaviour
             slowing = true;
 
             currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
+            currentRot = Mathf.Lerp(currentRot, GoalRot, speed * Time.deltaTime);
             //currentTime = GoalTime;
 
             TimeJuice -= 2 * Time.deltaTime;
@@ -52,6 +54,7 @@ public class TimeSlow : MonoBehaviour
             slowing = false;
 
             currentTime = Mathf.Lerp(currentTime, 1, 4 * speed * Time.deltaTime);
+            currentRot = Mathf.Lerp(currentRot, 1, 4 * speed * Time.deltaTime);
             //currentTime = 1;
 
             if (TM.currentAmount > 1)

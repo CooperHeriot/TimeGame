@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     [Header("Enable first person mode")]
     public bool FPSMode;
     public float turnSpeed;
+
+    public TimeSlow TS;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +62,7 @@ public class PlayerMove : MonoBehaviour
             }
                 
 
-            transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
+            transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed * TS.currentRot) * Time.deltaTime, 0);
         }
     }
 }

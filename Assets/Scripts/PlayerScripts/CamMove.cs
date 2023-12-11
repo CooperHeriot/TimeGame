@@ -18,6 +18,8 @@ public class CamMove : MonoBehaviour
     [Header("Enable first person mode")]
     public bool FPSMode;
     public float turnSpeed;
+
+    public TimeSlow TS;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class CamMove : MonoBehaviour
             transform.position = Vector3.Slerp(transform.position, eighth, speed * Time.deltaTime);
         } else
         {
-            transform.Rotate((-Input.GetAxis("Mouse Y") * turnSpeed) * Time.deltaTime, 0, 0);
+            transform.Rotate(((-Input.GetAxis("Mouse Y") * turnSpeed) * TS.currentRot) * Time.deltaTime, 0, 0);
 
             float cameraXRot = transform.localEulerAngles.x;
             if (cameraXRot > 180)
