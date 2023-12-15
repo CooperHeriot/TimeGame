@@ -63,6 +63,7 @@ public class PlayerMove : MonoBehaviour
                 
 
             transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed * TS.currentRot) * Time.deltaTime, 0);
+            //transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed * TS.currentRot), 0);
         }
     }
 }
