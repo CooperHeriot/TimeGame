@@ -48,8 +48,11 @@ public class CamMove : MonoBehaviour
             transform.position = Vector3.Slerp(transform.position, eighth, speed * Time.deltaTime);
         } else
         {
-            transform.Rotate(((-Input.GetAxis("Mouse Y") * turnSpeed) * TS.currentRot) * Time.deltaTime, 0, 0);
-            //transform.Rotate(((-Input.GetAxis("Mouse Y") * turnSpeed) * TS.currentRot), 0, 0);
+            if (Time.timeScale > 0)
+            {
+                //transform.Rotate((-Input.GetAxis("Mouse Y") * turnSpeed) * Time.deltaTime, 0, 0);
+                transform.Rotate(((-Input.GetAxis("Mouse Y") * turnSpeed)), 0, 0);
+            }
 
             float cameraXRot = transform.localEulerAngles.x;
             if (cameraXRot > 180)

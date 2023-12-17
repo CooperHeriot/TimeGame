@@ -60,10 +60,11 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
             }
-                
 
-            transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed * TS.currentRot) * Time.deltaTime, 0);
-            //transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed * TS.currentRot), 0);
+            if (Time.timeScale > 0) {
+                //transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
+                transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed), 0);
+            }
         }
     }
 }

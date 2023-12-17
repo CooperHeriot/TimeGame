@@ -89,14 +89,14 @@ public class CamManager : MonoBehaviour
 
         for (int i = 0; i < Cams.Count; i++)
         {
-            Cams[i].fieldOfView = (60 / (PH.TheTime));
-            if (Cams[i].fieldOfView > 90)
+            Cams[i].fieldOfView = (70 / (PH.TheTime));
+            if (Cams[i].fieldOfView > 100)
             {
-                Cams[i].fieldOfView = 90;
+                Cams[i].fieldOfView = 100;
             }
-            if (Cams[i].fieldOfView < 60)
+            if (Cams[i].fieldOfView < 70)
             {
-                Cams[i].fieldOfView = 60;
+                Cams[i].fieldOfView = 70;
             }
 
             if (TS.slowing == true)
