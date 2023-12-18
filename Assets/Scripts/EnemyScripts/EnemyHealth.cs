@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject drop;
 
     private EnemyShoot ES;
+
+    public bool inderpendat;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,10 @@ public class EnemyHealth : MonoBehaviour
         dead = true;
 
         //temp
-        ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
+        if (inderpendat == false)
+        {
+            ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
+        }       
 
         if (drop != null)
         {

@@ -11,6 +11,8 @@ public class EnemyMove : MonoBehaviour
 
     private EnemyShoot ES;
     public GameObject target;
+
+    public bool indypendent;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,11 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = ES.target;
+        if (indypendent == false)
+        {
+            target = ES.target;
+        }
+        
 
         NM.SetDestination(target.transform.position);
 
