@@ -30,6 +30,8 @@ public class WaveBehaviour : MonoBehaviour
     public float chance;
     public float chanec = 40;
     private float c1;
+
+    public bool once;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,7 @@ public class WaveBehaviour : MonoBehaviour
 
         if (currentWave >= Waves.Count)
         {
+            
             WM.StopWaves = true;
         }
     }
@@ -64,7 +67,7 @@ public class WaveBehaviour : MonoBehaviour
     public void NewWave()
     {
         //WM.enems += 1;
-
+        once = true;
         for (int i = 0; i < Waves[currentWave].transform.childCount; i++)
         {
             /////////int spop;
@@ -172,5 +175,11 @@ public class WaveBehaviour : MonoBehaviour
                 Currentdoors.transform.GetChild(i).GetComponent<DoorGoAway>().die();
             }
         }
+
+        /*if (once == true)
+        {
+            once = false;
+            WM.SummonLog(WM.killss, WM.times);
+        }*/
     }
 }

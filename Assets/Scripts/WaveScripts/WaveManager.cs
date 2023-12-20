@@ -21,6 +21,9 @@ public class WaveManager : MonoBehaviour
 
     //public GameObject Currentdoors;
 
+    public GameObject CombatLog, canvers;
+    public float killss, times;
+    public bool once;
     [Header("Paradox Stuff")]
     public bool StopWaves;
     // Start is called before the first frame update
@@ -36,6 +39,12 @@ public class WaveManager : MonoBehaviour
     void Update()
     {
         enems = FindObjectsOfType<EnemyHealth>().Length;
+
+        if (StopWaves == false)
+        {
+            times += 1 * Time.deltaTime;
+            once = true;
+        }
 
         if (enems == 0)
         {
@@ -59,6 +68,15 @@ public class WaveManager : MonoBehaviour
                 {
                     WaveBehavs[i].GetComponent<WaveBehaviour>().openDoors();
                 }
+
+                if (once == true)
+                {
+                    once = false;
+                    SummonLog(killss, times);
+                }
+
+                killss = 0;
+                times = 0;
             }           
 
             TextHolder.SetActive(false);
@@ -112,5 +130,12 @@ public class WaveManager : MonoBehaviour
         {
             WaveBehavs[i].GetComponent<WaveBehaviour>().NewWave();
         }
+    }
+
+    public void SummonLog(float kills, float timme)
+    {
+        GameObject logg = Instantiate(CombatLog, Vector3.zero, transform.rotation, canvers.transform);
+        logg.GetComponent<Combatlog>().kill = kills;
+        logg.GetComponent<Combatlog>().ttime = timme;
     }
 }

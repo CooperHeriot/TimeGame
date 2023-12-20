@@ -62,6 +62,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
         FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
+        FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
         Destroy(gameObject);
     }
 }
