@@ -299,6 +299,7 @@ MonoBehaviour:
   currentHealth: 3
   dead: 0
   drop: {fileID: 914307245091030823, guid: ec75758b57b622c4db7531e5985e7d19, type: 3}
+  inderpendat: 0
 --- !u!114 &2987071321959567894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   target: {fileID: 0}
+  indypendent: 0
 --- !u!195 &6717686709121544603
 NavMeshAgent:
   m_ObjectHideFlags: 0
