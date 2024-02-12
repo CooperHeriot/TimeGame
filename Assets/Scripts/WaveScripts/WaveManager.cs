@@ -138,6 +138,6 @@ public class WaveManager : MonoBehaviour
         logg.GetComponent<Combatlog>().kill = kills;
         logg.GetComponent<Combatlog>().ttime = timme;
         //logg.transform.position = Vector3.zero;
-        logg.GetComponent<RectTransform>().position = Vector3.zero;
+        logg.GetComponent<RectTransform>().position = combatlog1.GetComponent<RectTransform>().position;
     }
 }
