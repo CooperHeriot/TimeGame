@@ -21,7 +21,7 @@ public class WaveManager : MonoBehaviour
 
     //public GameObject Currentdoors;
 
-    public GameObject CombatLog, canvers;
+    public GameObject CombatLog, combatlog1, canvers;
     public float killss, times;
     public bool once;
     [Header("Paradox Stuff")]
@@ -134,8 +134,10 @@ public class WaveManager : MonoBehaviour
 
     public void SummonLog(float kills, float timme)
     {
-        GameObject logg = Instantiate(CombatLog, Vector3.zero, transform.rotation, canvers.transform);
+        GameObject logg = Instantiate(CombatLog, combatlog1.transform.position, transform.rotation, canvers.transform);
         logg.GetComponent<Combatlog>().kill = kills;
         logg.GetComponent<Combatlog>().ttime = timme;
+        //logg.transform.position = Vector3.zero;
+        logg.GetComponent<RectTransform>().position = Vector3.zero;
     }
 }
