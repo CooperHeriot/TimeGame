@@ -61,6 +61,8 @@ public class WaveBehaviour : MonoBehaviour
         {
             
             WM.StopWaves = true;
+
+            
         }
     }
 

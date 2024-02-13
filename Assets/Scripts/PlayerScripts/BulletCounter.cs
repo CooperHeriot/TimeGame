@@ -9,11 +9,12 @@ public class BulletCounter : MonoBehaviour
 
     public Gunbehav gb;
     public GameObject dots;
+    private Animator anim;
     public SpriteRenderer SR;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = dots.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,11 +31,14 @@ public class BulletCounter : MonoBehaviour
 
         if (gb.currentAmmo < 1)
         {
-            dots.SetActive(true);
+            //dots.SetActive(true);
+            //anim.Play("Reloading");
+            anim.SetBool("Spin", true);
             SR.enabled = false;
         } else
         {
-            dots.SetActive(false);
+            anim.SetBool("Spin", false);
+            //dots.SetActive(false);
             SR.enabled = true;
         }
     }
