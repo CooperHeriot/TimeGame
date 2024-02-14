@@ -72,11 +72,12 @@ public class WaveManager : MonoBehaviour
                 if (once == true)
                 {
                     once = false;
-                    SummonLog(killss, times);
+                    ///SummonLog(killss, times);
+                    //killss = 0;
+                    //times = 0;
                 }
 
-                killss = 0;
-                times = 0;
+                
             }           
 
             TextHolder.SetActive(false);
@@ -139,5 +140,12 @@ public class WaveManager : MonoBehaviour
         logg.GetComponent<Combatlog>().ttime = timme;
         //logg.transform.position = Vector3.zero;
         logg.GetComponent<RectTransform>().position = combatlog1.GetComponent<RectTransform>().position;
+    }
+
+    public void SummonSummonLog()
+    {
+        SummonLog(killss, times);
+        killss = 0;
+        times = 0;
     }
 }
