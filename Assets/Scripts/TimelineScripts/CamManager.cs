@@ -13,8 +13,12 @@ public class CamManager : MonoBehaviour
 
     public float Aount = 1;
 
+    [Header("Enable Full Screen")]
+    public bool EnableFullScreen;
+
     [Header("1")]
     public Rect C1;
+    public Rect C1Alt;
 
     [Header("2")]
     public Rect C11;
@@ -34,6 +38,19 @@ public class CamManager : MonoBehaviour
     void Start()
     {
         TM = GetComponent<TimelineManager>();
+
+        if (EnableFullScreen == false)
+        {
+            Cams[0].rect = C1;
+
+            Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        }
+        else
+        {
+            Cams[0].rect = C1Alt;
+
+            Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+        }
     }
 
     // Update is called once per frame
@@ -42,7 +59,19 @@ public class CamManager : MonoBehaviour
         if (TM.currentAmount == 1 && Aount != 1)
         {
             //Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
-            Cams[0].rect = C1;
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C1;
+
+                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            }
+            else
+            {
+                Cams[0].rect = C1Alt;
+
+                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+            }
+            
 
             Aount = 1;
 
@@ -106,6 +135,30 @@ public class CamManager : MonoBehaviour
             {
                 Cams[i].GetComponent<CamParticles>().particle.SetActive(false);
             }
+        }
+    }
+
+    public void ToggleFullscreen()
+    {
+        if (TM.currentAmount == 1 && Aount != 1)
+        {
+            //Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C1;
+
+                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            }
+            else
+            {
+                Cams[0].rect = C1Alt;
+
+                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+            }
+
+
+            Aount = 1;
+
         }
     }
 }
