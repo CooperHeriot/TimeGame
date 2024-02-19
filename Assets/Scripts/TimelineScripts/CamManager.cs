@@ -39,6 +39,15 @@ public class CamManager : MonoBehaviour
     {
         TM = GetComponent<TimelineManager>();
 
+        if (PlayerPrefs.GetInt("Scren") == 1)
+        {
+            EnableFullScreen = true;
+        }
+        else
+        {
+            EnableFullScreen = false;
+        }
+
         if (EnableFullScreen == false)
         {
             Cams[0].rect = C1;
@@ -51,6 +60,8 @@ public class CamManager : MonoBehaviour
 
             Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
         }
+
+        
     }
 
     // Update is called once per frame
@@ -143,7 +154,9 @@ public class CamManager : MonoBehaviour
 
     public void ToggleFullscreen()
     {
-        if (TM.currentAmount == 1 && Aount != 1)
+        EnableFullScreen = !EnableFullScreen;
+
+        if (TM.currentAmount == 1)
         {
             //Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
             if (EnableFullScreen == false)
@@ -159,9 +172,16 @@ public class CamManager : MonoBehaviour
                 Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
             }
 
+            //Aount = 1; 
+        }
 
-            Aount = 1;
-
+        if (EnableFullScreen == true)
+        {
+            PlayerPrefs.SetInt("Scren", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Scren", 0);
         }
     }
 }

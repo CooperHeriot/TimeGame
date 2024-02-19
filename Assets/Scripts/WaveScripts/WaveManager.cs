@@ -72,9 +72,9 @@ public class WaveManager : MonoBehaviour
                 if (once == true)
                 {
                     once = false;
-                    ///SummonLog(killss, times);
-                    //killss = 0;
-                    //times = 0;
+                    SummonLog(killss, times);
+                    killss = 0;
+                    times = 0;
                 }
 
                 

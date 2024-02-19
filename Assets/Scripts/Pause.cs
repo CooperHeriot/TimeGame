@@ -106,4 +106,11 @@ public class Pause : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void toggleFullscreen()
+    {
+        GameObject.FindObjectOfType<CamManager>().ToggleFullscreen();
+
+       // print("rgtfyf");
+    }
 }
