@@ -68,7 +68,7 @@ public class TimelineBehav : MonoBehaviour
         {
             GB.Prime = false;
 
-            PrimeBorder.SetActive(false);
+            //PrimeBorder.SetActive(false);
         }
 
         //rotate the non prime players
