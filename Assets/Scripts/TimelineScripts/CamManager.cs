@@ -52,13 +52,13 @@ public class CamManager : MonoBehaviour
         {
             Cams[0].rect = C1;
 
-            Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.0274f, 0.96408f, 1f);
         }
         else
         {
             Cams[0].rect = C1Alt;
 
-            Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+            Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.75f, 0.96408f, 1f);
         }
 
         
@@ -74,13 +74,13 @@ public class CamManager : MonoBehaviour
             {
                 Cams[0].rect = C1;
 
-                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.0274f, 0.96408f, 1f);
             }
             else
             {
                 Cams[0].rect = C1Alt;
 
-                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+                Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.75f, 0.96408f, 1f);
             }
             
 
@@ -95,8 +95,8 @@ public class CamManager : MonoBehaviour
             Cams[0].rect = C11;
             Cams[1].rect = C22;
 
-            Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            Cams[1].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+            Cams[1].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.0274f, 0.96408f, 1f);
 
             Aount = 2;
            
@@ -163,13 +163,13 @@ public class CamManager : MonoBehaviour
             {
                 Cams[0].rect = C1;
 
-                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.0274f, 0.96408f, 1f);
             }
             else
             {
                 Cams[0].rect = C1Alt;
 
-                Cams[0].transform.GetChild(0).transform.localScale = new Vector3(0.16f, 0.1f, 0.1f);
+                Cams[0].transform.GetChild(0).transform.GetChild(2).localScale = new Vector3(1.75f, 0.96408f, 1f);
             }
 
             //Aount = 1; 
