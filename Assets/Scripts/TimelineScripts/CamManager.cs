@@ -108,8 +108,8 @@ public class CamManager : MonoBehaviour
                 Cams[0].rect = C11Alt;
                 Cams[1].rect = C22Alt;
 
-                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.21f, 0.96408f, 1f);
-                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.21f, 0.96408f, 1f);
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.85f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.85f, 0.96408f, 1f);
             }
             Aount = 2; 
         }
