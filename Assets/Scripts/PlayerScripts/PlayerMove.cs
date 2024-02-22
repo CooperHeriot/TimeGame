@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public bool ded, stopped;
+    public bool grounded;
 
-    public float speed = 1;
+    public float speed = 1, jump = 1;
     private Rigidbody rb;
+    public LayerMask LM;
 
     [Header("Enable first person mode")]
     public bool FPSMode;
@@ -64,7 +66,19 @@ public class PlayerMove : MonoBehaviour
             if (Time.timeScale > 0) {
                 //transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
                 transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed), 0);
+
+                if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
+                {
+                    rb.velocity = new Vector3(rb.velocity.x, jump, rb.velocity.z);
+                }
             }
+        }
+
+        if (Physics.Raycast(transform.position, -transform.up, 1.6f, LM))
+        {
+            grounded = true;
+        } else { 
+        grounded = false;
         }
     }
 }

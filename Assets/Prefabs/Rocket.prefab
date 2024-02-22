@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3645985488047760038}
   - component: {fileID: 792152770641182276}
   - component: {fileID: 4955681415921184224}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,6 +337,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b3e959948c3deb4db6216e06a13525a, type: 3}
       propertyPath: m_Name
       value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b3e959948c3deb4db6216e06a13525a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3e959948c3deb4db6216e06a13525a, type: 3}
