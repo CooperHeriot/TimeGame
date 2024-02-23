@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
     public bool paused;
     public string sceneToLoad;
 
+    public float orien;
     [Header("Enable first person mode")]
     public bool FPSMode;
     public TimelineManager TM;
@@ -112,5 +113,17 @@ public class Pause : MonoBehaviour
         GameObject.FindObjectOfType<CamManager>().ToggleFullscreen();
 
        // print("rgtfyf");
+    }
+
+    public void newPos(float _new)
+    {
+        orien = _new;
+
+        for (int i = 0; i < FindObjectsOfType<GunOrien>().Length; i++)
+        {
+            FindObjectsOfType<GunOrien>()[i].GetComponent<GunOrien>().NewPos(orien);
+        }
+
+        PlayerPrefs.SetFloat("rien", orien);
     }
 }
