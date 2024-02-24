@@ -22,7 +22,7 @@ public class ReturnIfFall : MonoBehaviour
             Point = hit.point;
         }
 
-        if (transform.position.y < Point.y -10)
+        if (transform.position.y < Point.y -20)
         {
             transform.position = new Vector3(Point.x, Point.y + 2, Point.z);
         }
