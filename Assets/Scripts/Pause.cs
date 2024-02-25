@@ -96,15 +96,25 @@ public class Pause : MonoBehaviour
 
     public void LoadScene()
     {
+        PlayerPrefs.SetInt("point", -1);
+
         SceneManager.LoadScene(sceneToLoad);
     }
 
     public void reset()
     {
+        PlayerPrefs.SetInt("point", -1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void checkPoint()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void quit()
     {
+        PlayerPrefs.SetInt("point", -1);
+
         Application.Quit();
     }
 

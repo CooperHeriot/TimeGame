@@ -12,7 +12,7 @@ public class newWave : MonoBehaviour
 
     public GameObject nParaEnem, doors;
 
-    public int me;
+    public int me, pointt;
 
     public GameObject Paent;
 
@@ -73,6 +73,8 @@ public class newWave : MonoBehaviour
 
     public void MakeAnew()
     {
+        PlayerPrefs.SetInt("point", pointt);
+
         WM.StopWaves = false;
         WM.Cooldown = 5;
 
