@@ -29,4 +29,10 @@ public class Checkpoints : MonoBehaviour
     {
         
     }
+
+    void OnApplicationQuit()
+    {
+        //print("dasdassadasdsadasdasdsadasdasdasdsghfytuergs43");
+        PlayerPrefs.SetInt("point", -1);
+    }
 }
