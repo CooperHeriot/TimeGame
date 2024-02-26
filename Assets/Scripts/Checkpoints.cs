@@ -17,6 +17,7 @@ public class Checkpoints : MonoBehaviour
         if (points >= 0)
         {
             player.transform.position = pointss[points].transform.position;
+            player.transform.rotation = pointss[points].transform.rotation;
         } else
         {
             PlayerPrefs.SetInt("point", -1);
