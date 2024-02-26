@@ -25,6 +25,7 @@ public class Gunbehav : MonoBehaviour
 
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;
+    public Animator GunAnim;
 
     [Header("Is this the prime timeline player")]
     public bool Prime = true;
@@ -66,6 +67,8 @@ public class Gunbehav : MonoBehaviour
                     currentRate = 0;
 
                     currentAmmo -= 1;
+
+                    GunAnim.Play("GunSHOOT");
                 }
             }
             else
@@ -76,6 +79,8 @@ public class Gunbehav : MonoBehaviour
                     currentRate = 0;
 
                     currentAmmo -= 1;
+
+                    GunAnim.Play("GunSHOOT");
                 }
             }
 

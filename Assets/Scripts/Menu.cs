@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
 
     public void CHekpoint()
     {
-        PlayerPrefs.SetInt("point", -1);
+        //PlayerPrefs.SetInt("point", -1);
 
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -31,6 +31,8 @@ public class Menu : MonoBehaviour
 
     public void Reset()
     {
+        PlayerPrefs.SetInt("point", -1);
+
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

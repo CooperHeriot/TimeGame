@@ -18,6 +18,6 @@ public class GunOrien : MonoBehaviour
 
     public void NewPos(float _pos)
     {
-        transform.localPosition = new Vector3(_pos, transform.localPosition.y, transform.localPosition.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -_pos);
     }
 }

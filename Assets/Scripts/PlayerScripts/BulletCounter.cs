@@ -10,6 +10,8 @@ public class BulletCounter : MonoBehaviour
     public Gunbehav gb;
     public GameObject dots;
     private Animator anim;
+    public Animator anim2;
+    private bool once;
     public SpriteRenderer SR;
     // Start is called before the first frame update
     void Start()
@@ -35,11 +37,20 @@ public class BulletCounter : MonoBehaviour
             //anim.Play("Reloading");
             anim.SetBool("Spin", true);
             SR.enabled = false;
+
+            if (once == false)
+            {
+                anim2.Play("GunReload");
+                once = true;
+            }
+           
         } else
         {
             anim.SetBool("Spin", false);
             //dots.SetActive(false);
             SR.enabled = true;
+
+            once = false;
         }
     }
 }

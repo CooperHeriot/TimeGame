@@ -16,6 +16,9 @@ public class PlayerMove : MonoBehaviour
     public float turnSpeed;
 
     public TimeSlow TS;
+
+    public GameObject tiltOBJ;
+    public Vector3 zzzzd;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +61,8 @@ public class PlayerMove : MonoBehaviour
             Vector3 sideVector = transform.right * Input.GetAxis("Horizontal");
             Vector3 movementVector = (forwardVector + sideVector).normalized;
 
+            zzzzd = tiltOBJ.transform.right * Input.GetAxis("Horizontal"); ;
+
             if (ded == false && stopped == false)
             {
                 rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
@@ -73,6 +78,8 @@ public class PlayerMove : MonoBehaviour
                 }
             }
         }
+
+        tiltOBJ.transform.localRotation = new Quaternion(0, 0, zzzzd.z, tiltOBJ.transform.localRotation.w);
 
         if (Physics.Raycast(transform.position, -transform.up, 1.6f, LM))
         {
