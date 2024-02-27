@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public bool dead;
 
     public GameObject drop;
+    private bool oncce;
 
     private EnemyShoot ES;
 
@@ -18,6 +19,8 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         ES = GetComponent<EnemyShoot>();
+
+        oncce = false;
     }
 
     // Update is called once per frame
@@ -56,9 +59,10 @@ public class EnemyHealth : MonoBehaviour
             ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
         }       
 
-        if (drop != null)
+        if (drop != null && oncce == false)
         {
             Instantiate(drop, transform.position, transform.rotation, transform.parent);
+            oncce = true;
         }
 
         FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
