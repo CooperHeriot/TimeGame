@@ -59,7 +59,7 @@ public class CamMove : MonoBehaviour
             {
                 cameraXRot -= 360;
             }
-            cameraXRot = Mathf.Clamp(cameraXRot, -50, 50);
+            cameraXRot = Mathf.Clamp(cameraXRot, -90, 90);
             transform.localRotation = Quaternion.Euler(cameraXRot, 0, 0);
         }
 
