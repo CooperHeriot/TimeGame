@@ -32,7 +32,14 @@ public class WaveManager : MonoBehaviour
         TM = GetComponent<TimelineManager>();
 
         //UpdateWaves();
-        CD = Cooldown;
+        if (PlayerPrefs.GetInt("Difficulty") != 3)
+        {
+            CD = Cooldown;
+        } else
+        {
+            CD = 1f;
+        }
+            
     }
 
     // Update is called once per frame

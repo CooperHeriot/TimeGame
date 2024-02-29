@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Keys : MonoBehaviour
 {
     public string Scene2Load;
-    public GameObject W, A, S, D, R, LM, Shft;
+    public GameObject W, A, S, D, R, LM, Shft, Spce;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,13 +45,18 @@ public class Keys : MonoBehaviour
         {
             Destroy(Shft.gameObject);
         }
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Destroy(Spce.gameObject);
+        }
 
         if (Input.GetMouseButton(0))
         {
             Destroy(LM.gameObject);
         }
 
-        if (W == null && A == null && S == null && D == null && R == null && LM == null && Shft == null)
+        if (W == null && A == null && S == null && D == null && R == null && LM == null && Shft == null && Spce == null)
         {
             SceneManager.LoadScene(Scene2Load);
         }

@@ -21,6 +21,16 @@ public class EnemyMove : MonoBehaviour
         ES = GetComponent<EnemyShoot>();
 
        // target = ES.target;
+
+        if (PlayerPrefs.GetInt("Difficulty") == 3)
+        {
+            if (speed == 0)
+            {
+                speed = 1;
+            }
+
+            speed *= 3;
+        }
     }
 
     // Update is called once per frame

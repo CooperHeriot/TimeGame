@@ -20,7 +20,7 @@ public class EnemyShoot : MonoBehaviour
 
     [Header("Fire Rate")]
     public float fireRate;
-    private float currentRate;
+    private float currentRate, birerate = 1;
 
     public bool NeedLineOSight, InLine;
     public LayerMask LM;
@@ -36,6 +36,14 @@ public class EnemyShoot : MonoBehaviour
     public void Started()
     {
         target = Timeline.GetComponent<TimelineBehav>().Player;
+
+        if (PlayerPrefs.GetInt("Difficulty") == 3)
+        {
+            birerate = 2;
+        } else
+        {
+            birerate = 1;
+        }
 
        // currentRate = fireRate;
     }
@@ -86,7 +94,7 @@ public class EnemyShoot : MonoBehaviour
             }
             else
             {
-                currentRate += 1 * Time.deltaTime;
+                currentRate += birerate * Time.deltaTime;
             }
             if (currentRate < 0)
             {
