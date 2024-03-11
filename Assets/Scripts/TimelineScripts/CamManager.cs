@@ -32,11 +32,20 @@ public class CamManager : MonoBehaviour
     public Rect C222;
     public Rect C333;
 
+    public Rect C111Alt;
+    public Rect C222Alt;
+    public Rect C333Alt;
+
     [Header("4")]
     public Rect C1111;
     public Rect C2222;
     public Rect C3333;
     public Rect C4444;
+
+    public Rect C1111Alt;
+    public Rect C2222Alt;
+    public Rect C3333Alt;
+    public Rect C4444Alt;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,26 +127,56 @@ public class CamManager : MonoBehaviour
         {
             //Cams[0].rect = new Rect(0.35f, 0f, 0.3f, 0.5f);            
             //Cams[1].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);            
-            //Cams[2].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);            
-            Cams[0].rect = C111;
-            Cams[1].rect = C222;
-            Cams[2].rect = C333;
+            //Cams[2].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C111;
+                Cams[1].rect = C222;
+                Cams[2].rect = C333;
 
-            Aount = 3;
-            
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+            }
+            else
+            {
+                Cams[0].rect = C111Alt;
+                Cams[1].rect = C222Alt;
+                Cams[2].rect = C333Alt;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+            }
+            Aount = 3;            
         }
 
         if (TM.currentAmount == 4 && Aount != 4)
-        {
-            //Cams[0].rect = new Rect(0.2f, 0f, 0.3f, 0.5f);
-            //Cams[1].rect = new Rect(0.5f, 0f, 0.3f, 0.5f);
-            //Cams[2].rect = new Rect(0.2f, 0.5f, 0.3f, 0.5f);
-            //Cams[3].rect = new Rect(0.5f, 0.5f, 0.3f, 0.5f);
-            Cams[0].rect = C1111;
-            Cams[1].rect = C2222;
-            Cams[2].rect = C3333;
-            Cams[3].rect = C4444;
+        {            
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C1111;
+                Cams[1].rect = C2222;
+                Cams[2].rect = C3333;
+                Cams[3].rect = C4444;
 
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+            }
+            else
+            {
+                Cams[0].rect = C1111Alt;
+                Cams[1].rect = C2222Alt;
+                Cams[2].rect = C3333Alt;
+                Cams[3].rect = C4444Alt;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+            }
             Aount = 4;
             
         }
@@ -207,6 +246,58 @@ public class CamManager : MonoBehaviour
                 Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.84f, 0.96408f, 1f);
             }
             //Aount = 2;
+        }
+        if (TM.currentAmount == 3)
+        {
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C111;
+                Cams[1].rect = C222;
+                Cams[2].rect = C333;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+            }
+            else
+            {
+                Cams[0].rect = C111Alt;
+                Cams[1].rect = C222Alt;
+                Cams[2].rect = C333Alt;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
+            }
+           // Aount = 3;
+        }
+        if (TM.currentAmount == 4)
+        {
+            if (EnableFullScreen == false)
+            {
+                Cams[0].rect = C1111;
+                Cams[1].rect = C2222;
+                Cams[2].rect = C3333;
+                Cams[3].rect = C4444;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+                Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.0274f, 0.96408f, 1f);
+            }
+            else
+            {
+                Cams[0].rect = C1111Alt;
+                Cams[1].rect = C2222Alt;
+                Cams[2].rect = C3333Alt;
+                Cams[3].rect = C4444Alt;
+
+                Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+                Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
+            }
+            //Aount = 4;
         }
 
         if (EnableFullScreen == true)
