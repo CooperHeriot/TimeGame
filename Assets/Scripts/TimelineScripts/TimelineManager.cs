@@ -20,8 +20,12 @@ public class TimelineManager : MonoBehaviour
 
     private NewNavMesh NV;
 
-
     private float Total = 1;
+
+    [Header("Anti Lag")]
+    public GameObject levl;
+    public float LAmount;
+    private float Lrount = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +44,15 @@ public class TimelineManager : MonoBehaviour
         NV = GetComponent<NewNavMesh>();
 
         WM.UpdateWaves(primeTime);
+
+        if (levl != null)
+        {
+            for (int i = 0; i < LAmount; i++)
+            {
+                Instantiate(levl, new Vector3(0, primeTime.transform.position.y + (offset * Lrount), 0), transform.rotation, transform);
+                Lrount += 1;
+            }
+        }
     }
 
     // Update is called once per frame
