@@ -135,7 +135,7 @@ public class Gunbehav : MonoBehaviour
 
             Destroy(GunMod);
 
-            newGun = GunMod;
+            GunMod = newGun;
         }    
     }
 }
