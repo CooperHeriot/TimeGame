@@ -25,6 +25,7 @@ public class Gunbehav : MonoBehaviour
 
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;
+    public GameObject GunMod;
     public Animator GunAnim;
 
     [Header("Is this the prime timeline player")]
@@ -117,7 +118,7 @@ public class Gunbehav : MonoBehaviour
         }
     }
 
-    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo)
+    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo, GameObject _Mod)
     {
         GSprite.sprite = _Gunn;
         fireRate = _FRate;
@@ -126,5 +127,15 @@ public class Gunbehav : MonoBehaviour
 
         currentAmmo = _Ammo;
         maxAmmo = _Ammo;
+
+        if (_Mod != null)
+        {
+            GameObject newGun = Instantiate(_Mod, GunMod.transform.position, GunMod.transform.rotation, GunMod.transform.parent.transform);
+            newGun.transform.localScale = Vector3.one;
+
+            Destroy(GunMod);
+
+            newGun = GunMod;
+        }    
     }
 }

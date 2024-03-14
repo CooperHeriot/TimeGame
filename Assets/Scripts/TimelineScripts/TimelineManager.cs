@@ -66,7 +66,7 @@ public class TimelineManager : MonoBehaviour
         }
     }
 
-    public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo)
+    public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Mod)
     {
         if (currentAmount < maxAmount)
         {
@@ -80,7 +80,7 @@ public class TimelineManager : MonoBehaviour
             CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
             NewTL.GetComponent<TimelineBehav>().prime = false;
 
-            NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo);
+            NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
 
             WM.UpdateWaves(NewTL);
 
