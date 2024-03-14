@@ -12,10 +12,14 @@ public class NewGun : MonoBehaviour
 
     [Header("Attributes")]
     public Sprite GunSprite;
+    public GameObject GunMod;
     public float FRate;
     public bool Auto;
     public GameObject Bullet;
     public float Ammo = 1;
+
+    public bool Replace;
+    //public bool StartGun;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +39,14 @@ public class NewGun : MonoBehaviour
 
     public void MakeAnew()
     {
-        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo);
+        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo, GunMod);
 
         FindObjectOfType<StatTracker>().GetComponent<StatTracker>().TPlusOne();
     }
 
     public void SwapGun()
     {
-        GB.NewGun(GunSprite, FRate, Auto, Bullet, Ammo);
+        GB.NewGun(GunSprite, FRate, Auto, Bullet, Ammo, GunMod);
     }
 
    /* private void OnCollisionEnter(Collision collision)
@@ -67,8 +71,14 @@ public class NewGun : MonoBehaviour
             if (TM.currentAmount < TM.maxAmount)
             {
                 //Destroy(gameObject);
-
-                MakeAnew();
+                if (Replace == false)
+                {
+                    MakeAnew();
+                } else
+                {
+                    SwapGun();
+                }
+                
             } else
             {
                 //Destroy(gameObject);

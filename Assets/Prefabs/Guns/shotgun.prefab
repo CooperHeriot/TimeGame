@@ -134,10 +134,12 @@ MonoBehaviour:
   ThisTimeLine: {fileID: 0}
   TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: b3d7e52d0cff04d4096cec7c56466e30, type: 3}
-  FRate: 0.3
+  GunMod: {fileID: 8034669860685262688, guid: 843d9aea01e014e4f8efed704472696c, type: 3}
+  FRate: 0.28
   Auto: 1
   Bullet: {fileID: 1795707250594262657, guid: e522f417370403c44995268362490a48, type: 3}
-  Ammo: 15
+  Ammo: 25
+  Replace: 0
 --- !u!65 &1102352383563012570
 BoxCollider:
   m_ObjectHideFlags: 0
