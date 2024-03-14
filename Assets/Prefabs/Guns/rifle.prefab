@@ -50,7 +50,7 @@ MonoBehaviour:
   ThisTimeLine: {fileID: 0}
   TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: a08a60cbf79ed67448d522a0a4d1ef42, type: 3}
-  GunMod: {fileID: 8034669860685262688, guid: 843d9aea01e014e4f8efed704472696c, type: 3}
+  GunMod: {fileID: 5176169542898605505, guid: dc4d185c1b0345c4cacbece9b3292fb5, type: 3}
   FRate: 0.1
   Auto: 1
   Bullet: {fileID: 6169899290938168524, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
