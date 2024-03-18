@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+//using TMPro;
 
 public class Gunbehav : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Gunbehav : MonoBehaviour
     public GameObject Model, point;
 
     public GameObject firepoint, bullet;
+
+    public bool firstGun;
 
     [Header("Fire Rate")]
     public float fireRate;
@@ -33,6 +37,12 @@ public class Gunbehav : MonoBehaviour
 
     [Header("Enable first person mode")]
     public bool FPSMode;
+
+    [Header("Ammo counter and Mark")]
+    public GameObject Amo;
+    public GameObject Mark;
+
+    private Color col1;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +56,12 @@ public class Gunbehav : MonoBehaviour
          {
              RTime = reloadTime;
          }*/
+
+        if (firstGun == true)
+        {
+            col1 = Amo.GetComponent<TextMeshProUGUI>().color;
+            Amo.GetComponent<TextMeshProUGUI>().color = Color.clear;
+        }
     }
 
     // Update is called once per frame
@@ -120,6 +136,13 @@ public class Gunbehav : MonoBehaviour
 
     public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo, GameObject _Mod)
     {
+        if (firstGun == true)
+        {
+            firstGun = false;
+
+            Amo.GetComponent<TextMeshProUGUI>().color = col1;
+        }
+
         GSprite.sprite = _Gunn;
         fireRate = _FRate;
         auto = _Auto;
@@ -135,7 +158,7 @@ public class Gunbehav : MonoBehaviour
 
             Destroy(GunMod);
 
-            newGun = GunMod;
+            GunMod = newGun;
         }    
     }
 }
