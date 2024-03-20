@@ -76,7 +76,7 @@ public class newWave : MonoBehaviour
         PlayerPrefs.SetInt("point", pointt);
 
         WM.StopWaves = false;
-        WM.Cooldown = 5;
+        WM.Cooldown = 3;
 
         //int me;
 
