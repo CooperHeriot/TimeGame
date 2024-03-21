@@ -7,7 +7,7 @@ public class MoveForward : MonoBehaviour
     public float speed;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
