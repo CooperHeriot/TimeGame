@@ -103,6 +103,8 @@ public class newWave : MonoBehaviour
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().paradaoxEnem = nParaEnem;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Currentdoors = doors;
 
+
+        print("workin" + pointt);
         Destroy(gameObject);
     }
 }

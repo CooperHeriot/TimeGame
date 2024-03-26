@@ -30,7 +30,7 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         JsonTranslator.SaveToJSON();
-        print("saved");
+        //print("saved");
     }
     public void LoadGame()
     {
@@ -43,6 +43,6 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         JsonTranslator.LoadFromJSON();
-        print("loaded");
+        //print("loaded");
     }
 }

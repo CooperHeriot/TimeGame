@@ -61,7 +61,7 @@ public class NewGun : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerMove>() != null)
+        if (other.gameObject.GetComponent<PlayerMove>() != null && TM != null)
         {
             other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
 

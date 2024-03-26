@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
@@ -35,15 +36,21 @@ public class Checkpoints : MonoBehaviour
         } else
         {
             PlayerPrefs.SetInt("point", -1);
-            if (SkipTutorial != null && p2 == 1)
+           /* if (SkipTutorial != null && p2 == 1)
             {
                 player.transform.position = pv;
                 player.transform.rotation = Rv;
 
-                GameObject daGun = Instantiate(startGun, player.transform.position, player.transform.rotation);
+
+
+                GameObject daGun = Instantiate(startGun, new Vector3(player.transform.position.x + 2, player.transform.position.y - 1, player.transform.position.z), player.transform.rotation);
+
+                daGun.GetComponent<BoxCollider>().enabled = false;
 
                 daGun.GetComponent<NewGun>().ThisTimeLine = GetComponent<TimelineManager>().primeTime;
-            }
+
+                daGun.GetComponent<BoxCollider>().enabled = true;
+            }*/
         }
        
     }
