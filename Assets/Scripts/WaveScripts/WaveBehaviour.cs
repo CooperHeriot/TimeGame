@@ -68,6 +68,8 @@ public class WaveBehaviour : MonoBehaviour
 
     public void NewWave()
     {
+
+        //print("adasdsadasdsadsadgtyuyt897898");
         //WM.enems += 1;
         once = true;
         for (int i = 0; i < Waves[currentWave].transform.childCount; i++)
@@ -184,4 +186,9 @@ public class WaveBehaviour : MonoBehaviour
             WM.SummonLog(WM.killss, WM.times);
         }*/
     }
+
+    /*public void PrintID(float _ID)
+    {
+        print(_ID);
+    }*/
 }

@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     private EnemyShoot ES;
 
     public bool inderpendat;
+    private bool honor = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            honor = true;
             death();
         }
     }
@@ -64,9 +66,11 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(drop, transform.position, transform.rotation, transform.parent);
             oncce = true;
         }
-
-        FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
-        FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
+        if (honor == true)
+        {
+            FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
+            FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
+        }       
         Destroy(gameObject);
     }
 }

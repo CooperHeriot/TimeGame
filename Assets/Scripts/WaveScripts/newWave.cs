@@ -74,8 +74,13 @@ public class newWave : MonoBehaviour
     public void MakeAnew()
     {
         PlayerPrefs.SetInt("point", pointt);
+       
+        for (int i = 0; i < FindObjectsOfType<EnemyHealth>().Length; i++)
+        {
+            FindObjectsOfType<EnemyHealth>()[i].death();
+        }
 
-        WM.StopWaves = false;
+            WM.StopWaves = false;
         WM.Cooldown = 3;
 
         //int me;
@@ -102,9 +107,10 @@ public class newWave : MonoBehaviour
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().SpawnPoints = nSpawnPoints;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().paradaoxEnem = nParaEnem;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Currentdoors = doors;
+        //WM.WaveBehavs[me].GetComponent<WaveBehaviour>().PrintID(me);
 
 
-        print("workin" + pointt);
+        //print("workin" + pointt);
         Destroy(gameObject);
     }
 }
