@@ -62,7 +62,7 @@ public class NewGun : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null && TM != null)
-        {
+        {            
             other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
 
             transform.parent = null;
@@ -73,6 +73,7 @@ public class NewGun : MonoBehaviour
                 //Destroy(gameObject);
                 if (Replace == false)
                 {
+                    ThisTimeLine.GetComponent<TimelineBehav>().activateImg();
                     MakeAnew();
                 } else
                 {

@@ -11,6 +11,8 @@ public class TimelineBehav : MonoBehaviour
 
     public Quaternion PrimeRot, notPrimeRot;
 
+    public GameObject SplitImage;
+
     [Header("is this Prime")]
     public bool prime;
     public GameObject PrimeBorder;
@@ -50,7 +52,8 @@ public class TimelineBehav : MonoBehaviour
                 G2.SetActive(false);
             }
         }
-        
+
+        SplitImage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -94,5 +97,15 @@ public class TimelineBehav : MonoBehaviour
         Player.GetComponent<Gunbehav>().NewGun(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Modle);
     }
 
-   
+   public void activateImg()
+    {
+        SplitImage.SetActive(true);
+
+        Invoke("ImgOff", 1);
+    }
+
+    public void ImgOff()
+    {
+        SplitImage.SetActive(false);
+    }
 }
