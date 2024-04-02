@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NewGun : MonoBehaviour
@@ -62,22 +63,36 @@ public class NewGun : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null && TM != null)
-        {            
+        {
+            if (Replace == false)
+            {
+                for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                {
+                    GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOn();
+                }
+            }
+            
+
             other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
 
             transform.parent = null;
 
-            Destroy(gameObject);
+            Invoke("newStuff", 0.01f);
+            /*Destroy(gameObject);
             if (TM.currentAmount < TM.maxAmount)
             {
                 //Destroy(gameObject);
                 if (Replace == false)
                 {
-                    ThisTimeLine.GetComponent<TimelineBehav>().activateImg();
+                    
                     MakeAnew();
                 } else
                 {
                     SwapGun();
+                    for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                    {                       
+                       // GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOFf();
+                    }
                 }
                 
             } else
@@ -85,7 +100,11 @@ public class NewGun : MonoBehaviour
                 //Destroy(gameObject);
 
                 SwapGun();
-            }
+                for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                {
+                   // GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOFf();
+                }
+            }*/
 
 
             //other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
@@ -94,5 +113,29 @@ public class NewGun : MonoBehaviour
         
         //MakeAnew();
         //print("dsad");
+    }
+
+    public void newStuff()
+    {
+        Destroy(gameObject);
+        if (TM.currentAmount < TM.maxAmount)
+        {
+            //Destroy(gameObject);
+            if (Replace == false)
+            {
+                MakeAnew();
+            }
+            else
+            {
+                SwapGun();                
+            }
+
+        }
+        else
+        {
+            //Destroy(gameObject);
+
+            SwapGun();         
+        }
     }
 }

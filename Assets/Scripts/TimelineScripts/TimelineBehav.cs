@@ -53,7 +53,7 @@ public class TimelineBehav : MonoBehaviour
             }
         }
 
-        SplitImage.SetActive(false);
+        //SplitImage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -99,13 +99,13 @@ public class TimelineBehav : MonoBehaviour
 
    public void activateImg()
     {
-        SplitImage.SetActive(true);
+        //SplitImage.SetActive(true);
 
         Invoke("ImgOff", 1);
     }
 
     public void ImgOff()
     {
-        SplitImage.SetActive(false);
+        //SplitImage.SetActive(false);
     }
 }

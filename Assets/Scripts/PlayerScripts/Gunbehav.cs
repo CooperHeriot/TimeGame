@@ -7,6 +7,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Gunbehav : MonoBehaviour
 {
+    private bool CantShoot;
+    private PlayerMove PM;
     [Header("Current Timeline")]
     public GameObject Timeline;
 
@@ -46,6 +48,8 @@ public class Gunbehav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PM = GetComponent<PlayerMove>();
+
         currentRate = fireRate;
 
         if (maxAmmo == 0)
@@ -67,6 +71,8 @@ public class Gunbehav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CantShoot = PM.stopped;
+
         //point at cursor
         if (Time.timeScale > 0 && Prime == true && FPSMode == false)
         {
@@ -74,7 +80,7 @@ public class Gunbehav : MonoBehaviour
         }
 
         //SHOOT
-        if (Time.timeScale > 0)
+        if (Time.timeScale > 0 && CantShoot == false)
         {
             if (auto == false)
             {
