@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3877274901852818987}
   - component: {fileID: 2259831411377055749}
   - component: {fileID: 1801298379446888291}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8719194005294864459}
   - component: {fileID: 8308454513389606}
   - component: {fileID: 2109051595000097041}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: polySurface13
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,7 +23,7 @@ public class TimeDeleteTest : MonoBehaviour
         {
             dyeImg.SetActive(true);
 
-            Invoke("DeleteTime", 0.01f);
+            Invoke("DeleteTime", 0.1f);
         }
     }
     

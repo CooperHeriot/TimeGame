@@ -64,7 +64,7 @@ public class NewGun : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null && TM != null)
         {
-            if (Replace == false)
+            if (Replace == false && TM.currentAmount < TM.maxAmount)
             {
                 for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
                 {
@@ -77,7 +77,7 @@ public class NewGun : MonoBehaviour
 
             transform.parent = null;
 
-            Invoke("newStuff", 0.01f);
+            Invoke("newStuff", 0.007f);
             /*Destroy(gameObject);
             if (TM.currentAmount < TM.maxAmount)
             {

@@ -300,6 +300,7 @@ MonoBehaviour:
   dead: 0
   drop: {fileID: 914307245091030823, guid: ec75758b57b622c4db7531e5985e7d19, type: 3}
   inderpendat: 0
+  rend: {fileID: 5229037297951767353}
 --- !u!114 &2987071321959567894
 MonoBehaviour:
   m_ObjectHideFlags: 0

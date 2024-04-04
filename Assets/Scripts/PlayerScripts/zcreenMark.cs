@@ -23,7 +23,7 @@ public class zcreenMark : MonoBehaviour
             gameObject.transform.GetChild(i).transform.gameObject.SetActive(true);
         }
 
-        Invoke("turnOFf", 0.01f);
+        Invoke("turnOFf", 0.006f);
     }
 
     public void turnOFf()
