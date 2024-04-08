@@ -77,6 +77,8 @@ public class NewGun : MonoBehaviour
 
             transform.parent = null;
 
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Invoke("newStuff", 0.007f);
             /*Destroy(gameObject);
             if (TM.currentAmount < TM.maxAmount)
@@ -108,6 +110,7 @@ public class NewGun : MonoBehaviour
 
 
             //other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
 
         
