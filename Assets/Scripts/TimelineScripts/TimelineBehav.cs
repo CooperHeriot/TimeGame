@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TSide
+{
+    Left, Right, Middle
+}
+
 public class TimelineBehav : MonoBehaviour
 {
     private TimelineManager TM;
@@ -24,6 +29,9 @@ public class TimelineBehav : MonoBehaviour
     public bool OnOff;
 
     public GameObject G1, G2;
+
+    [Header("Odd Even")]
+    public TSide side;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,5 +115,21 @@ public class TimelineBehav : MonoBehaviour
     public void ImgOff()
     {
         //SplitImage.SetActive(false);
+    }
+
+
+    public void left()
+    {
+        side = TSide.Left;
+    }
+
+    public void right()
+    {
+        side = TSide.Right;
+    }
+
+    public void iddle()
+    {
+        side = TSide.Middle;
     }
 }
