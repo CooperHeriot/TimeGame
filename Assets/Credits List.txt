@@ -11,3 +11,5 @@ UI design: Yeogrin Jeon
 
 3d Modeller: Jesse Heriot
 UV unwrapping: Billy Green
+
+Play Testing: Joeseph Davey
