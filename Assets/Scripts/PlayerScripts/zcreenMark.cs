@@ -5,16 +5,29 @@ using UnityEngine;
 public class zcreenMark : MonoBehaviour
 {
     public Rigidbody rb;
+    public bool tinger;
+    public float tim = 0.006f;
+    public float tim2;
     // Start is called before the first frame update
     void Start()
     {
-        
+        tim2 = tim;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (tinger == true)
+        {
+            tim -= 1 * Time.deltaTime;
+        }
+
+        if  (tim <= 0)
+        {
+            turnOFf();
+            tinger = false;
+            tim = tim2;
+        }
     }
 
     public void turnOn()
@@ -26,7 +39,8 @@ public class zcreenMark : MonoBehaviour
             gameObject.transform.GetChild(i).transform.gameObject.SetActive(true);
         }
 
-        Invoke("turnOFf", 0.006f);
+        tinger = true;
+        //Invoke("turnOFf", 0.006f);
     }
 
     public void turnOFf()
