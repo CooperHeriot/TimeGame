@@ -7,7 +7,7 @@ public class TimeDeleteTest : MonoBehaviour
     private TimelineManager TM;
 
     public bool kill;
-    public GameObject father;
+    public GameObject father, dyeImg;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,14 @@ public class TimeDeleteTest : MonoBehaviour
     {
         if (kill == true)
         {
-            TM.eraseTimeline(father);
+            dyeImg.SetActive(true);
+
+            Invoke("DeleteTime", 0.1f);
         }
+    }
+    
+    public void DeleteTime()
+    {
+        TM.eraseTimeline(father);
     }
 }

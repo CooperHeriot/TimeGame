@@ -72,8 +72,8 @@ public class CamManager : MonoBehaviour
 
             Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
         }
+        Cams[0].GetComponent<camSide>().iddle();
 
-        
     }
 
     // Update is called once per frame
@@ -94,7 +94,7 @@ public class CamManager : MonoBehaviour
 
                 Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
             }
-            
+            Cams[0].GetComponent<camSide>().iddle();
 
             Aount = 1;
 
@@ -120,6 +120,9 @@ public class CamManager : MonoBehaviour
                 Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.84f, 0.96408f, 1f);
                 Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.84f, 0.96408f, 1f);
             }
+            Cams[0].GetComponent<camSide>().iddle();
+            Cams[1].GetComponent<camSide>().iddle();
+
             Aount = 2; 
         }
 
@@ -148,6 +151,10 @@ public class CamManager : MonoBehaviour
                 Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
                 Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
             }
+            Cams[0].GetComponent<camSide>().iddle();
+            Cams[1].GetComponent<camSide>().iddle();
+            Cams[2].GetComponent<camSide>().iddle();
+
             Aount = 3;            
         }
 
@@ -177,6 +184,11 @@ public class CamManager : MonoBehaviour
                 Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
                 Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
             }
+            Cams[0].GetComponent<camSide>().iddle();
+            Cams[1].GetComponent<camSide>().iddle();
+            Cams[2].GetComponent<camSide>().iddle();
+            Cams[3].GetComponent<camSide>().iddle();
+
             Aount = 4;
             
         }

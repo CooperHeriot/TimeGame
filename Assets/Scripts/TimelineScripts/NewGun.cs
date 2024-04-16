@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NewGun : MonoBehaviour
@@ -63,20 +64,37 @@ public class NewGun : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerMove>() != null && TM != null)
         {
+            if (Replace == false && TM.currentAmount < TM.maxAmount)
+            {
+                for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                {
+                    GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOn();
+                }
+            }
+            
+
             other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
 
             transform.parent = null;
 
-            Destroy(gameObject);
+            //other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            Invoke("newStuff", 0.007f);
+            /*Destroy(gameObject);
             if (TM.currentAmount < TM.maxAmount)
             {
                 //Destroy(gameObject);
                 if (Replace == false)
                 {
+                    
                     MakeAnew();
                 } else
                 {
                     SwapGun();
+                    for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                    {                       
+                       // GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOFf();
+                    }
                 }
                 
             } else
@@ -84,14 +102,43 @@ public class NewGun : MonoBehaviour
                 //Destroy(gameObject);
 
                 SwapGun();
-            }
+                for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
+                {
+                   // GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOFf();
+                }
+            }*/
 
 
             //other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
+           // other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
 
         
         //MakeAnew();
         //print("dsad");
+    }
+
+    public void newStuff()
+    {
+        Destroy(gameObject);
+        if (TM.currentAmount < TM.maxAmount)
+        {
+            //Destroy(gameObject);
+            if (Replace == false)
+            {
+                MakeAnew();
+            }
+            else
+            {
+                SwapGun();                
+            }
+
+        }
+        else
+        {
+            //Destroy(gameObject);
+
+            SwapGun();         
+        }
     }
 }

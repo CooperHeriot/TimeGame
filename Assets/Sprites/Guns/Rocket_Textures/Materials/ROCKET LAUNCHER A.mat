@@ -234,7 +234,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 12
+    - _OutlineWidth: 7.5
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
@@ -313,7 +313,7 @@ Material:
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}
+    - _OutlineDistancFade: {r: -67.2043, g: 32.79573, b: 0, a: 0}
     - _RimColor: {r: 0, g: 0.76190615, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

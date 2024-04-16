@@ -16,12 +16,17 @@ public class EnemyHealth : MonoBehaviour
 
     public bool inderpendat;
     private bool honor = false;
+
+    public Renderer rend;
+    private Color col;
     // Start is called before the first frame update
     void Start()
     {
         ES = GetComponent<EnemyShoot>();
 
         oncce = false;
+
+        col = rend.material.color;
     }
 
     // Update is called once per frame
@@ -33,6 +38,13 @@ public class EnemyHealth : MonoBehaviour
     public void EnemyHurt(float dmg)
     {
         currentHealth -= dmg;
+
+        if (rend != null)
+        {
+            //col = rend.material.color;
+            rend.material.color = Color.white;
+            Invoke("returncol", 0.1f);
+        }
 
         if (currentHealth <= 0)
         {
@@ -72,5 +84,10 @@ public class EnemyHealth : MonoBehaviour
             FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
         }       
         Destroy(gameObject);
+    }
+
+    public void returncol()
+    {
+        rend.material.color = col;
     }
 }

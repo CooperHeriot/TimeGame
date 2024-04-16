@@ -36,7 +36,7 @@ public class Checkpoints : MonoBehaviour
         } else
         {
             PlayerPrefs.SetInt("point", -1);
-           /* if (SkipTutorial != null && p2 == 1)
+            if (SkipTutorial != null && p2 == 1)
             {
                 player.transform.position = pv;
                 player.transform.rotation = Rv;
@@ -50,7 +50,7 @@ public class Checkpoints : MonoBehaviour
                 daGun.GetComponent<NewGun>().ThisTimeLine = GetComponent<TimelineManager>().primeTime;
 
                 daGun.GetComponent<BoxCollider>().enabled = true;
-            }*/
+            }
         }
        
     }

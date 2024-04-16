@@ -97,6 +97,7 @@ public class Pause : MonoBehaviour
     public void LoadScene()
     {
         PlayerPrefs.SetInt("point", -1);
+        Time.timeScale = 1;
 
         SceneManager.LoadScene(sceneToLoad);
     }

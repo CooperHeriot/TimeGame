@@ -311,6 +311,7 @@ MonoBehaviour:
   dist: 20
   FPSMode: 0
   turnSpeed: 0
+  TS: {fileID: 0}
 --- !u!1 &101440525
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,9 +587,12 @@ MonoBehaviour:
   ThisTimeLine: {fileID: 1389665089}
   TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: b3d7e52d0cff04d4096cec7c56466e30, type: 3}
+  GunMod: {fileID: 0}
   FRate: 1
   Auto: 0
   Bullet: {fileID: 6169899290938168524, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
+  Ammo: 1
+  Replace: 0
 --- !u!4 &155232839
 Transform:
   m_ObjectHideFlags: 0
@@ -3713,6 +3717,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3789,6 +3794,39 @@ Transform:
   m_Father: {fileID: 99531837}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &965886577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 3
   dead: 0
+  drop: {fileID: 0}
+  inderpendat: 0
+  rend: {fileID: 0}
 --- !u!54 &1042973829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4304,6 +4345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b39239085bed4c41be36c863d17fccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  online: 0
   target: {fileID: 0}
   Timeline: {fileID: 1389665089}
   Model: {fileID: 1739863383}
@@ -5204,9 +5246,13 @@ MonoBehaviour:
   Player: {fileID: 2127149548}
   PrimeRot: {x: 0, y: 0, z: 0, w: 0}
   notPrimeRot: {x: 0, y: 0, z: 0, w: 0}
+  SplitImage: {fileID: 0}
   prime: 0
   PrimeBorder: {fileID: 1950567912}
   Cam: {fileID: 963194227}
+  OnOff: 0
+  G1: {fileID: 0}
+  G2: {fileID: 0}
 --- !u!114 &1389665092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,7 +5277,13 @@ MonoBehaviour:
   - {fileID: 1037226011}
   - {fileID: 856086376}
   spw: 0
+  spop: 0
+  Currentdoors: {fileID: 0}
   Tm: {fileID: 0}
+  paradaoxEnem: {fileID: 0}
+  chance: 0
+  chanec: 40
+  once: 0
 --- !u!1 &1406098992
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,6 +5834,7 @@ MonoBehaviour:
   panel: {fileID: 125745715}
   paused: 0
   sceneToLoad: Menu
+  orien: 0
   FPSMode: 0
   TM: {fileID: 0}
   TheTime: 0
@@ -6352,6 +6405,8 @@ MonoBehaviour:
   primmeRot: {x: 0, y: 0, z: 0, w: 0}
   GameOver: {fileID: 893481228}
   lsott: 0
+  levl: {fileID: 0}
+  LAmount: 0
 --- !u!114 &1759550455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6366,8 +6421,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cams:
   - {fileID: 963194227}
+  PH: {fileID: 0}
+  TS: {fileID: 0}
   Aount: 1
+  EnableFullScreen: 0
   C1:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C1Alt:
     serializedVersion: 2
     x: 0
     y: 0
@@ -6380,6 +6444,18 @@ MonoBehaviour:
     width: 0
     height: 0
   C22:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C11Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C22Alt:
     serializedVersion: 2
     x: 0
     y: 0
@@ -6398,6 +6474,24 @@ MonoBehaviour:
     width: 0
     height: 0
   C333:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C111Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C222Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C333Alt:
     serializedVersion: 2
     x: 0
     y: 0
@@ -6427,6 +6521,30 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  C1111Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C2222Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C3333Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C4444Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &1759550456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6445,6 +6563,13 @@ MonoBehaviour:
   enems: 0
   TextHolder: {fileID: 0}
   Tm: {fileID: 0}
+  CombatLog: {fileID: 0}
+  combatlog1: {fileID: 0}
+  canvers: {fileID: 0}
+  killss: 0
+  times: 0
+  once: 0
+  StopWaves: 0
 --- !u!1 &1761924203
 GameObject:
   m_ObjectHideFlags: 0
@@ -6708,9 +6833,12 @@ MonoBehaviour:
   ThisTimeLine: {fileID: 1389665089}
   TM: {fileID: 0}
   GunSprite: {fileID: 21300000, guid: b3d7e52d0cff04d4096cec7c56466e30, type: 3}
+  GunMod: {fileID: 0}
   FRate: 0.4
   Auto: 1
   Bullet: {fileID: 1795707250594262657, guid: e522f417370403c44995268362490a48, type: 3}
+  Ammo: 1
+  Replace: 0
 --- !u!1 &1885945108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6917,6 +7045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kill: 0
   father: {fileID: 0}
+  dyeImg: {fileID: 0}
 --- !u!1 &1950567912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,9 +7396,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ded: 0
   stopped: 0
+  grounded: 0
   speed: 9
+  jump: 1
+  LM:
+    serializedVersion: 2
+    m_Bits: 0
   FPSMode: 0
   turnSpeed: 0
+  TS: {fileID: 0}
+  tiltOBJ: {fileID: 0}
+  zzzzd: {x: 0, y: 0, z: 0}
+  z2: 0
 --- !u!54 &2127149554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7303,11 +7441,20 @@ MonoBehaviour:
   point: {fileID: 1746669606}
   firepoint: {fileID: 1664222438}
   bullet: {fileID: 6169899290938168524, guid: 3f2e26d1c0bbdc944ae5b8a1d3f2ad39, type: 3}
+  firstGun: 0
   fireRate: 0.15
   auto: 1
+  currentAmmo: 10
+  maxAmmo: 0
+  reloadTime: 0
+  RTime: 0
   GSprite: {fileID: 1699353584}
+  GunMod: {fileID: 0}
+  GunAnim: {fileID: 0}
   Prime: 1
   FPSMode: 0
+  Amo: {fileID: 0}
+  Mark: {fileID: 0}
 --- !u!114 &2127149556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7327,6 +7474,7 @@ MonoBehaviour:
   heltBorder: {fileID: 0}
   TDT: {fileID: 1942850559}
   IFrames: 1
+  IFFrames: 0
 --- !u!1 &2132432983
 GameObject:
   m_ObjectHideFlags: 0

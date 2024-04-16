@@ -24,7 +24,13 @@ public class ReturnIfFall : MonoBehaviour
 
         if (transform.position.y < Point.y -20)
         {
-            transform.position = new Vector3(Point.x, Point.y + 2, Point.z);
+            //transform.position = new Vector3(Point.x, Point.y + 2, Point.z);
+            returnToFloor();
         }
+    }
+
+    public void returnToFloor()
+    {
+        transform.position = new Vector3(Point.x, Point.y + 2, Point.z);
     }
 }

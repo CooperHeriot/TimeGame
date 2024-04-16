@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rb.isKinematic = false;
     }
 
     // Update is called once per frame
