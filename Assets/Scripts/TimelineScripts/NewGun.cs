@@ -69,9 +69,9 @@ public class NewGun : MonoBehaviour
                 for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
                 {
                     GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOn();
+                    print("dadasasdsadasddqwe12312321321321312321321343543654767870");
                 }
-            }
-            
+            }           
 
             other.gameObject.GetComponent<PlayerHealth>().PlayerHeal(3);
 
@@ -79,7 +79,20 @@ public class NewGun : MonoBehaviour
 
             //other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            Invoke("newStuff", 0.007f);
+            //Invoke("newStuff", 0.007f);
+
+            if (Replace == true)
+            {
+                newStuff();
+            }
+            else
+            {
+                Invoke("newStuff", 0.017f);
+                print("egor");
+            }
+            
+
+
             /*Destroy(gameObject);
             if (TM.currentAmount < TM.maxAmount)
             {
