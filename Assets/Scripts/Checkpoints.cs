@@ -72,6 +72,6 @@ public class Checkpoints : MonoBehaviour
 
     public void DoneTutorial()
     {
-        PlayerPrefs.SetInt("ptwo", 1);
+        //PlayerPrefs.SetInt("ptwo", 1);
     }
 }
