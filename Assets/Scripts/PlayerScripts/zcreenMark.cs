@@ -32,12 +32,12 @@ public class zcreenMark : MonoBehaviour
 
     public void turnOn()
     {
-        rb.isKinematic = true;
-
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             gameObject.transform.GetChild(i).transform.gameObject.SetActive(true);
         }
+
+        rb.isKinematic = true;
 
         tinger = true;
         //Invoke("turnOFf", 0.006f);
