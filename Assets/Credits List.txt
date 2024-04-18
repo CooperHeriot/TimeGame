@@ -12,5 +12,6 @@ UI design: Yeogrin Jeon
 
 3d Modeller: Jesse Heriot
 UV unwrapping: Billy Green
+Animation: Willow
 
 Play Testing: Joeseph Davey
