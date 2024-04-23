@@ -540,6 +540,7 @@ MonoBehaviour:
   HurtPlayer: 0
   HurtEnemy: 1
   destroyOnHit: 1
+  knockBack: 0
 --- !u!1 &8659742546033807320
 GameObject:
   m_ObjectHideFlags: 0

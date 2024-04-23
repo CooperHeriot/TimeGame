@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: 60c1307b82697f544be1e0464bd46270
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: CHEF:mixamorig:Hips_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Left_Up_Leg_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightUpLeg_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Left_Leg_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightLeg_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftFoot_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightFoot_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Spine1_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Neck_jnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Head_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftArm_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightArm_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftForeArm_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightForeArm_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: CHEF:mixamorig:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Chef_Base_Anim_01(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:Chef_Root
+      parentName: Chef_Base_Anim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Hips_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.000001622113, y: 0.081259325, z: -0.00035621543}
+      rotation: {x: -0.00000009497104, y: 0.0000018738637, z: -0.000031601896, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Hips_ctrl_auto
+      parentName: CHEF:mixamorig:Hips_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Hips_ctrl
+      parentName: CHEF:mixamorig:Hips_ctrl_auto
+      position: {x: 0.0000006010579, y: -0.009090598, z: -0.0070702955}
+      rotation: {x: -0.13101842, y: 0, z: -0, w: 0.9913799}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Spine1_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.000002526502, y: 0.11231356, z: -0.0012195354}
+      rotation: {x: -0.013896125, y: 0, z: -0, w: 0.99990344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Spine1_ctrl_auto
+      parentName: CHEF:mixamorig:Spine1_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Spine1_ctrl
+      parentName: CHEF:mixamorig:Spine1_ctrl_auto
+      position: {x: -0.00000011168168, y: -0.009957133, z: -0.015391644}
+      rotation: {x: 0.18524998, y: -0.061738983, z: -0.08175391, w: 0.9773367}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftArm_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: -0.059875898, y: 0.15242411, z: -0.002307406}
+      rotation: {x: 0.38324392, y: -0.58038414, z: 0.40707234, w: 0.59209}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftArm_ctrl_auto
+      parentName: CHEF:mixamorig:LeftArm_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftArm_ctrl
+      parentName: CHEF:mixamorig:LeftArm_ctrl_auto
+      position: {x: -0.014021462, y: -0.009057015, z: -0.00812133}
+      rotation: {x: 0.19384854, y: 0.05852837, z: -0.14412893, w: 0.96861964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftForeArm_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: -0.08754919, y: 0.15189016, z: -0.002288866}
+      rotation: {x: 0.72051394, y: -0.6930587, z: 0.016497204, w: 0.016033605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftForeArm_ctrl_auto
+      parentName: CHEF:mixamorig:LeftForeArm_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftForeArm_ctrl
+      parentName: CHEF:mixamorig:LeftForeArm_ctrl_auto
+      position: {x: 0.0067453063, y: -0.0148743475, z: 0.0057197404}
+      rotation: {x: -0.23618549, y: -0.32151592, z: -0.4164509, w: 0.81695324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightForeArm_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.08755051, y: 0.15187058, z: -0.0031202747}
+      rotation: {x: 0.7205569, y: 0.69279295, z: -0.01428029, w: 0.025135698}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightForeArm_ctrl_auto
+      parentName: CHEF:mixamorig:RightForeArm_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightForeArm_ctrl
+      parentName: CHEF:mixamorig:RightForeArm_ctrl_auto
+      position: {x: -0.038097076, y: -0.008633009, z: -0.024730358}
+      rotation: {x: -0.6994269, y: -0.011071242, z: 0.04720904, w: 0.71305734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightArm_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.059876904, y: 0.15241106, z: -0.0029101877}
+      rotation: {x: 0.39068523, y: 0.58437884, z: -0.3998979, w: 0.58817357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightArm_ctrl_auto
+      parentName: CHEF:mixamorig:RightArm_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightArm_ctrl
+      parentName: CHEF:mixamorig:RightArm_ctrl_auto
+      position: {x: -0.0053474763, y: -0.0049704127, z: 0.023781922}
+      rotation: {x: 0.13206764, y: 0.04020121, z: 0.55972177, w: 0.8171007}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Up_Leg_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: -0.018300598, y: 0.07328982, z: -0.00073382567}
+      rotation: {x: 0.0003778327, y: 0.027309284, z: 0.99956733, w: -0.010920236}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Up_Leg_ctrl_auto
+      parentName: CHEF:mixamorig:Left_Up_Leg_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Up_Leg_ctrl
+      parentName: CHEF:mixamorig:Left_Up_Leg_ctrl_auto
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Leg_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: -0.017512431, y: 0.03728325, z: 0.0012350598}
+      rotation: {x: 0.00016894226, y: -0.06172686, z: 0.9980179, w: 0.012249}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Leg_ctrl_auto
+      parentName: CHEF:mixamorig:Left_Leg_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Left_Leg_ctrl
+      parentName: CHEF:mixamorig:Left_Leg_ctrl_auto
+      position: {x: 0.022144424, y: -0.0010079766, z: 0.012506374}
+      rotation: {x: -0.11413301, y: 8.849616e-19, z: 3.6962475e-18, w: 0.9934655}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftFoot_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: -0.018301805, y: 0.005280267, z: -0.0027393433}
+      rotation: {x: 0.03629733, y: 0.52265924, z: 0.85170364, w: -0.010522699}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftFoot_ctrl_auto
+      parentName: CHEF:mixamorig:LeftFoot_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:LeftFoot_ctrl
+      parentName: CHEF:mixamorig:LeftFoot_ctrl_auto
+      position: {x: 0.021725776, y: -0.006228852, z: -0.0017104849}
+      rotation: {x: -0.010956204, y: 0.08360121, z: -0.14359114, w: 0.98603874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightUpLeg_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.018302832, y: 0.0732875, z: -0.00084399123}
+      rotation: {x: -0.00036652322, y: 0.026901798, z: 0.9995781, w: 0.0109460065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightUpLeg_ctrl_auto
+      parentName: CHEF:mixamorig:RightUpLeg_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightUpLeg_ctrl
+      parentName: CHEF:mixamorig:RightUpLeg_ctrl_auto
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightLeg_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.017513083, y: 0.03729087, z: 0.0010949221}
+      rotation: {x: -0.00013215841, y: -0.059548892, z: 0.99815035, w: -0.012244}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightLeg_ctrl_auto
+      parentName: CHEF:mixamorig:RightLeg_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightLeg_ctrl
+      parentName: CHEF:mixamorig:RightLeg_ctrl_auto
+      position: {x: -0.02379242, y: -0.0009134174, z: 0.012515418}
+      rotation: {x: -0.11413301, y: -1.6505572e-18, z: 6.767629e-18, w: 0.9934655}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightFoot_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.01830185, y: 0.00528002, z: -0.0027386816}
+      rotation: {x: -0.035968874, y: 0.52514684, z: 0.8501892, w: 0.01026121}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightFoot_ctrl_auto
+      parentName: CHEF:mixamorig:RightFoot_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightFoot_ctrl
+      parentName: CHEF:mixamorig:RightFoot_ctrl_auto
+      position: {x: -0.023376128, y: -0.006300062, z: -0.0017855687}
+      rotation: {x: -0.011714116, y: -0.11219761, z: 0.20185801, w: 0.97289664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Neck_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.0001278956, y: 0.15180288, z: 0.027377605}
+      rotation: {x: 0.0000000055152976, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Neck_ctrl_auto
+      parentName: CHEF:mixamorig:Neck_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Neck_ctrl
+      parentName: CHEF:mixamorig:Neck_ctrl_auto
+      position: {x: 0.0008122441, y: -0.02368181, z: -0.0025904404}
+      rotation: {x: 0.4606723, y: -0.03804019, z: -0.095122814, w: 0.8816381}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Head_ctrl_offset
+      parentName: CHEF:Chef_Root
+      position: {x: 0.0012703335, y: 0.17963059, z: 0.04487427}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Head_ctrl_auto
+      parentName: CHEF:mixamorig:Head_ctrl_offset
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Head_ctrl
+      parentName: CHEF:mixamorig:Head_ctrl_auto
+      position: {x: 0.0017734166, y: -0.03913607, z: 0.00085754175}
+      rotation: {x: -0.017276615, y: 0.012446966, z: -0.022851415, w: 0.9995121}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:polySurface47
+      parentName: Chef_Base_Anim_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Hips_jnt
+      parentName: Chef_Base_Anim_01(Clone)
+      position: {x: 0.000001622113, y: 0.08488558, z: -0.0074265096}
+      rotation: {x: -0.000000011641532, y: -1.2434498e-12, z: 9.769963e-13, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: CHEF:mixamorig:RightUpLeg_jnt
+      parentName: CHEF:mixamorig:Hips_jnt
+      position: {x: 0.018301114, y: -0.0006285247, z: 0.0066475305}
+      rotation: {x: -0.0005323657, y: -0.098753355, z: 0.9837104, w: 0.15020475}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: CHEF:mixamorig:RightLeg_jnt
+      parentName: CHEF:mixamorig:RightUpLeg_jnt
+      position: {x: -0.02378881, y: 0.03621293, z: 0.012554586}
+      rotation: {x: 0.03248157, y: 0.012607662, z: 0.06559711, w: 0.9972377}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: CHEF:mixamorig:RightFoot_jnt
+      parentName: CHEF:mixamorig:RightLeg_jnt
+      position: {x: 0.000017479097, y: 0.035709847, z: -0.0095419325}
+      rotation: {x: 0.57397926, y: 0.06950007, z: 0.073316425, w: 0.8126145}
+      scale: {x: 0.9999997, y: 1, z: 1.0000001}
+    - name: CHEF:mixamorig:RightToeBase
+      parentName: CHEF:mixamorig:RightFoot_jnt
+      position: {x: 0.00010684863, y: 0.010397596, z: -0.00066222175}
+      rotation: {x: 0.22765839, y: -0.012135334, z: 0.0028374642, w: 0.97366136}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: CHEF:mixamorig:Left_Up_Leg_jnt
+      parentName: CHEF:mixamorig:Hips_jnt
+      position: {x: -0.018302316, y: -0.0006571077, z: 0.006753782}
+      rotation: {x: -0.00009145618, y: -0.0987973, z: 0.98590297, w: -0.1350349}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: CHEF:mixamorig:Left_Leg_jnt
+      parentName: CHEF:mixamorig:Left_Up_Leg_jnt
+      position: {x: 0.022139523, y: 0.036271937, z: 0.012553932}
+      rotation: {x: 0.02373362, y: -0.008606468, z: -0.05223455, w: 0.9983157}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: CHEF:mixamorig:LeftFoot_jnt
+      parentName: CHEF:mixamorig:Left_Leg_jnt
+      position: {x: -0.000018771596, y: 0.03576069, z: -0.009526742}
+      rotation: {x: 0.57947993, y: -0.07201692, z: -0.069319375, w: 0.8088334}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: CHEF:mixamorig:LeftToeBase
+      parentName: CHEF:mixamorig:LeftFoot_jnt
+      position: {x: -0.00010817162, y: 0.010267062, z: -0.0006698942}
+      rotation: {x: 0.23040721, y: 0.010670895, z: -0.0025267696, w: 0.97303253}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: CHEF:mixamorig:Spine
+      parentName: CHEF:mixamorig:Hips_jnt
+      position: {x: -0, y: 0.014332723, z: -0.00039845405}
+      rotation: {x: -0.013896127, y: 1.964912e-12, z: -7.721304e-13, w: 0.99990344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Spine1_jnt
+      parentName: CHEF:mixamorig:Spine
+      position: {x: 1.8705561e-11, y: 0.016728299, z: -0.0000010830147}
+      rotation: {x: -0.00000002142042, y: 0.000000011798088, z: -0.000000005495201, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: CHEF:mixamorig:Spine2
+      parentName: CHEF:mixamorig:Spine1_jnt
+      position: {x: -0, y: 0.01911768, z: 0}
+      rotation: {x: -0.24000293, y: -0.000028708866, z: 0.0010325788, w: 0.9707716}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Neck_jnt
+      parentName: CHEF:mixamorig:Spine2
+      position: {x: 0.0001253691, y: 0.019561684, z: 0.029683487}
+      rotation: {x: 0.01389616, y: -0.000000010619895, z: 0.0000000049460716, w: 0.99990344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CHEF:mixamorig:Head_jnt
+      parentName: CHEF:mixamorig:Neck_jnt
+      position: {x: -0.0008803216, y: 0.024341635, z: 0.0017075524}
+      rotation: {x: -0.0000000014551915, y: -0.0000000010913936, z: -7.27596e-10, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: CHEF:mixamorig:RightShoulder
+      parentName: CHEF:mixamorig:Spine2
+      position: {x: 0.01864648, y: 0.018351927, z: -0.000100519654}
+      rotation: {x: -0.5290067, y: -0.4683441, z: 0.53180736, w: -0.46689042}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: CHEF:mixamorig:RightArm_jnt
+      parentName: CHEF:mixamorig:RightShoulder
+      position: {x: 0.00026, y: 0.04033, z: -0.00897}
+      rotation: {x: 0.26616755, y: -0.0072827935, z: -0.0020109415, w: -0.9638972}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999976}
+    - name: CHEF:mixamorig:RightForeArm_jnt
+      parentName: CHEF:mixamorig:RightArm_jnt
+      position: {x: 0.00013910307, y: 0.025453426, z: 0.0108751375}
+      rotation: {x: 0.14529014, y: 0.675364, z: 0.15206592, w: 0.70685947}
+      scale: {x: 0.9999997, y: 1, z: 1}
+    - name: CHEF:mixamorig:RightHand
+      parentName: CHEF:mixamorig:RightForeArm_jnt
+      position: {x: 5.3290704e-17, y: 0.044198897, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: CHEF:mixamorig:LeftShoulder
+      parentName: CHEF:mixamorig:Spine2
+      position: {x: -0.01864648, y: 0.018351216, z: -0.000074945434}
+      rotation: {x: 0.52938, y: -0.46801713, z: 0.5314536, w: 0.4671979}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: CHEF:mixamorig:LeftArm_jnt
+      parentName: CHEF:mixamorig:LeftShoulder
+      position: {x: -0.010198568, y: 0.0370967, z: -0.011941697}
+      rotation: {x: -0.2663072, y: 0.004112899, z: 0.0011363922, w: 0.96387875}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: CHEF:mixamorig:LeftForeArm_jnt
+      parentName: CHEF:mixamorig:LeftArm_jnt
+      position: {x: 0.00014, y: 0.02545, z: 0.01088}
+      rotation: {x: 0.14791399, y: -0.68802637, z: -0.14932333, w: 0.69458175}
+      scale: {x: 0.9999997, y: 1.0000001, z: 1}
+    - name: CHEF:mixamorig:LeftHand
+      parentName: CHEF:mixamorig:LeftForeArm_jnt
+      position: {x: -0, y: 0.04419293, z: -5.551115e-19}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a061afc689e4cb54696f0fa5c286aaa1, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

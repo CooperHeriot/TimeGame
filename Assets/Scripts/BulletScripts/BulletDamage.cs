@@ -7,6 +7,7 @@ public class BulletDamage : MonoBehaviour
     public float damage = 1;
     public bool HurtPlayer, HurtEnemy, destroyOnHit = true;
 
+    public bool knockBack;
     private bool solid;
     // Start is called before the first frame update
     void Start()
@@ -45,8 +46,13 @@ public class BulletDamage : MonoBehaviour
             if (destroyOnHit == true)
             {
                 Destroy(gameObject);
-            }
-        }  
+            } 
+        }
+
+        if (knockBack == true)
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce((collision.gameObject.transform.position - transform.position) * damage * 100);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -69,6 +75,11 @@ public class BulletDamage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+
+        if (knockBack == true)
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce((collision.gameObject.transform.position - transform.position) * damage * 100);
         }
     }
 }
