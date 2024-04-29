@@ -97,7 +97,6 @@ public class CamManager : MonoBehaviour
             Cams[0].GetComponent<camSide>().iddle();
 
             Aount = 1;
-
         }
 
         if (TM.currentAmount == 2 && Aount != 2)
@@ -120,10 +119,11 @@ public class CamManager : MonoBehaviour
                 Cams[0].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.84f, 0.96408f, 1f);
                 Cams[1].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(0.84f, 0.96408f, 1f);
             }
-            Cams[0].GetComponent<camSide>().iddle();
-            Cams[1].GetComponent<camSide>().iddle();
+            Cams[0].GetComponent<camSide>().left();
+            Cams[1].GetComponent<camSide>().right();
 
             Aount = 2; 
+
         }
 
         if (TM.currentAmount == 3 && Aount != 3)
@@ -152,8 +152,8 @@ public class CamManager : MonoBehaviour
                 Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.75f, 0.96408f, 1f);
             }
             Cams[0].GetComponent<camSide>().iddle();
-            Cams[1].GetComponent<camSide>().iddle();
-            Cams[2].GetComponent<camSide>().iddle();
+            Cams[1].GetComponent<camSide>().left();
+            Cams[2].GetComponent<camSide>().right();
 
             Aount = 3;            
         }
@@ -184,10 +184,10 @@ public class CamManager : MonoBehaviour
                 Cams[2].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
                 Cams[3].transform.GetChild(0).transform.GetChild(0).localScale = new Vector3(1.73f, 0.96408f, 1f);
             }
-            Cams[0].GetComponent<camSide>().iddle();
-            Cams[1].GetComponent<camSide>().iddle();
-            Cams[2].GetComponent<camSide>().iddle();
-            Cams[3].GetComponent<camSide>().iddle();
+            Cams[0].GetComponent<camSide>().left();
+            Cams[1].GetComponent<camSide>().right();
+            Cams[2].GetComponent<camSide>().left();
+            Cams[3].GetComponent<camSide>().right();
 
             Aount = 4;
             

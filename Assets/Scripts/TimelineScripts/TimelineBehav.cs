@@ -32,6 +32,7 @@ public class TimelineBehav : MonoBehaviour
 
     [Header("Odd Even")]
     public TSide side;
+    public AudioBehav AB;
     // Start is called before the first frame update
     void Start()
     {
@@ -121,15 +122,21 @@ public class TimelineBehav : MonoBehaviour
     public void left()
     {
         side = TSide.Left;
+
+        AB.AS.panStereo = -1;
     }
 
     public void right()
     {
         side = TSide.Right;
+
+        AB.AS.panStereo = 1;
     }
 
     public void iddle()
     {
         side = TSide.Middle;
+
+        AB.AS.panStereo = 0;
     }
 }
