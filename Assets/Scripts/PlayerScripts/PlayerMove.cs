@@ -82,7 +82,9 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        z2 = (Input.GetAxis("Horizontal") * -1) / 100;
+        //z2 = (Input.GetAxis("Horizontal") * -1) / 100;
+        //z2 = (Input.GetAxis("Horizontal") * -1) / 25;
+        z2 = Mathf.Lerp(z2, (Input.GetAxis("Horizontal") * -1) / 4, 10 * Time.deltaTime);
 
         tiltOBJ.transform.localRotation = new Quaternion(0, 0, z2, tiltOBJ.transform.localRotation.w);
 
