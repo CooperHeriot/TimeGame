@@ -137,7 +137,7 @@ public class WaveBehaviour : MonoBehaviour
 
        currentWave += 1;
 
-       Tm.text = ("Enemies: " + relativeAmount);
+       Tm.text = (" " + relativeAmount);
         CheckColor();
     }
 
@@ -146,7 +146,7 @@ public class WaveBehaviour : MonoBehaviour
         enms.Remove(_Enem);
         relativeAmount = enms.Count;
 
-        Tm.text = ("Enemies: " + relativeAmount);
+        Tm.text = ("" + relativeAmount);
 
         CheckColor();
 
@@ -160,11 +160,11 @@ public class WaveBehaviour : MonoBehaviour
     {
         if (relativeAmount != 0)
         {
-            Tm.color = Color.black;
+            Tm.color = Color.white;
         }
         else
         {
-            Tm.color = Color.white;
+            Tm.color = Color.clear;
 
             //WM.activeWaves -= 1;
         }

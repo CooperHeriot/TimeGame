@@ -27,7 +27,8 @@ public class BulletCounter : MonoBehaviour
             tp.text = ("Reloading");
         } else
         {
-            tp.text = (gb.currentAmmo + "/" + gb.maxAmmo);
+            //tp.text = (gb.currentAmmo + "/" + gb.maxAmmo);
+            tp.text = (gb.currentAmmo + "");
         }
         
 
