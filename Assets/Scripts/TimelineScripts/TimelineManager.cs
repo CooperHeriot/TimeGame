@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class TimelineManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class TimelineManager : MonoBehaviour
 
     [Header("Anti Lag")]
     public GameObject levl;
+    private bool DontCreate;
     public float LAmount;
     private float Lrount = 1;
     // Start is called before the first frame update
@@ -47,10 +49,29 @@ public class TimelineManager : MonoBehaviour
 
         if (levl != null)
         {
+            LAmount = maxAmount;
+
             for (int i = 0; i < LAmount; i++)
             {
                 Instantiate(levl, new Vector3(0, primeTime.transform.position.y + (offset * Lrount), 0), transform.rotation, transform);
                 Lrount += 1;
+
+
+                GameObject NewTL = Instantiate(primeTime, new Vector3(0, primeTime.transform.position.y + (offset * Total), 0), transform.rotation, transform);
+                Lines.Add(NewTL);
+
+                NewTL.GetComponent<TimelineBehav>().OnOff = !NewTL.GetComponent<TimelineBehav>().OnOff;
+
+                CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
+                NewTL.GetComponent<TimelineBehav>().prime = false;
+
+                //NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
+
+                WM.UpdateWaves(NewTL);
+
+                NV.makeNew();
+
+                Total += 1;
             }
         }
     }
