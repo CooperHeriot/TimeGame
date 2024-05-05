@@ -8,7 +8,8 @@ public class TimelineManager : MonoBehaviour
     public float maxAmount, currentAmount = 1, ActiveLines, offset = 30;
 
     public List<GameObject> Lines = new List<GameObject>();
-    public List<GameObject> inactiveLines = new List<GameObject>();
+    private List<GameObject> inactiveLines = new List<GameObject>();
+    public List<GameObject> lineViwer = new List<GameObject>();
     //public List<GameObject> SpawnPoints = new List<GameObject>();
     public GameObject primeTime;
 
@@ -175,9 +176,22 @@ public class TimelineManager : MonoBehaviour
                 for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().enms.Count; i++)
                 {
                     //GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
-                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], Vector3.zero, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.position, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
 
+                    if (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) > 100)
+                    {
+                        if (ed.transform.position.y > inactiveLines[0].transform.position.y)
+                        {
+                            print("down");
+                            ed.transform.position = new Vector3(ed.transform.position.x, ed.transform.position.y - (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) + 0.5f), ed.transform.position.z);
+                        } else
+                        {
+                            print("up");
+                            ed.transform.position = new Vector3(ed.transform.position.x, ed.transform.position.y + (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) + 0.5f), ed.transform.position.z);
+                        }
+                    }
                     ed.transform.localPosition = new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.x, 0, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.z);
+
                     ed.GetComponent<EnemyShoot>().Timeline = inactiveLines[0].gameObject;
                     ed.GetComponent<EnemyShoot>().Started();
 
@@ -187,7 +201,8 @@ public class TimelineManager : MonoBehaviour
 
                 WM.UpdateWaves(inactiveLines[0]);
 
-                inactiveLines.Remove(inactiveLines[0]);
+                //inactiveLines.Remove(inactiveLines[0]);
+                inactiveLines.RemoveAt(0);
             }
             CheckActiveLines();
         }
@@ -272,5 +287,6 @@ public class TimelineManager : MonoBehaviour
         }
 
         currentAmount = ActiveLines;
+        lineViwer = inactiveLines;
     }
 }
