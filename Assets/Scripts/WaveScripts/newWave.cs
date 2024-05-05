@@ -104,7 +104,7 @@ public class newWave : MonoBehaviour
 
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().currentWave = 0;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Waves = nWaves;
-        WM.WaveBehavs[me].GetComponent<WaveBehaviour>().SpawnPoints = nSpawnPoints;
+       // WM.WaveBehavs[me].GetComponent<WaveBehaviour>().SpawnPoints = nSpawnPoints;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().paradaoxEnem = nParaEnem;
         WM.WaveBehavs[me].GetComponent<WaveBehaviour>().Currentdoors = doors;
         //WM.WaveBehavs[me].GetComponent<WaveBehaviour>().PrintID(me);

@@ -88,7 +88,7 @@ public class TimelineBehav : MonoBehaviour
         if (GB.Prime == false)
         {
             
-            GB.Model.transform.rotation = notPrimeRot;
+            //GB.Model.transform.rotation = notPrimeRot;
         }
     }
 

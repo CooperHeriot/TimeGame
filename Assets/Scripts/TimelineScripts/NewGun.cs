@@ -69,7 +69,7 @@ public class NewGun : MonoBehaviour
                 for (int i = 0; i < GameObject.FindObjectsOfType<zcreenMark>().Length; i++)
                 {
                     GameObject.FindObjectsOfType<zcreenMark>()[i].GetComponent<zcreenMark>().turnOn();
-                    print("dadasasdsadasddqwe12312321321321312321321343543654767870");
+                    //print("dadasasdsadasddqwe12312321321321312321321343543654767870");
                 }
             }           
 

@@ -21,7 +21,8 @@ public class TimeDeleteTest : MonoBehaviour
     {
         if (kill == true)
         {
-            dyeImg.SetActive(true);
+            kill = false;
+            //dyeImg.SetActive(true);
 
             Invoke("DeleteTime", 0.1f);
         }

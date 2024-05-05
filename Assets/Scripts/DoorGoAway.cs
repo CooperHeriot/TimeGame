@@ -26,6 +26,10 @@ public class DoorGoAway : MonoBehaviour
 
     public void die()
     {
-        anim.SetBool("Die", true);
+        if (anim != null)
+        {
+            anim.SetBool("Die", true);
+        }
+
     }
 }

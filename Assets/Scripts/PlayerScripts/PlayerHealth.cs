@@ -81,8 +81,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void death()
     {
-        dead = true;
-        PM.ded = true;
+        //dead = true;
+        //PM.ded = true;
 
         for (int i = 0; i < FindObjectsOfType<PlayerHealth>().Length; i++)
         {
@@ -90,5 +90,6 @@ public class PlayerHealth : MonoBehaviour
         }
 
         TDT.kill = true;
+        PlayerHeal(3);
     }
 }

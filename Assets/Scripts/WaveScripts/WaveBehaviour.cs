@@ -16,6 +16,8 @@ public class WaveBehaviour : MonoBehaviour
     public List<GameObject> Waves = new List<GameObject>();
 
     public List<GameObject> SpawnPoints = new List<GameObject>();
+
+    public List<GameObject> WaveTriggers = new List<GameObject>();
     public int spw, spop;
 
     public GameObject Currentdoors;
@@ -52,7 +54,7 @@ public class WaveBehaviour : MonoBehaviour
     void Update()
     {
         /*if (Input.GetKeyDown(KeyCode.P)){
-            NewWave();
+            KillAll();
         }*/
 
         spw = 0;
@@ -187,6 +189,13 @@ public class WaveBehaviour : MonoBehaviour
         }*/
     }
 
+    public void KillAll()
+    {
+        for (int i = 0; i < enms.Count; i++)
+        {
+            enms[i].GetComponent<EnemyHealth>().death();
+        }
+    }
     /*public void PrintID(float _ID)
     {
         print(_ID);

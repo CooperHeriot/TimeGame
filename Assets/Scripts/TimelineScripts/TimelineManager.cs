@@ -5,9 +5,11 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class TimelineManager : MonoBehaviour
 {
-    public float maxAmount, currentAmount = 1, offset = 30;
+    public float maxAmount, currentAmount = 1, ActiveLines, offset = 30;
 
     public List<GameObject> Lines = new List<GameObject>();
+    public List<GameObject> inactiveLines = new List<GameObject>();
+    //public List<GameObject> SpawnPoints = new List<GameObject>();
     public GameObject primeTime;
 
     public Quaternion primmeRot;
@@ -25,7 +27,7 @@ public class TimelineManager : MonoBehaviour
 
     [Header("Anti Lag")]
     public GameObject levl;
-    private bool DontCreate;
+    private bool DontCreate = false;
     public float LAmount;
     private float Lrount = 1;
     public NewGun NG;
@@ -50,11 +52,12 @@ public class TimelineManager : MonoBehaviour
 
         if (levl != null)
         {
+            DontCreate = true;
             LAmount = maxAmount - 1;
 
             for (int i = 0; i < LAmount; i++)
             {
-                Instantiate(levl, new Vector3(0, primeTime.transform.position.y + (offset * Lrount), 0), transform.rotation, transform);
+                //Instantiate(levl, new Vector3(0, primeTime.transform.position.y + (offset * Lrount), 0), transform.rotation, transform);
                 //Lrount += 1;
 
 
@@ -63,26 +66,44 @@ public class TimelineManager : MonoBehaviour
 
                 NewTL.GetComponent<TimelineBehav>().OnOff = !NewTL.GetComponent<TimelineBehav>().OnOff;
 
-                CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
+               // CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
                 NewTL.GetComponent<TimelineBehav>().prime = false;
 
                 NewTL.GetComponent<TimelineBehav>().newGunForPlayer(NG.GunSprite, NG.FRate, NG.Auto, NG.Bullet, NG.Ammo, NG.GunMod);
 
-                WM.UpdateWaves(NewTL);
+                //WM.UpdateWaves(NewTL);
 
                 NV.makeNew();
 
                 Total += 1;
 
                 Lrount += 1;
+
+                //NewTL.GetComponent<WaveBehaviour>().KillAll();
+
+                NewTL.SetActive(false);
+                inactiveLines.Add(NewTL);
             }
+        }
+       
+        CheckActiveLines();
+
+        //currentAmount = Lines.Count;
+
+        if (DontCreate == false)
+        {
+            currentAmount = Lines.Count;
+        }
+        else
+        {
+            currentAmount = ActiveLines;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Lines.Count == 0)
+        if (currentAmount == 0)
         {
             GameOver.SetActive(true);
 
@@ -92,26 +113,85 @@ public class TimelineManager : MonoBehaviour
 
     public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Mod)
     {
-        if (currentAmount < maxAmount)
+        CheckActiveLines();
+        if (DontCreate == false)
         {
-           // GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
-            //if (_TLine.GetComponent<TimelineBehav>().OnOff == false) { }
-            GameObject NewTL = Instantiate(_TLine, new Vector3(0, primeTime.transform.position.y + (offset * Total), 0), transform.rotation, transform);
-            Lines.Add(NewTL);
+            if (currentAmount < maxAmount)
+            {
+                // GameObject NewTL = Instantiate(_TLine, new Vector3(primeTime.transform.position.x + (offset * currentAmount), 0, primeTime.transform.position.z + (offset * currentAmount)), transform.rotation, transform);
+                //if (_TLine.GetComponent<TimelineBehav>().OnOff == false) { }
+                GameObject NewTL = Instantiate(_TLine, new Vector3(0, primeTime.transform.position.y + (offset * Total), 0), transform.rotation, transform);
+                Lines.Add(NewTL);
 
-            NewTL.GetComponent<TimelineBehav>().OnOff = !NewTL.GetComponent<TimelineBehav>().OnOff;
+                NewTL.GetComponent<TimelineBehav>().OnOff = !NewTL.GetComponent<TimelineBehav>().OnOff;
 
-            CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
-            NewTL.GetComponent<TimelineBehav>().prime = false;
+                CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
+                NewTL.GetComponent<TimelineBehav>().prime = false;
 
-            NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
+                NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
 
-            WM.UpdateWaves(NewTL);
+                WM.UpdateWaves(NewTL);
 
-            NV.makeNew();
+                NV.makeNew();
 
-            Total += 1;
+                Total += 1;
+            }
+        } else
+        {
+            //new Code
+            CheckActiveLines();
+            if(ActiveLines < Lines.Count)
+            {
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.GetComponent<PlayerHealth>().currentHealth = 3;
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.GetComponent<PlayerHealth>().dead = false;
+
+                inactiveLines[0].SetActive(true);
+                //inactiveLines[0].GetComponent<WaveBehaviour>().KillAll();
+                //inactiveLines[0].GetComponent<TimelineBehav>().prime = false;
+                inactiveLines[0].GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
+                
+                //PLAYER STUFF
+                Vector3 Playerpos = _TLine.GetComponent<TimelineBehav>().Player.transform.localPosition;
+
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.transform.localPosition = Playerpos;
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.transform.rotation = _TLine.GetComponent<TimelineBehav>().Player.transform.rotation;
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.gameObject.GetComponentInChildren<CamMove>().transform.rotation = _TLine.GetComponent<TimelineBehav>().Player.gameObject.GetComponentInChildren<CamMove>().transform.rotation;
+
+                CM.Cams.Add(inactiveLines[0].GetComponent<TimelineBehav>().Cam);
+
+                //disableTriggers
+                for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().WaveTriggers.Count; i++)
+                {
+                    if (_TLine.GetComponent<WaveBehaviour>().WaveTriggers[i] == null)
+                    {
+                        Destroy(inactiveLines[0].GetComponent<WaveBehaviour>().WaveTriggers[i].gameObject);
+                    }                    
+                }
+                inactiveLines[0].GetComponent<WaveBehaviour>().currentWave = _TLine.GetComponent<WaveBehaviour>().currentWave;
+                inactiveLines[0].GetComponent<WaveBehaviour>().Waves = _TLine.GetComponent<WaveBehaviour>().Waves;
+                inactiveLines[0].GetComponent<WaveBehaviour>().chance = _TLine.GetComponent<WaveBehaviour>().chance;
+
+                //add enemies
+                for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().enms.Count; i++)
+                {
+                    //GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], Vector3.zero, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+
+                    ed.transform.localPosition = new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.x, 0, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.z);
+                    ed.GetComponent<EnemyShoot>().Timeline = inactiveLines[0].gameObject;
+                    ed.GetComponent<EnemyShoot>().Started();
+
+                    inactiveLines[0].GetComponent<WaveBehaviour>().enms.Add(ed);
+                    inactiveLines[0].GetComponent<WaveBehaviour>().relativeAmount = inactiveLines[0].GetComponent<WaveBehaviour>().enms.Count;
+                }
+
+                WM.UpdateWaves(inactiveLines[0]);
+
+                inactiveLines.Remove(inactiveLines[0]);
+            }
+            CheckActiveLines();
         }
+        
         
         if (currentAmount >= maxAmount)
         {
@@ -124,29 +204,73 @@ public class TimelineManager : MonoBehaviour
                 }
             }
         }
-
+        CheckActiveLines();
         currentAmount = Lines.Count;
     }
 
     public void eraseTimeline(GameObject _TLine)
     {
-        WM.removeWave(_TLine);
-
-        Destroy(_TLine.gameObject);
-        Lines.Remove(_TLine);
-
-        //WM.removeWave(_TLine);
-
-        if (_TLine.GetComponent<TimelineBehav>().prime == true)
+        CheckActiveLines();
+        if (DontCreate == false)
         {
-            Lines[0].GetComponent<TimelineBehav>().becomePrime();
-            primeTime = Lines[0];
+            WM.removeWave(_TLine);
+
+            Destroy(_TLine.gameObject);
+            Lines.Remove(_TLine);
+
+            //WM.removeWave(_TLine);
+
+            if (_TLine.GetComponent<TimelineBehav>().prime == true)
+            {
+                Lines[0].GetComponent<TimelineBehav>().becomePrime();
+                primeTime = Lines[0];
+            }
+
+            CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
+
+            currentAmount = Lines.Count;
+
+            NV.makeNew();
+        } else
+        {
+            _TLine.GetComponent<WaveBehaviour>().KillAll();
+            _TLine.GetComponent<WaveBehaviour>().KillAll();
+            _TLine.GetComponent<WaveBehaviour>().KillAll();
+            _TLine.GetComponent<WaveBehaviour>().KillAll();
+            WM.removeWave(_TLine);
+            
+            _TLine.gameObject.SetActive(false);
+            CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
+            CheckActiveLines();
+
+            inactiveLines.Add(_TLine);
+        }
+        CheckActiveLines();
+    }
+
+    public void CheckActiveLines()
+    {
+        ActiveLines = 0;
+        for (int i = 0; i < Lines.Count; i++)
+        {
+            if (Lines[i].activeInHierarchy == true)
+            {
+                ActiveLines += 1;
+                if (inactiveLines.Count > 1)
+                {
+                    //inactiveLines.Remove(Lines[i]);
+                }else
+                {
+                   // inactiveLines.Clear();
+                }
+                
+                //inactiveLines.Count -= 1;
+            } else
+            {
+              ///  inactiveLines.Add(Lines[i]);
+            }
         }
 
-        CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
-
-        currentAmount = Lines.Count;
-
-        NV.makeNew();
+        currentAmount = ActiveLines;
     }
 }
