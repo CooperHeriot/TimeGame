@@ -35,6 +35,24 @@ public class TimelineManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //difficulty stuff
+        int difficulty = PlayerPrefs.GetInt("Difficulty");
+
+        if (difficulty == 0)
+        {
+            difficulty = 1;
+        }
+
+        if (difficulty == 1)
+        {
+            GetComponent<TimelineManager>().maxAmount = 2;
+        }
+        else
+        {
+            GetComponent<TimelineManager>().maxAmount = 4;
+        }
+
+
         GameOver.SetActive(false);
 
         Lines.Add(primeTime);
@@ -55,6 +73,7 @@ public class TimelineManager : MonoBehaviour
         {
             DontCreate = true;
             LAmount = maxAmount - 1;
+            //LAmount = maxAmount;
 
             for (int i = 0; i < LAmount; i++)
             {
@@ -176,9 +195,9 @@ public class TimelineManager : MonoBehaviour
                 for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().enms.Count; i++)
                 {
                     //GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
-                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.position, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.x, inactiveLines[0].transform.position.y, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.z), _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
 
-                    if (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) > 100)
+                    /*if (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) > 100)
                     {
                         if (ed.transform.position.y > inactiveLines[0].transform.position.y)
                         {
@@ -189,8 +208,8 @@ public class TimelineManager : MonoBehaviour
                             print("up");
                             ed.transform.position = new Vector3(ed.transform.position.x, ed.transform.position.y + (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) + 0.5f), ed.transform.position.z);
                         }
-                    }
-                    ed.transform.localPosition = new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.x, 0, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.z);
+                    }*/
+                    //ed.transform.localPosition = new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.x, 0, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.z);
 
                     ed.GetComponent<EnemyShoot>().Timeline = inactiveLines[0].gameObject;
                     ed.GetComponent<EnemyShoot>().Started();
