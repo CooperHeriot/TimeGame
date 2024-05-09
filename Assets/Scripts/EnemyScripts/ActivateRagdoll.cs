@@ -7,6 +7,7 @@ public class ActivateRagdoll : MonoBehaviour
 {
     public List<Rigidbody> Rbs = new List<Rigidbody>();
     public List<Collider> colliders = new List<Collider>();
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,22 @@ public class ActivateRagdoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*if (Input.GetKeyDown(KeyCode.P)) 
+        {
+            TurnOnStuff();
+        }*/
     }
 
+    public void TurnOnStuff()
+    {
+        anim.enabled = false;
+        for (int i = 0; i < colliders.Count; i++)
+        {
+            colliders[i].enabled = true;
+        }
+        Rbs[0].AddForce(0,12500,0);
+        Rbs[0].AddForce(Rbs[0].transform.forward * -2000);
+    }
     public void checkforRigids(GameObject _gam)
     {
         for (int i = 0; i < _gam.transform.childCount; i++)
@@ -41,11 +55,12 @@ public class ActivateRagdoll : MonoBehaviour
 
             if (_gam.transform.GetChild(i).childCount > 0)
             {
-                for (int ii = 0; ii < _gam.transform.GetChild(i).childCount; ii++)
+                checkforRigids(_gam.transform.GetChild(i).gameObject);
+                /*for (int ii = 0; ii < _gam.transform.GetChild(i).childCount; ii++)
                 {
                     print("Diving into" + _gam.transform.GetChild(ii).gameObject);
                     checkforRigids(_gam.transform.GetChild(ii).gameObject);
-                }
+                }*/
             }
         }
     }

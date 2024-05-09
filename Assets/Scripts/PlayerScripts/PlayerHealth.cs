@@ -90,6 +90,6 @@ public class PlayerHealth : MonoBehaviour
         }
 
         TDT.kill = true;
-        PlayerHeal(3);
+        //PlayerHeal(3);
     }
 }

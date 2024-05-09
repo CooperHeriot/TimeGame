@@ -19,6 +19,8 @@ public class EnemyHealth : MonoBehaviour
 
     public Renderer rend;
     private Color col;
+
+    public ActivateRagdoll AR;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +67,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void death()
     {
+        if (AR != null)
+        {
+            AR.TurnOnStuff();
+            AR.transform.parent = null;
+        }
+
         dead = true;
 
         //temp
