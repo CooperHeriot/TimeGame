@@ -45,6 +45,9 @@ public class Gunbehav : MonoBehaviour
     public GameObject Mark;
 
     private Color col1;
+
+    [Header("Gun Sprite")]
+    public AudioClip GunSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +95,7 @@ public class Gunbehav : MonoBehaviour
                     currentAmmo -= 1;
 
                     GunAnim.Play("GunSHOOT");
+                    Timeline.GetComponent<AudioBehav>().PlaySound(GunSound);
                 }
             }
             else
@@ -104,6 +108,7 @@ public class Gunbehav : MonoBehaviour
                     currentAmmo -= 1;
 
                     GunAnim.Play("GunSHOOT");
+                    Timeline.GetComponent<AudioBehav>().PlaySound(GunSound);
                 }
             }
 

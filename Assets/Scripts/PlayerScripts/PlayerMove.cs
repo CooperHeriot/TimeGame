@@ -20,6 +20,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject tiltOBJ;
     public Vector3 zzzzd;
     public float z2;
+    private int Inv;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        Inv = PlayerPrefs.GetInt("Inverty");
         if (FPSMode == false)
         {
             float x = Input.GetAxis("Horizontal");
@@ -73,7 +74,7 @@ public class PlayerMove : MonoBehaviour
 
             if (Time.timeScale > 0) {
                 //transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed) * Time.deltaTime, 0);
-                transform.Rotate(0, (Input.GetAxis("Mouse X") * turnSpeed), 0);
+                transform.Rotate(0, (Input.GetAxis("Mouse X") * (turnSpeed * Inv)), 0);
 
                 if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
                 {

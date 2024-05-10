@@ -21,6 +21,9 @@ public class EnemyHealth : MonoBehaviour
     private Color col;
 
     public ActivateRagdoll AR;
+
+    public AudioClip hurt, dye;
+    private TimelineBehav TB;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,8 @@ public class EnemyHealth : MonoBehaviour
         oncce = false;
 
         col = rend.material.color;
+
+        TB = ES.Timeline.GetComponent<TimelineBehav>();
     }
 
     // Update is called once per frame
@@ -51,8 +56,11 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             honor = true;
+            TB.GetComponent<AudioBehav>().PlaySound(dye);
             death();
         }
+
+        TB.GetComponent<AudioBehav>().PlaySound(hurt);
     }
 
     public void EnemyHeal(float helt)

@@ -57,10 +57,13 @@ public class TimeSlow : MonoBehaviour
             currentRot = Mathf.Lerp(currentRot, 1, 4 * speed * Time.deltaTime);
             //currentTime = 1;
 
-            if (TM.currentAmount > 1)
+            if (TM != null)
             {
-                TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
-            }
+                if (TM.currentAmount > 1)
+                {
+                    TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
+                }
+            }            
 
         }
 

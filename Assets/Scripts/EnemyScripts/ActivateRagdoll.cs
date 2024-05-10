@@ -47,7 +47,7 @@ public class ActivateRagdoll : MonoBehaviour
                 Rbs.Add(_gam.transform.GetChild(i).GetComponent<Rigidbody>());
                 print("GotRigid");
             }
-            if (_gam.transform.GetChild(i).GetComponent<Collider>() != null)
+            if (_gam.transform.GetChild(i).GetComponent<Collider>() != null && _gam.transform.GetChild(i).transform.tag != "DontTurnOff")
             {
                 colliders.Add(_gam.transform.GetChild(i).gameObject.GetComponent<Collider>());
                 print("GotColliderp");

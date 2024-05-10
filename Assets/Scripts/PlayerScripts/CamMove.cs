@@ -20,6 +20,7 @@ public class CamMove : MonoBehaviour
     public float turnSpeed;
 
     public TimeSlow TS;
+    private int Inv;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class CamMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Inv = PlayerPrefs.GetInt("Inverty");
         //Position of pointer
         screenPos = Input.mousePosition;
         screenPos.z = dist;
@@ -51,7 +53,7 @@ public class CamMove : MonoBehaviour
             if (Time.timeScale > 0)
             {
                 //transform.Rotate((-Input.GetAxis("Mouse Y") * turnSpeed) * Time.deltaTime, 0, 0);
-                transform.Rotate(((-Input.GetAxis("Mouse Y") * turnSpeed)), 0, 0);
+                transform.Rotate(((-Input.GetAxis("Mouse Y") * (turnSpeed * Inv))), 0, 0);
             }
 
             float cameraXRot = transform.localEulerAngles.x;

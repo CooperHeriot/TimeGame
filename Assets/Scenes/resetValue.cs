@@ -12,6 +12,8 @@ public class resetValue : MonoBehaviour
         if (PlayerPrefs.GetInt("Once") == 0)
         {
             PlayerPrefs.SetInt("Scren", 1);
+            PlayerPrefs.SetInt("Inverty", 1);
+
             PlayerPrefs.SetInt("Once", 1);
         }
         

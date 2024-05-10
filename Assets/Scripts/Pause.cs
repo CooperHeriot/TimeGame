@@ -137,4 +137,21 @@ public class Pause : MonoBehaviour
 
         PlayerPrefs.SetFloat("rien", orien);
     }
+
+    public void ToggleInvert(bool _Inv)
+    {
+        int innn = 0;
+
+        if (_Inv == true)
+        {
+            innn = -1;
+        } else
+        {
+            innn = 1;
+        }
+
+        PlayerPrefs.SetInt("Inverty", innn);
+
+        print(innn);
+    }
 }

@@ -27,6 +27,9 @@ public class EnemyShoot : MonoBehaviour
 
     [Header("Gun Sprite")]
     public SpriteRenderer GSprite;
+
+    [Header("Sound")]
+    public AudioClip ShootSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +69,7 @@ public class EnemyShoot : MonoBehaviour
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
+                    Timeline.GetComponent<AudioBehav>().PlaySound(ShootSound);
                 }
                 else
                 {
@@ -73,6 +77,7 @@ public class EnemyShoot : MonoBehaviour
                     {
                         Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                         currentRate = 0;
+                        Timeline.GetComponent<AudioBehav>().PlaySound(ShootSound);
                     }
                 }
 
