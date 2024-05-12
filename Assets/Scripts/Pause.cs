@@ -69,7 +69,10 @@ public class Pause : MonoBehaviour
         if (paused == true)
         {
             panel.SetActive(true);
-            Time.timeScale = 0;
+            if (TM != null)
+            {
+                Time.timeScale = 0;
+            }            
 
             if (FPSMode == true)
             {
