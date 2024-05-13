@@ -63,7 +63,8 @@ public class TimeButton : MonoBehaviour
 
     public void doIt()
     {
-        if (tier <= 0)
+        //if (tier <= 0)
+        if (Player.GetComponent<PlayerMove>().Tier == tier)
         {
             Player.GetComponent<PlayerMove>().stopped = false;
             Player.GetComponent<Rigidbody>().isKinematic = false;
@@ -72,7 +73,8 @@ public class TimeButton : MonoBehaviour
             maked.SetActive(true);
         } else
         {
-            tier -= 1;
+            //tier -= 1;
+            Player.GetComponent<PlayerMove>().Tier += 1;
         }
         
     }

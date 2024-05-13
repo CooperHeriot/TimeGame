@@ -191,6 +191,7 @@ public class TimelineManager : MonoBehaviour
                 inactiveLines[0].GetComponent<WaveBehaviour>().Waves = _TLine.GetComponent<WaveBehaviour>().Waves;
                 inactiveLines[0].GetComponent<WaveBehaviour>().chance = _TLine.GetComponent<WaveBehaviour>().chance;
 
+                inactiveLines[0].GetComponent<TimelineBehav>().Player.GetComponent<PlayerMove>().Tier = _TLine.GetComponent<TimelineBehav>().Player.GetComponent<PlayerMove>().Tier;
                 //add enemies
                 for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().enms.Count; i++)
                 {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public float Tier;
+
     public bool ded, stopped;
     public bool grounded;
 
