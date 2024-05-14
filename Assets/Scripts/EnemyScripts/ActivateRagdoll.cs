@@ -7,6 +7,7 @@ public class ActivateRagdoll : MonoBehaviour
 {
     public List<Rigidbody> Rbs = new List<Rigidbody>();
     public List<Collider> colliders = new List<Collider>();
+    public SkinnedMeshRenderer MR;
     public Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,10 @@ public class ActivateRagdoll : MonoBehaviour
         for (int i = 0; i < colliders.Count; i++)
         {
             colliders[i].enabled = false;
+        }
+        for (int i = 0; i < Rbs.Count; i++)
+        {
+            Rbs[i].isKinematic = true;
         }
     }
 
@@ -34,8 +39,14 @@ public class ActivateRagdoll : MonoBehaviour
         {
             colliders[i].enabled = true;
         }
+        for (int i = 0; i < Rbs.Count; i++)
+        {
+            Rbs[i].isKinematic = false;
+        }
+
         Rbs[0].AddForce(0,12500,0);
         Rbs[0].AddForce(Rbs[0].transform.forward * -2000);
+        MR.material.color = Color.grey;   
     }
     public void checkforRigids(GameObject _gam)
     {

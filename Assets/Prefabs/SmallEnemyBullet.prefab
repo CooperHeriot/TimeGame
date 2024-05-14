@@ -404,6 +404,8 @@ MonoBehaviour:
   HurtPlayer: 1
   HurtEnemy: 0
   destroyOnHit: 1
+  knockBack: 0
+  BreaksWalls: 0
 --- !u!1001 &2744869681998470267
 PrefabInstance:
   m_ObjectHideFlags: 0

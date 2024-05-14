@@ -87,7 +87,7 @@ public class Gunbehav : MonoBehaviour
         {
             if (auto == false)
             {
-                if (Input.GetMouseButtonDown(0) && currentRate >= fireRate && currentAmmo > 0)
+                if (Input.GetMouseButtonDown(0) && currentRate >= fireRate && currentAmmo > 0 && currentAmmo < 999)
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
@@ -100,7 +100,7 @@ public class Gunbehav : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButton(0) && currentRate >= fireRate && currentAmmo > 0)
+                if (Input.GetMouseButton(0) && currentRate >= fireRate && currentAmmo > 0 && currentAmmo < 999)
                 {
                     Instantiate(bullet, firepoint.transform.position, firepoint.transform.rotation, Timeline.transform);
                     currentRate = 0;
