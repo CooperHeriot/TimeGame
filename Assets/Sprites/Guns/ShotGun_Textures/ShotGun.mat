@@ -9,9 +9,12 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ShotGun
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _HALFTONESHAPE_DOT
   - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   - _OUTLINE
   - _SPECULARHIGHLIGHTS_OFF
   - _TOON_SHADING_ON
@@ -25,15 +28,16 @@ Material:
     RenderType: Opaque
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a9562ef7481be114c995a5e1d0ce6458, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb3b0a600418b5a47ac4bfd55d1b4ee6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5f82663235e0af04abb5d9031cbf7421, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CelCurveTexture:
@@ -105,11 +109,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a9562ef7481be114c995a5e1d0ce6458, type: 3}
+        m_Texture: {fileID: 2800000, guid: bb3b0a600418b5a47ac4bfd55d1b4ee6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: b1cfbc3983b4ab542945fbe4d7541c72, type: 3}
+        m_Texture: {fileID: 2800000, guid: da2d8de369276ab4c82fb038833731e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
