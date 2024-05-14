@@ -7,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Windwaker 1
+  m_Name: Sillything
   m_Shader: {fileID: -6465566751694194690, guid: a9aea49e19495174f80f910ddb189a37, type: 3}
   m_ValidKeywords:
+  - INTERSECTION_EFFECTS_ON
   - SURFACE_FOAM_ON
   - WORLD_SPACE_UV_ON
   m_InvalidKeywords:
@@ -51,7 +52,7 @@ Material:
     - SURFACE_FOAM: 1
     - WORLD_SPACE_UV: 1
     - _IntersectionFoamBlend: 1
-    - _IntersectionFoamDepth: 0.72
+    - _IntersectionFoamDepth: 0.87
     - _IntersectionFoamScale: 0.19
     - _IntersectionWaterBlend: 0
     - _QueueControl: 1
@@ -62,11 +63,11 @@ Material:
     - _ShoreFade: 16.1
     - _SurfaceFoamBlend: 1
     - _WaterColorDepth: 75.39
-    - _WaterColorHorizonDistance: 1.4
+    - _WaterColorHorizonDistance: 15.3
     m_Colors:
     - <noninit>: {r: 0.9881688, g: 0.759434, b: 1, a: 1}
     - _IntersectionFoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _IntersectionFoamMovement: {r: 0, g: 0, b: 0, a: 0}
+    - _IntersectionFoamMovement: {r: 0.06, g: 0.08, b: 0, a: 0}
     - _IntersectionFoamSampling: {r: 1, g: 0, b: 0, a: 0}
     - _NormalsMovement: {r: 0.04, g: 0.36, b: 0, a: 0}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 0}
@@ -75,12 +76,12 @@ Material:
     - _SurfaceFoamMovement: {r: 0.7, g: 0, b: 0.47, a: 0.01}
     - _SurfaceFoamSampling: {r: 1, g: 0, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 0.57, a: 0.22}
-    - _WaterColorDeep: {r: 0.9881688, g: 0.759434, b: 1, a: 1}
-    - _WaterColorHorizon: {r: 0.14132074, g: 0, b: 0, a: 1}
-    - _WaterColorShallow: {r: 0, g: 0, b: 0, a: 1}
+    - _WaterColorDeep: {r: 0.13679248, g: 0.76808196, b: 1, a: 1}
+    - _WaterColorHorizon: {r: 0, g: 0.032376483, b: 0.14117648, a: 1}
+    - _WaterColorShallow: {r: 0, g: 0.28241917, b: 0.3018868, a: 1}
     - _WaveColor: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveDirections: {r: 0, g: 0.64, b: 1, a: 0.33}
-    - _WaveVisuals: {r: 1.97, g: 8.1, b: 1.92, a: 0}
+    - _WaveDirections: {r: 0.64, g: 0, b: 0, a: 0}
+    - _WaveVisuals: {r: 0.04, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3884871068361501984
 MonoBehaviour:
