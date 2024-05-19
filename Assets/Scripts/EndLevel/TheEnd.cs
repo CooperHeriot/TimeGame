@@ -29,7 +29,9 @@ public class TheEnd : MonoBehaviour
 
             endingg.SetActive(true);
 
-            FindObjectOfType<StatTracker>().GetComponent<StatTracker>().done = true;
+            endingg.transform.parent.transform.GetComponent<StatTracker>().done = true;
+
+            //FindObjectOfType<StatTracker>().GetComponent<StatTracker>().done = true;
         }
     }
 }

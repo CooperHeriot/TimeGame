@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Windwaker 1
   m_Shader: {fileID: -6465566751694194690, guid: a9aea49e19495174f80f910ddb189a37, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - SURFACE_FOAM_ON
   - WORLD_SPACE_UV_ON
@@ -21,6 +23,7 @@ Material:
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -76,7 +79,7 @@ Material:
     - _SurfaceFoamSampling: {r: 1, g: 0, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 0.57, a: 0.22}
     - _WaterColorDeep: {r: 0.9881688, g: 0.759434, b: 1, a: 1}
-    - _WaterColorHorizon: {r: 0.14132074, g: 0, b: 0, a: 1}
+    - _WaterColorHorizon: {r: 0.14131999, g: 0, b: 0, a: 1}
     - _WaterColorShallow: {r: 0, g: 0, b: 0, a: 1}
     - _WaveColor: {r: 0, g: 0, b: 0, a: 0}
     - _WaveDirections: {r: 0, g: 0.64, b: 1, a: 0.33}
