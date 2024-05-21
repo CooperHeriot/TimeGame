@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - INTERSECTION_EFFECTS_ON
   - SURFACE_FOAM_ON
   - WORLD_SPACE_UV_ON
   m_InvalidKeywords:
@@ -79,7 +80,7 @@ Material:
     - _SurfaceFoamSampling: {r: 1, g: 0, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 0.57, a: 0.22}
     - _WaterColorDeep: {r: 0.9881688, g: 0.759434, b: 1, a: 1}
-    - _WaterColorHorizon: {r: 0.14131999, g: 0, b: 0, a: 1}
+    - _WaterColorHorizon: {r: 0.14131972, g: 0, b: 0, a: 1}
     - _WaterColorShallow: {r: 0, g: 0, b: 0, a: 1}
     - _WaveColor: {r: 0, g: 0, b: 0, a: 0}
     - _WaveDirections: {r: 0, g: 0.64, b: 1, a: 0.33}
