@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
@@ -15,6 +16,8 @@ public class Pause : MonoBehaviour
     public TimelineManager TM;
 
     public float TheTime;
+
+    public GameObject first, optionsfirst, optionslast;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +81,7 @@ public class Pause : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.None;
             }
+            EventSystem.current.SetSelectedGameObject(first);
         } else
         {
             panel.SetActive(false);
@@ -156,5 +160,18 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("Inverty", innn);
 
         print(innn);
+    }
+
+    public void Setoptions()
+    {
+        EventSystem.current.SetSelectedGameObject(optionsfirst);
+    }
+    public void SetOptionsLast()
+    {
+        EventSystem.current.SetSelectedGameObject(optionslast);
+    }
+    public void SetFirst()
+    {
+        EventSystem.current.SetSelectedGameObject(first);
     }
 }
