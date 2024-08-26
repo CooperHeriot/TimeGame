@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 180415298}
   - component: {fileID: 180415297}
   m_Layer: 5
-  m_Name: ezgif-7-f5d2a65b60_0
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 380542500}
   - component: {fileID: 380542501}
   m_Layer: 0
-  m_Name: Title-transparent-nofloor
+  m_Name: BackDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2132,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165948, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165950, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: m_RootOrder
@@ -3111,7 +3111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 1119.9998, y: 629.71423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800138301
@@ -3685,7 +3685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165948, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165950, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: m_RootOrder
@@ -3822,7 +3822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 1119.9998, y: 629.71423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &983993616
@@ -4330,7 +4330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165948, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165950, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: m_RootOrder
@@ -11073,6 +11073,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1495256458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495256460}
+  - component: {fileID: 1495256459}
+  m_Layer: 0
+  m_Name: Screenshotter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1495256459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495256458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afeecc4379e00da4496f6296ed8ed837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1495256460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495256458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6784837, y: -18.665617, z: 28.097408}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533741067
 GameObject:
   m_ObjectHideFlags: 0
@@ -11319,7 +11363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165948, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8034673010770165950, guid: d5afddece38a0744788e2d97c58757e6, type: 3}
       propertyPath: m_RootOrder
@@ -12181,7 +12225,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -16559,3 +16603,4 @@ SceneRoots:
   - {fileID: 810476587}
   - {fileID: 380542500}
   - {fileID: 879382751}
+  - {fileID: 1495256460}
