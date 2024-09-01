@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     public bool ded, stopped;
     public bool grounded;
 
-    public float speed = 1, jump = 1;
+    public float speed = 1, jump = 1, pulldown = 1;
     private Rigidbody rb;
     public LayerMask LM;
 
@@ -54,9 +54,13 @@ public class PlayerMove : MonoBehaviour
 
             rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
 
-            transform.Rotate(0, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime, 0);*/
+            transform.Rotate(0, Input.GetAxis("Mouse X") * turnSpeed * Time.deltaTime, 0);*/           
         }
-              
+
+        if (grounded == false && (Input.GetKey(KeyCode.Space) == false || rb.velocity.y < 0))
+        {
+            rb.AddForce(0, -pulldown * Time.deltaTime, 0);
+        }
     }
 
     void Update()

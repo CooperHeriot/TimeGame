@@ -219,6 +219,15 @@ public class CamManager : MonoBehaviour
     {
         EnableFullScreen = !EnableFullScreen;
 
+        if (EnableFullScreen == true)
+        {
+            PlayerPrefs.SetInt("Scren", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Scren", 0);
+        }
+
         if (TM.currentAmount == 1)
         {
             //Cams[0].rect = new Rect(0.2f, 0f, 0.6f, 1f);
@@ -312,13 +321,6 @@ public class CamManager : MonoBehaviour
             //Aount = 4;
         }
 
-        if (EnableFullScreen == true)
-        {
-            PlayerPrefs.SetInt("Scren", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Scren", 0);
-        }
+        
     }
 }

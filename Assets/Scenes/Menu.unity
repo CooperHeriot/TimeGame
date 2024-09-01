@@ -11073,6 +11073,175 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1462467413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462467415}
+  - component: {fileID: 1462467414}
+  m_Layer: 0
+  m_Name: camm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1462467414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462467413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61ae9ef564245243a1116146dc7a656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cams: []
+  PH: {fileID: 0}
+  TS: {fileID: 0}
+  Aount: 1
+  EnableFullScreen: 0
+  C1:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C1Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C11:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C22:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C11Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C22Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C111:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C222:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C333:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C111Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C222Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C333Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C1111:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C2222:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C3333:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C4444:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C1111Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C2222Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C3333Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  C4444Alt:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+--- !u!4 &1462467415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462467413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 644.16187, y: 224.14084, z: 1072.1285}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495256458
 GameObject:
   m_ObjectHideFlags: 0
@@ -16604,3 +16773,4 @@ SceneRoots:
   - {fileID: 380542500}
   - {fileID: 879382751}
   - {fileID: 1495256460}
+  - {fileID: 1462467415}
