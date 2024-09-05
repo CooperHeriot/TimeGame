@@ -75,7 +75,13 @@ public class PlayerMove : MonoBehaviour
 
             if (ded == false && stopped == false)
             {
-                rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
+                if (grounded == true)
+                {
+                    rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
+                } else
+                {
+                    rb.AddForce((movementVector * speed) / 3);
+                }               
             }
 
             if (Time.timeScale > 0) {

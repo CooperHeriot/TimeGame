@@ -240,7 +240,8 @@ public class TimelineManager : MonoBehaviour
             }
         }
         CheckActiveLines();
-        currentAmount = Lines.Count;
+        //currentAmount = Lines.Count;
+        currentAmount = ActiveLines;
     }
 
     public void eraseTimeline(GameObject _TLine)
@@ -263,7 +264,8 @@ public class TimelineManager : MonoBehaviour
 
             CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
 
-            currentAmount = Lines.Count;
+            //currentAmount = Lines.Count;
+            currentAmount = ActiveLines;
 
             NV.makeNew();
         } else

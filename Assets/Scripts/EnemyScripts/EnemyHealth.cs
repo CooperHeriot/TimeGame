@@ -80,25 +80,28 @@ public class EnemyHealth : MonoBehaviour
             AR.TurnOnStuff();
             AR.transform.parent = null;
         }
-
-        dead = true;
-
-        //temp
-        if (inderpendat == false)
+        
+        if (dead == false)
         {
-            ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
-        }       
+            dead = true;
+            //temp
+            if (inderpendat == false)
+            {
+                ES.Timeline.GetComponent<WaveBehaviour>().EnemyDie(gameObject);
+            }
 
-        if (drop != null && oncce == false)
-        {
-            Instantiate(drop, transform.position, transform.rotation, transform.parent);
-            oncce = true;
+            if (drop != null && oncce == false)
+            {
+                Instantiate(drop, transform.position, transform.rotation, transform.parent);
+                oncce = true;
+            }
+            if (honor == true)
+            {
+                FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
+                FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
+            }
         }
-        if (honor == true)
-        {
-            FindObjectOfType<StatTracker>().GetComponent<StatTracker>().KilledPlusOne();
-            FindObjectOfType<WaveManager>().GetComponent<WaveManager>().killss += 1;
-        }       
+        
         Destroy(gameObject);
     }
 
