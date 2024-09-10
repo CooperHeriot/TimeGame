@@ -75,13 +75,16 @@ public class WaveManager : MonoBehaviour
                 {
                     WaveBehavs[i].GetComponent<WaveBehaviour>().openDoors();
                 }
-
+                
                 if (once == true)
                 {
                     once = false;
                     SummonLog(killss, times);
                     killss = 0;
                     times = 0;
+
+                    TM.alignCharacters();
+                    print("alignnned");
                 }
 
                 

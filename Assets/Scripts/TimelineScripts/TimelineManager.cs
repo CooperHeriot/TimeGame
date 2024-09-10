@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Collections;
 using UnityEngine;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
@@ -10,6 +11,7 @@ public class TimelineManager : MonoBehaviour
     public List<GameObject> Lines = new List<GameObject>();
     private List<GameObject> inactiveLines = new List<GameObject>();
     public List<GameObject> lineViwer = new List<GameObject>();
+    public List<GameObject> reverseLineViwer = new List<GameObject>();
     //public List<GameObject> SpawnPoints = new List<GameObject>();
     public GameObject primeTime;
 
@@ -93,7 +95,7 @@ public class TimelineManager : MonoBehaviour
 
                 //WM.UpdateWaves(NewTL);
 
-                NV.makeNew();
+               // NV.makeNew();
 
                 Total += 1;
 
@@ -101,8 +103,13 @@ public class TimelineManager : MonoBehaviour
 
                 //NewTL.GetComponent<WaveBehaviour>().KillAll();
 
-                NewTL.SetActive(false);
+               // NewTL.SetActive(false);
                 inactiveLines.Add(NewTL);
+            }
+            NV.makeNew();
+            for (int i = 0; i < inactiveLines.Count; i++)
+            {
+                inactiveLines[i].SetActive(false);
             }
         }
        
@@ -133,7 +140,7 @@ public class TimelineManager : MonoBehaviour
 
     public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Mod)
     {
-        CheckActiveLines();
+       // CheckActiveLines();
         if (DontCreate == false)
         {
             if (currentAmount < maxAmount)
@@ -159,13 +166,13 @@ public class TimelineManager : MonoBehaviour
         } else
         {
             //new Code
-            CheckActiveLines();
+            //CheckActiveLines();
             if(ActiveLines < Lines.Count)
             {
                 inactiveLines[0].GetComponent<TimelineBehav>().Player.GetComponent<PlayerHealth>().currentHealth = 3;
                 inactiveLines[0].GetComponent<TimelineBehav>().Player.GetComponent<PlayerHealth>().dead = false;
 
-                inactiveLines[0].SetActive(true);
+                inactiveLines[0].SetActive(true);               
                 //inactiveLines[0].GetComponent<WaveBehaviour>().KillAll();
                 //inactiveLines[0].GetComponent<TimelineBehav>().prime = false;
                 inactiveLines[0].GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
@@ -223,8 +230,9 @@ public class TimelineManager : MonoBehaviour
 
                 //inactiveLines.Remove(inactiveLines[0]);
                 inactiveLines.RemoveAt(0);
+                //CheckActiveLines();
             }
-            CheckActiveLines();
+            //CheckActiveLines();
         }
         
         
@@ -236,6 +244,7 @@ public class TimelineManager : MonoBehaviour
                 {
                     Destroy(Lines[i].gameObject);
                     Lines.Remove(Lines[i]);
+                    //CheckActiveLines();
                 }
             }
         }
@@ -246,7 +255,7 @@ public class TimelineManager : MonoBehaviour
 
     public void eraseTimeline(GameObject _TLine)
     {
-        CheckActiveLines();
+        //CheckActiveLines();
         if (DontCreate == false)
         {
             WM.removeWave(_TLine);
@@ -270,6 +279,32 @@ public class TimelineManager : MonoBehaviour
             NV.makeNew();
         } else
         {
+            if (_TLine.GetComponent<TimelineBehav>().prime == true)
+            {
+                int TMM = 0;
+
+                for (int i = 0; i < Lines.Count; i++)
+                {
+                    if (Lines[i] == _TLine)
+                    {
+                        TMM = i;
+                    }
+                }
+
+                reverseLineViwer.Remove(_TLine);
+                reverseLineViwer[0].GetComponent<TimelineBehav>().becomePrime();
+                primeTime = reverseLineViwer[0];
+                /* if (TMM + 1 > reverseLineViwer.Count)
+                 {
+                     reverseLineViwer[0].GetComponent<TimelineBehav>().becomePrime();
+                     primeTime = reverseLineViwer[0];
+                 } else
+                 {
+                     reverseLineViwer[TMM + 1].GetComponent<TimelineBehav>().becomePrime();
+                     primeTime = reverseLineViwer[TMM + 1];
+                 }    */
+            }
+
             _TLine.GetComponent<WaveBehaviour>().KillAll();
             _TLine.GetComponent<WaveBehaviour>().KillAll();
             _TLine.GetComponent<WaveBehaviour>().KillAll();
@@ -278,7 +313,7 @@ public class TimelineManager : MonoBehaviour
             
             _TLine.gameObject.SetActive(false);
             CM.Cams.Remove(_TLine.GetComponent<TimelineBehav>().Cam);
-            CheckActiveLines();
+            //CheckActiveLines();
 
             inactiveLines.Add(_TLine);
         }
@@ -288,10 +323,14 @@ public class TimelineManager : MonoBehaviour
     public void CheckActiveLines()
     {
         ActiveLines = 0;
+        reverseLineViwer.Clear();
         for (int i = 0; i < Lines.Count; i++)
         {
+            
             if (Lines[i].activeInHierarchy == true)
             {
+                
+
                 ActiveLines += 1;
                 if (inactiveLines.Count > 1)
                 {
@@ -300,15 +339,34 @@ public class TimelineManager : MonoBehaviour
                 {
                    // inactiveLines.Clear();
                 }
-                
+
+
+                reverseLineViwer.Add(Lines[i]);
                 //inactiveLines.Count -= 1;
             } else
             {
-              ///  inactiveLines.Add(Lines[i]);
+                ///  inactiveLines.Add(Lines[i]);
+                reverseLineViwer.Remove(Lines[i]);
             }
         }
 
         currentAmount = ActiveLines;
         lineViwer = inactiveLines;
+
+        //NV.makeNew();
+    }
+
+    public void alignCharacters()
+    {
+        for (int i = 0; i < Lines.Count;i++)
+        {
+            //if (Lines[i].GetComponent<TimelineBehav>().prime == false) 
+            if (Lines[i] != primeTime) 
+            {
+                Lines[i].GetComponent<TimelineBehav>().Player.transform.position = new Vector3(primeTime.GetComponent<TimelineBehav>().Player.transform.position.x, Lines[i].GetComponent<TimelineBehav>().Player.transform.position.y, primeTime.GetComponent<TimelineBehav>().Player.transform.position.z);
+                //Lines[i].GetComponent<TimelineBehav>().Player.transform.position = new Vector3(primeTime.GetComponent<TimelineBehav>().Player.transform.position.x, primeTime.GetComponent<TimelineBehav>().Player.transform.position.y, primeTime.GetComponent<TimelineBehav>().Player.transform.position.z);
+                print("Algined playa");
+            }
+        }
     }
 }
