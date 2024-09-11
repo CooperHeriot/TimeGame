@@ -6,10 +6,16 @@ public class ReturnIfFall : MonoBehaviour
 {
     public Vector3 Point;
     private LayerMask LM;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         LM = GetComponent<PlayerMove>().LM;
+        if (GetComponent<Rigidbody>() != null)
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+       
     }
 
     // Update is called once per frame
@@ -32,5 +38,6 @@ public class ReturnIfFall : MonoBehaviour
     public void returnToFloor()
     {
         transform.position = new Vector3(Point.x, Point.y + 2, Point.z);
+        rb.velocity = Vector3.zero;
     }
 }
