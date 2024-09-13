@@ -364,6 +364,7 @@ public class TimelineManager : MonoBehaviour
             if (Lines[i] != primeTime) 
             {
                 Lines[i].GetComponent<TimelineBehav>().Player.transform.position = new Vector3(primeTime.GetComponent<TimelineBehav>().Player.transform.position.x, Lines[i].GetComponent<TimelineBehav>().Player.transform.position.y, primeTime.GetComponent<TimelineBehav>().Player.transform.position.z);
+                Lines[i].GetComponent<TimelineBehav>().Player.transform.rotation = new Quaternion(primeTime.GetComponent<TimelineBehav>().Player.transform.rotation.x, primeTime.GetComponent<TimelineBehav>().Player.transform.rotation.y, primeTime.GetComponent<TimelineBehav>().Player.transform.rotation.z, primeTime.GetComponent<TimelineBehav>().Player.transform.rotation.w);
                 //Lines[i].GetComponent<TimelineBehav>().Player.transform.position = new Vector3(primeTime.GetComponent<TimelineBehav>().Player.transform.position.x, primeTime.GetComponent<TimelineBehav>().Player.transform.position.y, primeTime.GetComponent<TimelineBehav>().Player.transform.position.z);
                 print("Algined playa");
             }

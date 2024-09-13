@@ -25,6 +25,8 @@ public class PauseSensitivity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sensitibty = PlayerPrefs.GetFloat("senss");
+
         TM = FindObjectOfType<TimelineManager>();
 
         //ps = PH.GetComponent<PauseHolder>();

@@ -29,6 +29,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         rb.isKinematic = false;
+        turnSpeed = PlayerPrefs.GetFloat("senss");
     }
 
     // Update is called once per frame
@@ -107,5 +108,10 @@ public class PlayerMove : MonoBehaviour
         } else { 
         grounded = false;
         }
+    }
+
+    private void OnEnable()
+    {
+        turnSpeed = PlayerPrefs.GetFloat("senss");
     }
 }

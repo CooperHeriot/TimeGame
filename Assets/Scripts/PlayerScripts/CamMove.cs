@@ -25,6 +25,7 @@ public class CamMove : MonoBehaviour
     void Start()
     {
         cam = GetComponentInChildren<Camera>();
+        turnSpeed = PlayerPrefs.GetFloat("senss");
     }
 
     // Update is called once per frame
@@ -66,5 +67,10 @@ public class CamMove : MonoBehaviour
         }
 
         
+    }
+
+    private void OnEnable()
+    {
+        turnSpeed = PlayerPrefs.GetFloat("senss");
     }
 }

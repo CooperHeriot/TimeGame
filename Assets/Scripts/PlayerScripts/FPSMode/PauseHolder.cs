@@ -8,11 +8,15 @@ public class PauseHolder : MonoBehaviour
 
     public float sensitibty;
 
-    public GameObject PH;
+   // public GameObject PH;
 
     // Start is called before the first frame update
     void Start()
     {
+        sensitibty = PlayerPrefs.GetFloat("senss");
+
+        print(PlayerPrefs.GetFloat("senss"));
+
         TM = FindObjectOfType<TimelineManager>();
 
         //ps = PH.GetComponent<PauseHolder>();
@@ -20,9 +24,11 @@ public class PauseHolder : MonoBehaviour
 
     void Awake()
     {
-        PH = FindObjectOfType<PauseSensitivity>().gameObject;
+        sensitibty = PlayerPrefs.GetFloat("senss");
 
-        newrSens(PH.GetComponent<PauseSensitivity>().sensitibty);
+        //PH = FindObjectOfType<PauseSensitivity>().gameObject;
+
+        //newrSens(PH.GetComponent<PauseSensitivity>().sensitibty);
     }
 
     // Update is called once per frame
@@ -35,6 +41,8 @@ public class PauseHolder : MonoBehaviour
     {
         sensitibty = _new;
 
+        PlayerPrefs.SetFloat("senss", sensitibty);
+        print(PlayerPrefs.GetFloat("senss"));
         for (int i = 0; i < FindObjectsOfType<CamMove>().Length; i++)
         {
             FindObjectsOfType<CamMove>()[i].GetComponent<CamMove>().turnSpeed = sensitibty;
@@ -44,7 +52,7 @@ public class PauseHolder : MonoBehaviour
             FindObjectsOfType<PlayerMove>()[i].GetComponent<PlayerMove>().turnSpeed = sensitibty;
         }
 
-        FindObjectOfType<PauseSensitivity>().sensitibty = sensitibty;
+       // FindObjectOfType<PauseSensitivity>().sensitibty = sensitibty;
     }
 }
 
