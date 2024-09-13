@@ -15,7 +15,7 @@ public class PauseHolder : MonoBehaviour
     {
         sensitibty = PlayerPrefs.GetFloat("senss");
 
-        print(PlayerPrefs.GetFloat("senss"));
+        //print(PlayerPrefs.GetFloat("senss"));
 
         TM = FindObjectOfType<TimelineManager>();
 
@@ -42,7 +42,7 @@ public class PauseHolder : MonoBehaviour
         sensitibty = _new;
 
         PlayerPrefs.SetFloat("senss", sensitibty);
-        print(PlayerPrefs.GetFloat("senss"));
+        //print(PlayerPrefs.GetFloat("senss"));
         for (int i = 0; i < FindObjectsOfType<CamMove>().Length; i++)
         {
             FindObjectsOfType<CamMove>()[i].GetComponent<CamMove>().turnSpeed = sensitibty;

@@ -60,7 +60,7 @@ public class PlayerMove : MonoBehaviour
 
         if (grounded == false && (Input.GetKey(KeyCode.Space) == false || rb.velocity.y < 0))
         {
-            rb.AddForce(0, -pulldown * Time.deltaTime, 0);
+            rb.AddForce(0, -pulldown * Time.deltaTime, 0);          
         }
     }
 
@@ -76,7 +76,7 @@ public class PlayerMove : MonoBehaviour
 
             if (ded == false && stopped == false)
             {
-                if (grounded == true)
+                if (grounded == true || TS.slowing == true)
                 {
                     rb.velocity = movementVector * speed + Vector3.up * rb.velocity.y;
                 } else

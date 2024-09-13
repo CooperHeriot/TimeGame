@@ -59,7 +59,7 @@ public class TimeSlow : MonoBehaviour
 
             if (TM != null)
             {
-                if (TM.currentAmount > 1)
+                if (TM.currentAmount > 1 && !Input.GetKey(KeyCode.LeftShift))
                 {
                     TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
                 }
