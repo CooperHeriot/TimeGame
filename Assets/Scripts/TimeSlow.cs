@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class TimeSlow : MonoBehaviour
@@ -19,6 +21,9 @@ public class TimeSlow : MonoBehaviour
     public GameObject reminder;
 
     public bool slowing;
+    public Volume Vol;
+    private ColorAdjustments CA;
+    private Bloom BL;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +35,8 @@ public class TimeSlow : MonoBehaviour
 
         TJ = TimeJuice;
         TimeJuice = 0;
+        Vol.profile.TryGet(out CA);
+        Vol.profile.TryGet(out BL);
     }
 
     // Update is called once per frame
@@ -49,6 +56,9 @@ public class TimeSlow : MonoBehaviour
             {
                 Destroy(reminder.gameObject);
             }
+
+            CA.saturation.value = Mathf.Lerp(CA.saturation.value, -90, 3 * Time.deltaTime);
+            BL.intensity.value = Mathf.Lerp(BL.intensity.value, 30, 3 * Time.deltaTime);
         } else
         {
             slowing = false;
@@ -63,8 +73,9 @@ public class TimeSlow : MonoBehaviour
                 {
                     TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
                 }
-            }            
-
+            }
+            CA.saturation.value = Mathf.Lerp(CA.saturation.value, 37, 5 * Time.deltaTime);
+            BL.intensity.value = Mathf.Lerp(BL.intensity.value, 4.87f, 5 * Time.deltaTime);
         }
 
         if (TimeJuice > TJ)
