@@ -50,7 +50,7 @@ public class BulletDamage : MonoBehaviour
             } 
         }
 
-        if (knockBack == true)
+        if (knockBack == true && collision.gameObject.GetComponent<Rigidbody>() != null)
         {
             collision.gameObject.GetComponent<Rigidbody>().AddForce((collision.gameObject.transform.position - transform.position) * damage * 100);
         }
@@ -83,7 +83,7 @@ public class BulletDamage : MonoBehaviour
             }
         }
 
-        if (knockBack == true)
+        if (knockBack == true && collision.gameObject.GetComponent<Rigidbody>() != null)
         {
             collision.gameObject.GetComponent<Rigidbody>().AddForce((collision.gameObject.transform.position - transform.position) * damage * 100);
         }

@@ -91,7 +91,7 @@ public class TimelineManager : MonoBehaviour
                // CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
                 NewTL.GetComponent<TimelineBehav>().prime = false;
 
-                NewTL.GetComponent<TimelineBehav>().newGunForPlayer(NG.GunSprite, NG.FRate, NG.Auto, NG.Bullet, NG.Ammo, NG.GunMod);
+                NewTL.GetComponent<TimelineBehav>().newGunForPlayer(NG.GunSprite, NG.FRate, NG.Auto, NG.Bullet, NG.Ammo, NG.GunMod, NG.Soun);
 
                 //WM.UpdateWaves(NewTL);
 
@@ -138,7 +138,7 @@ public class TimelineManager : MonoBehaviour
         }
     }
 
-    public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Mod)
+    public void createNewTimeline(GameObject _TLine, Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Mod, AudioClip _sfx)
     {
        // CheckActiveLines();
         if (DontCreate == false)
@@ -155,7 +155,7 @@ public class TimelineManager : MonoBehaviour
                 CM.Cams.Add(NewTL.GetComponent<TimelineBehav>().Cam);
                 NewTL.GetComponent<TimelineBehav>().prime = false;
 
-                NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
+                NewTL.GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod, _sfx);
 
                 WM.UpdateWaves(NewTL);
 
@@ -175,7 +175,7 @@ public class TimelineManager : MonoBehaviour
                 inactiveLines[0].SetActive(true);               
                 //inactiveLines[0].GetComponent<WaveBehaviour>().KillAll();
                 //inactiveLines[0].GetComponent<TimelineBehav>().prime = false;
-                inactiveLines[0].GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod);
+                inactiveLines[0].GetComponent<TimelineBehav>().newGunForPlayer(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Mod, _sfx);
                 
                 //PLAYER STUFF
                 Vector3 Playerpos = _TLine.GetComponent<TimelineBehav>().Player.transform.localPosition;

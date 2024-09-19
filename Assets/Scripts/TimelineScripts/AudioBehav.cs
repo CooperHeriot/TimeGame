@@ -29,5 +29,6 @@ public class AudioBehav : MonoBehaviour
         Sund.GetComponent<AudioSource>().clip = _audio;
         Sund.GetComponent<AudioSource>().panStereo = AS.panStereo;
         Sund.GetComponent<AudioSource>().Play();
+      //  print("jnifdfsnfosfqorjqp39ue21");
     }
 }

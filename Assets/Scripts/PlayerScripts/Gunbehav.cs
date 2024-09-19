@@ -145,7 +145,7 @@ public class Gunbehav : MonoBehaviour
         }
     }
 
-    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo, GameObject _Mod)
+    public void NewGun(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _Ammo, GameObject _Mod, AudioClip _AC)
     {
         if (firstGun == true)
         {
@@ -170,6 +170,8 @@ public class Gunbehav : MonoBehaviour
             Destroy(GunMod);
 
             GunMod = newGun;
-        }    
+        }
+
+        GunSound = _AC;
     }
 }

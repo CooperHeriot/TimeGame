@@ -19,7 +19,9 @@ public class NewGun : MonoBehaviour
     public GameObject Bullet;
     public float Ammo = 1;
 
+    public AudioClip Soun;
     public bool Replace;
+   
     //public bool StartGun;
     // Start is called before the first frame update
     void Start()
@@ -40,14 +42,14 @@ public class NewGun : MonoBehaviour
 
     public void MakeAnew()
     {
-        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo, GunMod);
+        TM.createNewTimeline(ThisTimeLine,  GunSprite,  FRate,  Auto,  Bullet, Ammo, GunMod, Soun);
 
         FindObjectOfType<StatTracker>().GetComponent<StatTracker>().TPlusOne();
     }
 
     public void SwapGun()
     {
-        GB.NewGun(GunSprite, FRate, Auto, Bullet, Ammo, GunMod);
+        GB.NewGun(GunSprite, FRate, Auto, Bullet, Ammo, GunMod, Soun);
     }
 
    /* private void OnCollisionEnter(Collision collision)

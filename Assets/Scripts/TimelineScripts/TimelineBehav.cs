@@ -103,9 +103,9 @@ public class TimelineBehav : MonoBehaviour
         PrimeBorder.SetActive(true);
     }
 
-    public void newGunForPlayer(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Modle)
+    public void newGunForPlayer(Sprite _Gunn, float _FRate, bool _Auto, GameObject _Bullet, float _ammo, GameObject _Modle, AudioClip _SX)
     {
-        Player.GetComponent<Gunbehav>().NewGun(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Modle);
+        Player.GetComponent<Gunbehav>().NewGun(_Gunn, _FRate, _Auto, _Bullet, _ammo, _Modle, _SX);
     }
 
    public void activateImg()

@@ -140,6 +140,7 @@ MonoBehaviour:
   Auto: 1
   Bullet: {fileID: 1795707250594262657, guid: e522f417370403c44995268362490a48, type: 3}
   Ammo: 25
+  Soun: {fileID: 8300000, guid: 3ed3b22f1b1f2b141a1d6f24666ce41c, type: 3}
   Replace: 0
 --- !u!65 &1102352383563012570
 BoxCollider:
