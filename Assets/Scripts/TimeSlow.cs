@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class TimeSlow : MonoBehaviour
 {
+    public bool notFirst;
     public float currentTime, GoalTime;
     public float currentRot, GoalRot;
     public float speed = 1;
@@ -19,6 +20,9 @@ public class TimeSlow : MonoBehaviour
 
     public Image img;
     public GameObject reminder;
+    public GameObject explain;
+    public bool actinaetd;
+    //public GameObject ehgh;
 
     public bool slowing;
     public Volume Vol;
@@ -45,7 +49,7 @@ public class TimeSlow : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && TimeJuice > 0)
         {
             slowing = true;
-
+            notFirst = true;
             currentTime = Mathf.Lerp(currentTime, GoalTime, speed * Time.deltaTime);
             currentRot = Mathf.Lerp(currentRot, GoalRot, speed * Time.deltaTime);
             //currentTime = GoalTime;
@@ -69,9 +73,16 @@ public class TimeSlow : MonoBehaviour
 
             if (TM != null)
             {
-                if (TM.currentAmount > 1 && !Input.GetKey(KeyCode.LeftShift))
+                if (TM.currentAmount > 1 && !Input.GetKey(KeyCode.LeftShift) && actinaetd == true)
                 {
-                    TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
+                    if (notFirst == false)
+                    {
+                        TimeJuice += ((0.75f * (TM.currentAmount - 1)) * Time.deltaTime);
+                    } else
+                    {
+                        TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
+                    }
+                    
                 }
             }
             CA.saturation.value = Mathf.Lerp(CA.saturation.value, 37, 5 * Time.deltaTime);
@@ -81,15 +92,22 @@ public class TimeSlow : MonoBehaviour
         if (TimeJuice > TJ)
         {
             TimeJuice = TJ;
+            notFirst = true;
 
-            if (reminder != null)
+            if (reminder != null && explain.activeInHierarchy == true)
             {
                 reminder.SetActive(true);
+                explain.SetActive(false);
             }            
         }
 
         Paus.TheTime = currentTime;
 
         img.fillAmount = (TimeJuice / TJ);
+    }
+
+    public void acriakavted()
+    {
+        actinaetd = true;
     }
 }
