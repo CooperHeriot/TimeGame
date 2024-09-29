@@ -77,7 +77,7 @@ public class TimeSlow : MonoBehaviour
                 {
                     if (notFirst == false)
                     {
-                        TimeJuice += ((0.75f * (TM.currentAmount - 1)) * Time.deltaTime);
+                        TimeJuice += ((0.78f * (TM.currentAmount - 1)) * Time.deltaTime);
                     } else
                     {
                         TimeJuice += ((0.25f * (TM.currentAmount - 1)) * Time.deltaTime);
