@@ -26,6 +26,10 @@ public class WaveManager : MonoBehaviour
     public bool once;
     [Header("Paradox Stuff")]
     public bool StopWaves;
+
+    [Header("Paradox Stuff")]
+    public AudioSource Combat, Calm;
+    public float test;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +73,7 @@ public class WaveManager : MonoBehaviour
             {
                 Cooldown = CD;
                 nextWave();
+                StartCoroutine(SetCombat());
             } else
             {
                 for (int i = 0; i < WaveBehavs.Count; i++)
@@ -85,6 +90,7 @@ public class WaveManager : MonoBehaviour
 
                     TM.alignCharacters();
                     print("alignnned");
+                    StartCoroutine(SetCalm());
                 }
 
                 
@@ -157,5 +163,62 @@ public class WaveManager : MonoBehaviour
         SummonLog(killss, times);
         killss = 0;
         times = 0;
+    }
+
+    IEnumerator SetCombat()
+    {
+        //print("sdsdsf11111111");
+        if (Combat.volume != 1)
+        {
+            float mt = 1;
+            while (mt > 0)
+            {
+                Calm.volume = mt;
+                Combat.volume = 1 - mt;
+                //mt -= (20 / 100);
+                mt -= 0.05f;
+                //mt -= 99;
+                test = mt;
+                
+                //print("sddfsadfsf");
+                yield return new WaitForSeconds(0.1f);
+            }
+            Calm.volume = 0;
+            Combat.volume = 1;
+        } else
+        {
+            Calm.volume = 0; 
+            Combat.volume = 1;
+            yield return null;
+        }     
+    }
+
+    IEnumerator SetCalm()
+    {
+        //print("sdsdsf11111111");
+        if (Calm.volume != 1)
+        {
+            float mt = 1;
+            while (mt > 0)
+            {
+                Combat.volume = mt;
+                Calm.volume = 1 - mt;
+                //mt -= (20 / 100);
+                mt -= 0.05f;
+                //mt -= 99;
+                test = mt;
+
+                //print("sddfsadfsf");
+                yield return new WaitForSeconds(0.1f);
+            }
+            Combat.volume = 0;
+            Calm.volume = 1;
+        }
+        else
+        {
+            Calm.volume = 0;
+            Combat.volume = 1;
+            yield return null;
+        }
     }
 }
