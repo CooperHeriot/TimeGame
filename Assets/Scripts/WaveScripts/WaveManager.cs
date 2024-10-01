@@ -151,7 +151,7 @@ public class WaveManager : MonoBehaviour
 
     public void SummonLog(float kills, float timme)
     {
-        GameObject logg = Instantiate(CombatLog, combatlog1.transform.position, transform.rotation, canvers.transform);
+        GameObject logg = Instantiate(CombatLog, combatlog1.transform.position, transform.rotation, combatlog1.transform);
         logg.GetComponent<Combatlog>().kill = kills;
         logg.GetComponent<Combatlog>().ttime = timme;
         //logg.transform.position = Vector3.zero;
