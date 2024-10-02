@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject settings;
     public bool paused;
     public string sceneToLoad;
 
@@ -18,6 +20,7 @@ public class Pause : MonoBehaviour
     public float TheTime;
 
     public GameObject first, optionsfirst, optionslast;
+    public AudioMixer Mix;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +39,17 @@ public class Pause : MonoBehaviour
         else
         {
             panel.SetActive(false);
+            settings.SetActive(false);
             Time.timeScale = TheTime;
 
             if (FPSMode == true)
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
-        }       
+        }
+
+        Mix.SetFloat("SV", PlayerPrefs.GetFloat("SFXv"));
+        Mix.SetFloat("MV", PlayerPrefs.GetFloat("MUSv"));
     }
 
     // Update is called once per frame
@@ -85,6 +92,7 @@ public class Pause : MonoBehaviour
         } else
         {
             panel.SetActive(false);
+            settings.SetActive(false);
             Time.timeScale = TheTime;
 
             if (FPSMode == true)
@@ -173,5 +181,16 @@ public class Pause : MonoBehaviour
     public void SetFirst()
     {
         EventSystem.current.SetSelectedGameObject(first);
+    }
+
+    public void newSFX(float _new)
+    {
+        Mix.SetFloat("SV", _new);
+        PlayerPrefs.SetFloat("SFXv", _new);
+    }
+    public void newMUS(float _new)
+    {
+        Mix.SetFloat("MV", _new);
+        PlayerPrefs.SetFloat("MUSv", _new);
     }
 }

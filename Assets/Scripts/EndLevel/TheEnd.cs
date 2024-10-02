@@ -26,6 +26,8 @@ public class TheEnd : MonoBehaviour
             Player = other.gameObject;
 
             Player.GetComponent<PlayerMove>().speed = 0;
+            Player.GetComponent<PlayerMove>().turnSpeed = 0;
+            Player.transform.GetChild(0).GetComponent<CamMove>().turnSpeed = 0;
 
             endingg.SetActive(true);
 

@@ -11,6 +11,9 @@ public class SetVariablersAtAStart : MonoBehaviour
         {
             PlayerPrefs.SetInt("bb", 1);
             PlayerPrefs.SetFloat("senss", 3);
+
+            PlayerPrefs.SetFloat("MUSv", -10);
+            PlayerPrefs.SetFloat("SFXv", 10);
         }
     }
 }

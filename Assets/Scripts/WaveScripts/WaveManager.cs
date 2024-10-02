@@ -58,7 +58,7 @@ public class WaveManager : MonoBehaviour
         }
 
         if (enems == 0)
-        {
+        {            
             Cooldown -= 1 * Time.deltaTime;
             if (StopWaves == false)
             {
