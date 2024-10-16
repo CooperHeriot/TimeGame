@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - INTERSECTION_EFFECTS_ON
   - SURFACE_FOAM_ON
   - WORLD_SPACE_UV_ON
   m_InvalidKeywords:
@@ -53,8 +54,8 @@ Material:
     - REFRACTION: 0
     - SURFACE_FOAM: 1
     - WORLD_SPACE_UV: 1
-    - _IntersectionFoamBlend: 0.47
-    - _IntersectionFoamDepth: 4.17
+    - _IntersectionFoamBlend: 75.24
+    - _IntersectionFoamDepth: 7.04
     - _IntersectionFoamScale: 0.19
     - _IntersectionWaterBlend: 0
     - _QueueControl: 1
@@ -63,20 +64,20 @@ Material:
     - _ShoreBlend: 9.1
     - _ShoreDepth: 1.95
     - _ShoreFade: 16.1
-    - _SurfaceFoamBlend: 1
+    - _SurfaceFoamBlend: 4.23
     - _WaterColorDepth: 75.39
     - _WaterColorHorizonDistance: 15.3
     m_Colors:
     - <noninit>: {r: 0.9881688, g: 0.759434, b: 1, a: 1}
-    - _IntersectionFoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IntersectionFoamColor: {r: 0, g: 0, b: 0, a: 0}
     - _IntersectionFoamMovement: {r: 0, g: 0, b: 0, a: 0}
-    - _IntersectionFoamSampling: {r: 1, g: 0, b: 0, a: 0}
+    - _IntersectionFoamSampling: {r: 0.66, g: 0, b: 0, a: 0}
     - _NormalsMovement: {r: -0.14, g: -0.16, b: 0, a: 0}
     - _ShoreColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SurfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0.3215686}
-    - _SurfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.7294118}
+    - _SurfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _SurfaceFoamColor2: {r: 0, g: 0, b: 0, a: 0}
     - _SurfaceFoamMovement: {r: 0.7, g: 0, b: 0.47, a: 0.01}
-    - _SurfaceFoamSampling: {r: 1, g: 0, b: 0, a: 0}
+    - _SurfaceFoamSampling: {r: 38.38, g: 0, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 0.57, a: 0.22}
     - _WaterColorDeep: {r: 0.88573563, g: 0.6367924, b: 1, a: 1}
     - _WaterColorHorizon: {r: 0, g: 0.032376483, b: 0.14117643, a: 1}
