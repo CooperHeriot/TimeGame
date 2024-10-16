@@ -226,6 +226,24 @@ public class TimelineManager : MonoBehaviour
                     inactiveLines[0].GetComponent<WaveBehaviour>().relativeAmount = inactiveLines[0].GetComponent<WaveBehaviour>().enms.Count;
                 }
 
+                for (int i = 0; i < inactiveLines[0].GetComponent<TimelineBehav>().Dors.Count; i++)
+                {
+                    if (_TLine.GetComponent<TimelineBehav>().Dors[i] == null)
+                    {
+                        inactiveLines[0].GetComponent<TimelineBehav>().Dors[i].SetActive(false);
+                        inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints = inactiveLines[0].GetComponent<TimelineBehav>().Dors[i].GetComponent<DoorControls>().nSpawnPoints;
+                    }
+                }
+
+                /*for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().SpawnPoints.Count; i++)
+                {
+                    if (i < inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints.Count)
+                    {
+                        inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints[i] = _TLine.GetComponent<WaveBehaviour>().SpawnPoints[i];
+                    }           
+                }*/
+                    
+
                 WM.UpdateWaves(inactiveLines[0]);
 
                 //inactiveLines.Remove(inactiveLines[0]);
@@ -292,8 +310,12 @@ public class TimelineManager : MonoBehaviour
                 }
 
                 reverseLineViwer.Remove(_TLine);
-                reverseLineViwer[0].GetComponent<TimelineBehav>().becomePrime();
-                primeTime = reverseLineViwer[0];
+                if (reverseLineViwer.Count > 0)
+                {
+                    reverseLineViwer[0].GetComponent<TimelineBehav>().becomePrime();
+                    primeTime = reverseLineViwer[0];
+                }
+                
                 /* if (TMM + 1 > reverseLineViwer.Count)
                  {
                      reverseLineViwer[0].GetComponent<TimelineBehav>().becomePrime();
