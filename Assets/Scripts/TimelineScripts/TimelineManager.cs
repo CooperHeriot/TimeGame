@@ -203,7 +203,16 @@ public class TimelineManager : MonoBehaviour
                 for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().enms.Count; i++)
                 {
                     //GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
-                    GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.x, inactiveLines[0].transform.position.y, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.z), _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+                    if (_TLine.GetComponent<WaveBehaviour>().enms[i] != null)
+                    {
+                        GameObject ed = Instantiate(_TLine.GetComponent<WaveBehaviour>().enms[i], new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.x, inactiveLines[0].transform.position.y, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.position.z), _TLine.GetComponent<WaveBehaviour>().enms[i].transform.rotation, inactiveLines[0].transform);
+
+                        ed.GetComponent<EnemyShoot>().Timeline = inactiveLines[0].gameObject;
+                        ed.GetComponent<EnemyShoot>().Started();
+
+                        inactiveLines[0].GetComponent<WaveBehaviour>().enms.Add(ed);
+                        inactiveLines[0].GetComponent<WaveBehaviour>().relativeAmount = inactiveLines[0].GetComponent<WaveBehaviour>().enms.Count;
+                    }          
 
                     /*if (Vector3.Distance(ed.transform.position, inactiveLines[0].transform.position) > 100)
                     {
@@ -219,11 +228,7 @@ public class TimelineManager : MonoBehaviour
                     }*/
                     //ed.transform.localPosition = new Vector3(_TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.x, 0, _TLine.GetComponent<WaveBehaviour>().enms[i].transform.localPosition.z);
 
-                    ed.GetComponent<EnemyShoot>().Timeline = inactiveLines[0].gameObject;
-                    ed.GetComponent<EnemyShoot>().Started();
-
-                    inactiveLines[0].GetComponent<WaveBehaviour>().enms.Add(ed);
-                    inactiveLines[0].GetComponent<WaveBehaviour>().relativeAmount = inactiveLines[0].GetComponent<WaveBehaviour>().enms.Count;
+                   
                 }
 
                 for (int i = 0; i < inactiveLines[0].GetComponent<TimelineBehav>().Dors.Count; i++)
