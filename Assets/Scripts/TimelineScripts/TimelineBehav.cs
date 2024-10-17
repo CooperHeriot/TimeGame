@@ -10,6 +10,7 @@ public enum TSide
 public class TimelineBehav : MonoBehaviour
 {
     public List<GameObject> Dors = new List<GameObject>();
+    public List<GameObject> Buttons = new List<GameObject>();
 
     private TimelineManager TM;
 

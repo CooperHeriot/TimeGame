@@ -235,6 +235,14 @@ public class TimelineManager : MonoBehaviour
                     }
                 }
 
+                for (int i = 0; i < inactiveLines[0].GetComponent<TimelineBehav>().Buttons.Count; i++)
+                {
+                    inactiveLines[0].GetComponent<TimelineBehav>().Buttons[i].GetComponent<TimeButton>().tier = _TLine.GetComponent<TimelineBehav>().Buttons[i].GetComponent<TimeButton>().tier;
+                    if (_TLine.GetComponent<TimelineBehav>().Buttons[i] == null)
+                    {
+                        inactiveLines[0].GetComponent<TimelineBehav>().Buttons[i].SetActive(false);                       
+                    }
+                }
                 /*for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().SpawnPoints.Count; i++)
                 {
                     if (i < inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints.Count)
@@ -242,7 +250,7 @@ public class TimelineManager : MonoBehaviour
                         inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints[i] = _TLine.GetComponent<WaveBehaviour>().SpawnPoints[i];
                     }           
                 }*/
-                    
+
 
                 WM.UpdateWaves(inactiveLines[0]);
 
