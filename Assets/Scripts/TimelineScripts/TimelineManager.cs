@@ -246,7 +246,7 @@ public class TimelineManager : MonoBehaviour
 
                 for (int i = 0; i < inactiveLines[0].GetComponent<TimelineBehav>().Fields.Count; i++)
                 {                   
-                    if (_TLine.GetComponent<TimelineBehav>().Fields[i] != null)
+                    if (_TLine.GetComponent<TimelineBehav>().Fields[i].activeInHierarchy == true)
                     {
                         inactiveLines[0].GetComponent<TimelineBehav>().Fields[i].SetActive(true);
                         inactiveLines[0].GetComponent<WaveBehaviour>().Currentdoors = inactiveLines[0].GetComponent<TimelineBehav>().Fields[i];
