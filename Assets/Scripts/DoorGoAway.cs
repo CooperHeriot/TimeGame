@@ -20,7 +20,8 @@ public class DoorGoAway : MonoBehaviour
     {
         if (goin == true)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
