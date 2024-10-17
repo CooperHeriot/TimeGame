@@ -243,6 +243,15 @@ public class TimelineManager : MonoBehaviour
                         inactiveLines[0].GetComponent<TimelineBehav>().Buttons[i].SetActive(false);                       
                     }
                 }
+
+                for (int i = 0; i < inactiveLines[0].GetComponent<TimelineBehav>().Fields.Count; i++)
+                {                   
+                    if (_TLine.GetComponent<TimelineBehav>().Fields[i] != null)
+                    {
+                        inactiveLines[0].GetComponent<TimelineBehav>().Fields[i].SetActive(true);
+                        inactiveLines[0].GetComponent<WaveBehaviour>().Currentdoors = inactiveLines[0].GetComponent<TimelineBehav>().Fields[i];
+                    }
+                }
                 /*for (int i = 0; i < _TLine.GetComponent<WaveBehaviour>().SpawnPoints.Count; i++)
                 {
                     if (i < inactiveLines[0].GetComponent<WaveBehaviour>().SpawnPoints.Count)
